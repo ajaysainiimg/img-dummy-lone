@@ -1,0 +1,21 @@
+.fixed-navbar {
+    top: 0;
+    // position: fixed !important;
+    animation-name: fixedAnim;
+    animation-duration: 1s;
+    background-color: $black !important;
+    animation-fill-mode: forwards;
+    -webkit-box-shadow: 0 12px 6px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 12px 6px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.06);
+
+  @keyframes fixedAnim {
+    from {
+        top: -50px;
+    }
+  
+    to {
+        top: 0;
+    }
+  }
+}

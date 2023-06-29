@@ -1,0 +1,52 @@
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    @include admin-panel-mixin-min-sm();
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  @include admin-panel-mixin-min-md();
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  @include admin-panel-mixin-min-lg();
+}
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  @include admin-panel-mixin-min-xl();
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  @include admin-panel-mixin-min-xxl();
+}
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) {
+  @include admin-panel-mixin-max-xl();
+}
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  @include admin-panel-mixin-max-lg();
+}
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  @include admin-panel-mixin-max-md();
+}
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  @include admin-panel-mixin-max-sm();
+}
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  @include admin-panel-mixin-max-xs();
+}
+// XX-Large devices (larger desktops)
+// No media query since the xxl breakpoint has no upper bound on its width
+
+
+
+
+
+
+
