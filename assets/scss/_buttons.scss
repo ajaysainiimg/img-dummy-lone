@@ -1,4 +1,28 @@
-
+.custom-btn {
+  color: $white;
+  background-color: $theme1; 
+  transition: all 0.3s ease-in-out;
+  font-size: 13px;
+  padding: 0 34px;
+  letter-spacing: 1px;
+  &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background-color: $black;
+      z-index: -2;
+      transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    color: $theme1;
+      &::before {
+          width: 100%;
+      }
+  }
+}
 
 
 // Small devices (landscape phones, 576px and up)

@@ -1,0 +1,719 @@
+// footer start
+.footer {
+    & .footer-logo {
+        height: auto;
+        width: 200px;
+    }
+    & .footer-icon {
+        height: 22px;
+        width: 22px;
+    }
+    & .footer-data {
+        font-size: 15px;
+        color: $white;
+    }
+    & .footer-detail {
+        font-size: 14px;
+        color: lighten($black,85);
+        font-weight: 400;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $white;
+        }
+    }
+    & .subscibe-title {
+        font-size: 14px;
+        color: $white;
+    }
+    // & .footer-title {
+    //     font-size: 15px;
+    //     color: $white;
+    // }
+    & .subscribe-main {
+        & .subscibe-input {
+            color: $white;
+            font-size: 14px;
+            &:focus {
+                border-color: $white;
+            }
+            &::placeholder {
+                color: $white !important;
+            }
+        }
+    }
+    & .footer-subheading {
+        font-size: 18px;
+        color: $theme1;
+        letter-spacing: 1px;
+    }
+    & .main-link {
+        font-size: 15px;
+        color: $white;
+        transition: all 0.3s ease-in-out;
+        &::before {
+            content:'';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: $theme1;
+            height: 8px;
+            width: 8px;
+            opacity: 0;
+            border-radius: 50%;
+            transition: all  0.3s ease-in-out;
+            visibility: hidden;
+        }
+        &:hover {
+            color: $theme1;
+            transform: translateX(6px);
+            &::before {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    & .social-media {
+        & .social-link {
+            height:20px;
+            width: 20px;
+            transition: all 0.3s ease-in-out;
+            & .social-img {
+                transition: all 0.3s ease-in-out;
+            }
+            &:hover {
+               transform: scale(1.2);
+                & .social-img {
+                    filter: invert(1);
+                }
+            }
+            
+        }
+        // & .slider {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 51px;
+        //     width: 0;
+        //     height: 45px;
+        //     background: $theme1;
+        //     border-radius: 3px;
+        //     transition: all 0.5s 0.3s ease;
+           
+        // }
+    } 
+    & .copyright-title {
+        font-size: 13px;
+        color: $white;
+        & .img {
+            font-size: 14px;
+            color: $theme1;          
+        }
+        & .copyright-logo {
+            height: 35px;
+            width: auto;
+        }
+    }
+    & .policy-title {
+        font-size: 13px;
+        color: $white;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $theme1;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin footer-mixin-min-sm() {
+    .footer {
+        & .footer-logo {
+        }
+        & .footer-icon {
+        }
+        & .footer-data {
+        }
+        & .footer-detail {
+            &:hover {
+            }
+        }
+        & .subscibe-title {
+        }
+        & .subscribe-main {
+            & .subscibe-input {
+                &:focus {
+                }
+                &::placeholder {
+                }
+            }
+        }
+        & .footer-subheading {
+        }
+        & .main-link {
+            &::before {
+            }
+            &:hover {
+                &::before {
+                }
+            }
+        }
+        & .social-media {
+            & .social-link {
+                & .social-img {
+                }
+                &:hover {
+                    & .social-img {
+                    }
+                }
+                
+            }
+        } 
+        & .copyright-title {
+            & .img {    
+            }
+        }
+        & .policy-title {
+            &:hover {
+            }
+        }
+    }
+}
+// Medium devices (tablets, 768px and up)
+@mixin footer-mixin-min-md() {
+    .footer {
+        & .footer-logo {
+        }
+        & .footer-icon {
+        }
+        & .footer-data {
+        }
+        & .footer-detail {
+            &:hover {
+            }
+        }
+        & .subscibe-title {
+        }
+        & .subscribe-main {
+            & .subscibe-input {
+                &:focus {
+                }
+                &::placeholder {
+                }
+            }
+        }
+        & .footer-subheading {
+        }
+        & .main-link {
+            &::before {
+            }
+            &:hover {
+                &::before {
+                }
+            }
+        }
+        & .social-media {
+            & .social-link {
+                & .social-img {
+                }
+                &:hover {
+                    & .social-img {
+                    }
+                }
+                
+            }
+        } 
+        & .copyright-title {
+            & .img {    
+            }
+        }
+        & .policy-title {
+            &:hover {
+            }
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@mixin footer-mixin-min-lg() {
+    .footer {
+        & .footer-logo {
+        }
+        & .footer-icon {
+        }
+        & .footer-data {
+        }
+        & .footer-detail {
+            &:hover {
+            }
+        }
+        & .subscibe-title {
+        }
+        & .subscribe-main {
+            & .subscibe-input {
+                &:focus {
+                }
+                &::placeholder {
+                }
+            }
+        }
+        & .footer-subheading {
+        }
+        & .main-link {
+            &::before {
+            }
+            &:hover {
+                &::before {
+                }
+            }
+        }
+        & .social-media {
+            & .social-link {
+                & .social-img {
+                }
+                &:hover {
+                    & .social-img {
+                    }
+                }
+                
+            }
+        } 
+        & .copyright-title {
+            & .img {    
+            }
+        }
+        & .policy-title {
+            &:hover {
+            }
+        }
+    }
+}
+// X-Large devices (large desktops, 1200px and up)
+@mixin footer-mixin-min-xl() {
+    .footer {
+        & .footer-logo {
+        }
+        & .footer-icon {
+        }
+        & .footer-data {
+        }
+        & .footer-detail {
+            &:hover {
+            }
+        }
+        & .subscibe-title {
+        }
+        & .subscribe-main {
+            & .subscibe-input {
+                &:focus {
+                }
+                &::placeholder {
+                }
+            }
+        }
+        & .footer-subheading {
+        }
+        & .main-link {
+            &::before {
+            }
+            &:hover {
+                &::before {
+                }
+            }
+        }
+        & .social-media {
+            & .social-link {
+                & .social-img {
+                }
+                &:hover {
+                    & .social-img {
+                    }
+                }
+                
+            }
+        } 
+        & .copyright-title {
+            & .img {    
+            }
+        }
+        & .policy-title {
+            &:hover {
+            }
+        }
+    }
+}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin footer-mixin-min-xxl() {
+    .footer {
+        & .footer-logo {
+        }
+        & .footer-icon {
+        }
+        & .footer-data {
+        }
+        & .footer-detail {
+            &:hover {
+            }
+        }
+        & .subscibe-title {
+        }
+        & .subscribe-main {
+            & .subscibe-input {
+                &:focus {
+                }
+                &::placeholder {
+                }
+            }
+        }
+        & .footer-subheading {
+        }
+        & .main-link {
+            &::before {
+            }
+            &:hover {
+                &::before {
+                }
+            }
+        }
+        & .social-media {
+            & .social-link {
+                & .social-img {
+                }
+                &:hover {
+                    & .social-img {
+                    }
+                }
+                
+            }
+        } 
+        & .copyright-title {
+            & .img {    
+            }
+        }
+        & .policy-title {
+            &:hover {
+            }
+        }
+    }
+}
+// X-Large devices (large desktops, less than 1400px)
+@mixin footer-mixin-max-xl() {
+    .footer {
+        & .footer-logo {
+        }
+        & .footer-icon {
+        }
+        & .footer-data {
+        }
+        & .footer-detail {
+            &:hover {
+            }
+        }
+        & .subscibe-title {
+        }
+        & .subscribe-main {
+            & .subscibe-input {
+                &:focus {
+                }
+                &::placeholder {
+                }
+            }
+        }
+        & .footer-subheading {
+        }
+        & .main-link {
+            &::before {
+            }
+            &:hover {
+                &::before {
+                }
+            }
+        }
+        & .social-media {
+            & .social-link {
+                & .social-img {
+                }
+                &:hover {
+                    & .social-img {
+                    }
+                }
+                
+            }
+        } 
+        & .copyright-title {
+            & .img {    
+            }
+        }
+        & .policy-title {
+            &:hover {
+            }
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin footer-mixin-max-lg() {
+    .footer {
+        & .footer-logo {
+        }
+        & .footer-icon {
+        }
+        & .footer-data {
+        }
+        & .footer-detail {
+            &:hover {
+            }
+        }
+        & .subscibe-title {
+        }
+        & .subscribe-main {
+            & .subscibe-input {
+                &:focus {
+                }
+                &::placeholder {
+                }
+            }
+        }
+        & .footer-subheading {
+        }
+        & .main-link {
+            &::before {
+            }
+            &:hover {
+                &::before {
+                }
+            }
+        }
+        & .social-media {
+            & .social-link {
+                & .social-img {
+                }
+                &:hover {
+                    & .social-img {
+                    }
+                }
+                
+            }
+        } 
+        & .copyright-title {
+            & .img {    
+            }
+        }
+        & .policy-title {
+            &:hover {
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin footer-mixin-max-md() {
+    .footer {
+        & .footer-logo {
+            height: auto;
+            width: 180px;
+        }
+        & .footer-icon {
+        }
+        & .footer-data {
+        }
+        & .footer-detail {
+            &:hover {
+            }
+        }
+        & .subscibe-title {
+        }
+        & .subscribe-main {
+            & .subscibe-input {
+                &:focus {
+                }
+                &::placeholder {
+                }
+            }
+        }
+        & .footer-subheading {
+            font-size: 17px;
+        }
+        & .main-link {
+            &::before {
+            }
+            &:hover {
+                &::before {
+                }
+            }
+        }
+        & .social-media {
+            & .social-link {
+                & .social-img {
+                }
+                &:hover {
+                    & .social-img {
+                    }
+                }
+                
+            }
+        } 
+        & .copyright-title {
+            & .img {    
+            }
+            & .copyright-logo {
+                height: 30px;
+                width: auto;
+            }
+        }
+        & .policy-title {
+            &:hover {
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin footer-mixin-max-sm() {
+    .footer {
+        & .footer-logo {
+            height: auto;
+            width: 160px;
+        }
+        & .footer-icon {
+            height: 18px;
+            width: 18px;
+        }
+        & .footer-data {
+            font-size: 14px;
+        }
+        & .footer-detail {
+            font-size: 13px;
+            &:hover {
+            }
+        }
+        & .subscibe-title {
+            font-size: 13px;
+        }
+        & .subscribe-main {
+            & .subscibe-input {
+                font-size:13px;
+                &:focus {
+                }
+                &::placeholder {
+                }
+            }
+        }
+        & .footer-subheading {
+            font-size: 16px;
+        }
+        & .main-link {
+            font-size: 14px;
+            &::before {
+            }
+            &:hover {
+                &::before {
+                }
+            }
+        }
+        & .social-media {
+            & .social-link {
+                height: 20px;
+                width: 20px;
+                & .social-img {
+                }
+                &:hover {
+                    & .social-img {
+                    }
+                }
+                
+            }
+        } 
+        & .copyright-title {
+            font-size: 12px;
+            & .img { 
+                font-size: 12px;   
+            }
+            & .copyright-logo {
+                height: 25px;
+                width: auto;
+            }
+        }
+        & .policy-title {
+            font-size: 13px;
+            &:hover {
+            }
+        }
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin footer-mixin-max-xs() {
+    .footer {
+        & .footer-logo {
+            height: auto;
+            width: 140px;
+        }
+        & .footer-icon {
+            height: 16px;
+            width: 16px;
+        }
+        & .footer-data {
+            font-size: 13px;
+        }
+        & .footer-detail {
+            font-size: 12px;
+            &:hover {
+            }
+        }
+        & .subscibe-title {
+            font-size: 12px;
+        }
+        & .subscribe-main {
+            & img {
+                height: 14px;
+            }
+            & .subscibe-input {
+                font-size: 12px;
+                &:focus {
+                }
+                &::placeholder {
+                }
+            }
+        }
+        & .footer-subheading {
+            font-size: 15px;
+        }
+        & .footer-data-main {
+            padding-right: 0;
+        }
+        & .main-link {
+            font-size: 13px;
+            &::before {
+            }
+            &:hover {
+                &::before {
+                }
+            }
+        }
+        & .social-media {
+            & .social-link {
+                height: 16px;
+                width: 16px;
+                & .social-img {
+                }
+                &:hover {
+                    & .social-img {
+                    }
+                }
+                
+            }
+        } 
+        & .copyright-title {
+            text-align: center;
+            font-size: 11px;
+            padding-bottom: 8px;
+            & .img {    
+                font-size: 11px;
+            }
+            & .copyright-logo {
+                height: 20px;
+                width: auto;
+            }
+        }
+        & .policy-title {
+            font-size: 12px;
+            &:hover {
+            }
+        }
+    }
+}
+// footer end

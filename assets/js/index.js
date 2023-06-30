@@ -1,142 +1,83 @@
-// window.onload = function () {
-//     var chart = new CanvasJS.Chart("chart", {
-//         animationEnabled: true,
-//         title:{
-//             text: "Daily High Temperature at Different Beaches"
-//         },
-//         axisX: {
-//             valueFormatString: "DD MMM,YY"
-//         },
-//         axisY: {
-//             title: "Temperature (in °C)",
-//             suffix: " °C"
-//         },
-//         legend:{
-//             cursor: "pointer",
-//             fontSize: 16,
-//             itemclick: toggleDataSeries
-//         },
-//         toolTip:{
-//             shared: true
-//         },
-//         data: [{
-//             name: "Myrtle Beach",
-//             type: "spline",
-//             yValueFormatString: "#0.## °C",
-//             showInLegend: true,
-//             dataPoints: [
-//                 { x: new Date(2017,6,24), y: 31 },
-//                 { x: new Date(2017,6,25), y: 31 },
-//                 { x: new Date(2017,6,26), y: 29 },
-//                 { x: new Date(2017,6,27), y: 29 },
-//                 { x: new Date(2017,6,28), y: 31 },
-//                 { x: new Date(2017,6,29), y: 30 },
-//                 { x: new Date(2017,6,30), y: 29 }
-//             ]
-//         },
-//         {
-//             name: "Martha Vineyard",
-//             type: "spline",
-//             yValueFormatString: "#0.## °C",
-//             showInLegend: true,
-//             dataPoints: [
-//                 { x: new Date(2017,6,24), y: 20 },
-//                 { x: new Date(2017,6,25), y: 20 },
-//                 { x: new Date(2017,6,26), y: 25 },
-//                 { x: new Date(2017,6,27), y: 25 },
-//                 { x: new Date(2017,6,28), y: 25 },
-//                 { x: new Date(2017,6,29), y: 25 },
-//                 { x: new Date(2017,6,30), y: 25 }
-//             ]
-//         },
-//         {
-//             name: "Nantucket",
-//             type: "spline",
-//             yValueFormatString: "#0.## °C",
-//             showInLegend: true,
-//             dataPoints: [
-//                 { x: new Date(2017,6,24), y: 22 },
-//                 { x: new Date(2017,6,25), y: 19 },
-//                 { x: new Date(2017,6,26), y: 23 },
-//                 { x: new Date(2017,6,27), y: 24 },
-//                 { x: new Date(2017,6,28), y: 24 },
-//                 { x: new Date(2017,6,29), y: 23 },
-//                 { x: new Date(2017,6,30), y: 23 }
-//             ]
-//         }]
-//     });
-//     chart.render();
-    
-//     function toggleDataSeries(e){
-//         if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-//             e.dataSeries.visible = false;
-//         }
-//         else{
-//             e.dataSeries.visible = true;
-//         }
-//         chart.render();
-//     }
-
-//     // chart 2
-//     var chart = new CanvasJS.Chart("chartContainer2", {
-//         animationEnabled: true,
-//         title: {
-//             text: "Desktop Search Engine Market Share - 2016"
-//         },
-//         data: [{
-//             type: "pie",
-//             startAngle: 240,
-//             yValueFormatString: "##0.00\"%\"",
-//             indexLabel: "{label} {y}",
-//             dataPoints: [
-//                 {y: 79.45, label: "Google"},
-//                 {y: 7.31, label: "Bing"},
-//                 {y: 7.06, label: "Baidu"},
-//                 {y: 4.91, label: "Yahoo"},
-//                 {y: 1.26, label: "Others"}
-//             ]
-//         }]
-//     });
-//     chart.render();
-//     }
+// // on scorll navbar
+window.onscroll = function () {
+    scrollFunction();
+  };
+  var first = true;
+  function scrollFunction() {
+    if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+      document.getElementById("navbar").classList.add('fixed-navbar');
+    }
+     else {
+      document.getElementById("navbar").classList.remove('fixed-navbar');
+    }
+  }
 
 
+  // animation cursor
+// slider
+// $(document).ready(function () {
+//   (function ($) {
+// $('.style-carousel').owlCarousel({
+//   items:3,
+//   loop:true,
+//   margin:20,
+//   nav:false,
+//   dots:false,
+//   autoplay:false,
+//   autoplayTimeout:5000,
+//   autoplayHoverPause:true,
+//   // navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+//   responsive:{
+//       0:{
+//           items:1
+//       },
+//       600:{
+//           items:1
+//       },
+//       1000:{
+//           items:3
+//       }
+//   }
+// })
+// $( ".owl-prev").html('<img src="assets/img/index/owl-next.svg" alt="client" class="h-100 w-100 img-fluid">');
+//  $( ".owl-next").html('<img src="assets/img/index/owl-preview.svg" alt="client" class="h-100 w-100 img-fluid">');
+// })(jQuery);
+// });
 
+if ($(".custom-cursor").length) {
+  var cursor = document.querySelector(".custom-cursor__cursor");
+  var cursorinner = document.querySelector(".custom-cursor__cursor-two");
+  var a = document.querySelectorAll("a");
 
+  document.addEventListener("mousemove", function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
+  });
 
-//     var chart = bb.generate({
-//         data: {
-//           columns: [
-//           ["data1", 30, 200, 100, 400, 150, 250],
-//           ["data2", 50, 20, 10, 40, 15, 25]
-//           ],
-//           type: "line", // for ESM specify as: line()
-//         },
-//         bindto: "#lineChart"
-//       });
-      
-//       setTimeout(function() {
-//           chart.load({
-//               columns: [
-//                   ["data1", 230, 190, 300, 500, 300, 400]
-//               ]
-//           });
-//       }, 1000);
-      
-//       setTimeout(function() {
-//           chart.load({
-//               columns: [
-//                   ["data3", 130, 150, 200, 300, 200, 100]
-//               ]
-//           });
-//       }, 1500);
-      
-//       setTimeout(function() {
-//           chart.unload({
-//               ids: "data1"
-//           });
-//       }, 2000);
+  document.addEventListener("mousemove", function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    cursorinner.style.left = x + "px";
+    cursorinner.style.top = y + "px";
+  });
 
+  document.addEventListener("mousedown", function () {
+    cursor.classList.add("click");
+    cursorinner.classList.add("custom-cursor__innerhover");
+  });
 
-// side bar toggle 
-   
+  document.addEventListener("mouseup", function () {
+    cursor.classList.remove("click");
+    cursorinner.classList.remove("custom-cursor__innerhover");
+  });
+
+  a.forEach((item) => {
+    item.addEventListener("mouseover", () => {
+      cursor.classList.add("custom-cursor__hover");
+    });
+    item.addEventListener("mouseleave", () => {
+      cursor.classList.remove("custom-cursor__hover");
+    });
+  });
+}

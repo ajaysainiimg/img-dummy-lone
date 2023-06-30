@@ -1,0 +1,128 @@
+.privacypolicy {
+    & .privacy-heading {
+        font-size: 40px;
+        color: $theme1;
+    }
+    & .privacy-title {
+        font-size: 15px;
+        color: $white;
+    }
+    & .privacy-subheading {
+        color: $theme1;
+        font-size: 22px;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin policy-mixin-min-sm() {
+    .privacypolicy {
+        & .privacy-heading {
+        }
+        & .privacy-title {
+        }
+        & .privacy-subheading {
+        }
+    }
+  }
+  // Medium devices (tablets, 768px and up)
+  @mixin policy-mixin-min-md() {
+    .privacypolicy {
+        & .privacy-heading {
+        }
+        & .privacy-title {
+        }
+        & .privacy-subheading {
+        }
+    }
+  }
+  // Large devices (desktops, 992px and up)
+  @mixin policy-mixin-min-lg() {
+    .privacypolicy {
+        & .privacy-heading {
+        }
+        & .privacy-title {
+        }
+        & .privacy-subheading {
+        }
+    }
+  }
+  // X-Large devices (large desktops, 1200px and up)
+  @mixin policy-mixin-min-xl() {
+    .privacypolicy {
+        & .privacy-heading {
+        }
+        & .privacy-title {
+        }
+        & .privacy-subheading {
+        }
+    }
+  }
+  // XX-Large devices (larger desktops, 1400px and up)
+  @mixin policy-mixin-min-xxl() {
+    .privacypolicy {
+        & .privacy-heading {
+        }
+        & .privacy-title {
+        }
+        & .privacy-subheading {
+        }
+    }
+  }
+  // X-Large devices (large desktops, less than 1400px)
+  @mixin policy-mixin-max-xl() {
+    .privacypolicy {
+        & .privacy-heading {
+        }
+        & .privacy-title {
+        }
+        & .privacy-subheading {
+        }
+    }
+  }
+  // Large devices (desktops, less than 1200px)
+  @mixin policy-mixin-max-lg() {
+    .privacypolicy {
+        & .privacy-heading {
+        }
+        & .privacy-title {
+        }
+        & .privacy-subheading {
+        }
+    }
+  }
+  // Medium devices (tablets, less than 992px)
+  @mixin policy-mixin-max-md() {
+    .privacypolicy {
+        & .privacy-heading {
+        }
+        & .privacy-title {
+        }
+        & .privacy-subheading {
+        }
+    }
+  }
+  // Small devices (landscape phones, less than 768px)
+  @mixin policy-mixin-max-sm() {
+    .privacypolicy {
+        & .privacy-heading {
+        }
+        & .privacy-title {
+        }
+        & .privacy-subheading {
+        }
+    }
+  }
+  // X-Small devices (portrait phones, less than 576px)
+  @mixin policy-mixin-max-xs() {
+    .privacypolicy {
+        & .privacy-heading {
+            font-size: 26px;
+        }
+        & .privacy-title {
+            font-size: 12px;
+        }
+        & .privacy-subheading {
+            font-size: 16px;
+        }
+    }
+  }

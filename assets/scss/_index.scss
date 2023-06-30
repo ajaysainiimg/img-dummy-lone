@@ -1,2922 +1,1773 @@
-.admin-panel {
-    & .adminpanel-leftmain {
-        width: 280px;
-        transition: all 0.3s ease-in-out;
-        & .adminpanel-left {  
-            & .panel-logo {
-                height: 60px;
-                & .logo-img {
-                    height: auto;
-                    width: 130px;
-                }
-                & .panel-close {
-                    font-size: 12px;
-                }
+// hero section start
+.hero-section {
+    & .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        & .hero-subheading {
+            font-size: 18px;
+            color: $white;
+            letter-spacing: 3px;
+            animation:fadeInUp 1.2s ease backwards;
+            & .pie-chart {
+                height: 30px;
+                width: 30px;
             }
-            & .panel-content {
-                height: calc(100% - 60px);
-                & .sidelink-main {
-                    color: lighten($black, 25);
-                    font-size: 15px;
-                    font-weight: 400;
-                    transition: all 0.3s ease-in-out;
-                    &:hover {
-                        background-color: lighten($secondary, 50 ) !important;
-                    }
-                    & .icon-link {
-                        height: 16px;
-                        width: 16px;
-                    }
-                    &::after {
-                        content: '';
-                        height: 14px;
-                        position: absolute;
-                        width: 30px;
-                        right: 0;
-                        // top: 50% !important;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        z-index: 1;
-                        // transform: translateY(-50%);
-                        // transform: rotate(90deg);
-                        background: url(../img/Index/right.svg) no-repeat;
-                        transition: all 0.3s ease-in-out;
-                        // background-size: 8px 14px;
-                        background-position: center;
-                    }
-                    &:not(.collapsed) {
-                        background-color: lighten($secondary, 50 ) !important;
-                        &::after { 
-                            transform: rotate(90deg);  
-                        }
+        }
+        @keyframes fadeInUp{
+            0%{
+                transform:translate(0px, 200px);
+                 opacity: 0;
+            }
+            100%{
+                transform:translate(0px, 0);
+                 opacity: 1;
+            }
+        }
+        & .hero-heading {
+            font-size:65px;
+            color: $white;
+            line-height: normal;
+            animation:fadeInUp 1.5s ease backwards;
+            & .hero-animation {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: url(../img/Index/main-slide.png) no-repeat;
+                    background-size: 100%;
+                    background-position: center center;
+                    z-index: -1;
+                    animation: zoom-fade 5s linear 0s infinite;
+                }
+                @keyframes zoom-fade {
+                    0% {
+                      transform: scale(1);
                     }
                     
-                    // &.collapsed{
-                    //     &::after{
-                    //         transform: rotate(0);
-                    //     }
-                    // }
-                }
-                & .sidelink-main2 {
-                    color: lighten($black, 30);
-                    font-size: 15px;
-                    font-weight: 400;
-                    transition: all 0.3s ease-in-out;
-                    &:hover {
-                        background-color: lighten($secondary, 50 );
+                    10% {
+                      transform: scale(1.05);
                     }
-                    & .icon-link {
-                        height: 16px;
-                        width: 16px;
+                    
+                    20% {
+                        transform: scale(1.1);
                     }
+                    
+                     30% {
+                        transform: scale(1);
+                    }
+                    
+                    40% {
+                      transform: scale(1.1);
+                    }
+                    
+                    50% {
+                      transform: scale(1.1);
+                    }
+                    
+                    90% {
+                      transform: scale(1);
+                    }
+                    
+                    100% {
+                      opacity: 1;
+                      transform: scale(1);
+                    }
+                  }
                 }
-                & .sidelink {
-                    font-size: 13px;
-                    color: lighten($black, 60);
-                    font-weight: 500;
-                }
-                & .resource {
-                    font-size: 14px;
-                }
-            }
+        }
+        & .hero-title {
+            font-size: 15px;
+            animation:fadeInUp 1.7s ease backwards;
+        }
+        & .hero-btn {
+            animation:fadeInUp 1.8s ease backwards;
+        }
+    }    
+    & .swiper-slider1 {
+        background-image: url(../img/Index/slider-1.png);
+    } 
+    & .swiper-slider2 {
+        background-image: url(../img/Index/slider-2.png);
+    }
+    // & .owl-nav {
+    //     position: absolute;
+    //     top: 50%;
+    //     padding-left: 30px;
+    //     transform: translateY(-50%);
+    //     display: inline-flex;
+    //     flex-direction: column;
+    //     & .owl-prev {
+    //         height: 50px;
+    //         width: 50px;
+    //         border-radius: 50%;
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         background-color: $theme2 !important;
+    //     }
+    // }
+    & .swiper-button-next {
+        left: 30px;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        background-color: $theme2;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after {
+            font-size: 10px;
+            color: $black;
+            font-weight: 600;
         }
     }
-    & .rightSideContent {
-        transition: all 0.3s ease-in-out;
+    & .swiper-button-prev {
+        left: 30px;
+        height: 45px;
+        top: 40%;
+        width: 45px;
+        border-radius: 50%;
+        background-color: $theme2;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after {
+            font-size: 10px;
+            color: $black;
+            font-weight: 600;
+        }
     }
-    & .adminpanel-right {
-        & .dashboard-nav {
-            height: 60px;
-            // z-index: 1150;
-           & .admin-navbar {
-                & .menu-btn {
-                    height: 20px;
-                    width: 20px;
-                }
-                & .dash-logo {
-                    font-size: 19px;
-                    color: $black;
-                }
-                & .search-btn {
-                    height: 22px;
-                    width: 22px;
-                }
-                & .icon-link {
-                    height:25px;
-                    width: 25px;
-                    &::before {
-                        content: '7';
-                        position: absolute;
-                        height: 18px;
-                        width: 18px;
-                        top: -6px;
-                        right: -4px;
-                        background-color: $green;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-size: 10px;
-                        border-radius: 50%;
-                        color: $white;
-                        font-weight: 500;
-                    }
-                }
-                & .input-group {
-                    font-size: 14px;
-                    & .search-input {
-                        font-size: 13px ;
-                       &:focus {
-                        border-color: lighten($secondary, 40);
-                       }
-                    }
-                }
-                & .message {
-                    &::before {
-                        content: '8';     
-                        background-color: $red;
-                    }
-                }
-                & .navbar-link {
-                    font-size: 14px;
-                    color: $black;
-                    & .navuser-icon {
-                        height: 32px;
-                        width: 32px;
-                    }
-                }
-                & .dropdown-menu {
-                    left: -40px;
-                    & .dropdown-img {
-                        height: 33px;
-                        width: 33px;
-                    }
-                    & .user-name {
-                        font-size: 16px;
-                        line-height: 19px;
-                        color: lighten($black, 20);
-                    }
-                    & .user-position {
-                        font-size: 14px;
-                        color: lighten($black, 50);
-                    }
-                    & .user-link {
-                        font-size: 15px;
-                        color: lighten($black, 40);
-                        &:active {
-                            background-color: lighten($black, 95);
-                        }
-                        &:hover {
-                            background-color: lighten($black,95);
-                        }
-                        & .user-dataicon {
-                            height: 14px;
-                            width: 14px;
-                        }
-                    }
-                }
-           }
-        }
-        & .dashboard-right {
-            height: calc(100% - 120px);
-            transform: translate(0, 0);
-            & .notification-offcanvas {
-                & .offcanvas-title {
-                    font-size: 22px;
-                }
-                & .btn-close {
-                    font-size: 14px;
-                }
-                & .notification-link {
-                    transition: all 0.1s ease-in-out;
-                    &:hover {
-                        background-color: lighten($red, 50) !important;
-                    }
-                    & .notification-icon {
-                        height: 35px;
-                        width: 35px;
-                    }
-                    & .notification-heading {
-                        font-size: 14px;
-                        color: $black;
-                    }
-                    & .notification-time {
-                        font-size: 13px;
-                        color: lighten($secondary, 20);
-                    }
-                    & .notification-title {
-                        font-size: 13px;
-                        color: lighten($secondary, 20);
-                        text-align: justify;
-                    }
-                } 
-            }
-            & .msg-offcanvas {
-                & .offcanvas-header {
-                    // & .offcanvas-title {
-                    //     font-size: 22px;
-                    // }
-                    & .btn-close {
-                        font-size: 14px;
-                    }
-                    // & .user-img2 {
-                    //     height: 45px;
-                    //     width: 45px;
-                    // }
-                }
-                & .msguser-img {
-                    height: 40px;
-                    width: 40px;
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        right: 0;
-                        bottom: 0;
-                        height: 11px;
-                        width: 11px;
-                        border-radius: 50%;
-                        background-color: $teal;
-                        border: 2px solid $white;
-                    }
-                }
-                & .msguser-status {
-                    font-size: 13px;
-                    color: lighten($black, 70);
-                }
-                & .msguser-name {
-                    font-size: 15px;
-                }
-                & .msgusericon {
-                    height: 35px;
-                    width: 35px;
-                }
-                & .msg-detail {
-                    font-size: 12px;
-                    color: $black;
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        height: 15px;
-                        width: 15px;
-                        top: -5px;
-                        left: 3px;
-                        background-color: lighten($secondary, 48);
-                        transform: rotate(45deg);
-                        border-radius: 1px;
-                    }
-                }
-                & .msgtime {
-                    font-size: 10px;
-                    color: lighten($black, 55);
-                    font-weight: 400;
-                }
-                & .msg-input {
-                    font-size: 13px;
-                    color: lighten($black, 25);
-                    &:focus {
-                        border-color: lighten($secondary, 45);
-                    }
-                    &:-webkit-autofill{
-                        -webkit-background-clip: text;
-                        transition: background-color 5000s ease-in-out 0s;
-                        // box-shadow: inset 0 0 20px 20px #23232329;
-                    }
-                }
-                & .send-btn {
-                    font-size: 13px;
-                }
-                & .msg-detail2 {
-                    & span {
-                        height: 3px;
-                        width: 3px;
-                        opacity: 0;
-                    }
-                    & :nth-child(1) {
-                        animation: 1s type-animation infinite .33333s;
-                    }
-                    @keyframes type-animation {
-                        50% {
-                            opacity: 1;
-                        }
-                    }
-                    & :nth-child(2) {
-                        animation: 1s type-animation infinite .66666s;
-                    }
-                    & :nth-child(3) {
-                        animation: 1s type-animation infinite .99999s;
-                    }       
-                }
-            }
-            & .search-offcanvas {
-                height: 70px;
-                & .search-inputt {
-                    font-size: 13px;
-                    &:focus {
-                        border-color: lighten($secondary, 46);
-                    }
-                }
-                & .search-btn {
-                    font-size: 13px;
-                }
-            }
-            & .card {
-                & .dash-card {
-                    & .recent-activity {
-                        font-size: 16px;
-                        color: lighten($black, 25);
-                    }
-                    & .card {
-                        cursor: pointer;
-                        transition: all 0.3s ease-in-out;
-                        & .icon-shape {
-                            height:50px;
-                            width: 50px;
-                            background-color: $pink;
-                            padding: 12px;
-                        }
-                        & .card-budget {
-                            font-size: 14px;
-                            color: lighten($black, 70);
-                        }
-                        & .card-price {
-                            font-size: 24px;
-                            color: darken($primary, 30);
-                        }
-                        & .card-per {
-                            background-color: lighten($success, 60);
-                            & .arrow {
-                                height: 12px;
-                                width: 18px;
-                            }
-                            & .per-title {
-                                font-size: 12px;
-                                color: $teal;
-                            }
-                        }
-                        & .card-time {
-                            font-size: 13px;
-                        }
-                        &:hover {
-                            box-shadow: 0 0 6px rgba(33,33,33,.2);
-                            // transform: scale(0.9);
-                        }
-                    }
-                }
-                & .user-table {
-                    & .letest-project {
-                        font-size: 16px;
-                        color: lighten($black, 25);
-                    }
-                    & .table-heading {
-                        font-size: 11px;
-                        color: lighten($secondary, 10);
-                        font-weight: 500;
-                        white-space: nowrap;
-                    }
-                    & .table-img {
-                        height: 35px;
-                        width: 35px;
-                    }
-                    & .table-title {
-                        font-size: 14px;
-                        color: $black;
-                        white-space: nowrap;
-                    }
-                    & .table-date {
-                        font-size: 13px;
-                        color: lighten($secondary, 20);
-                        white-space: nowrap;
-                    }
-                    & .table-status {
-                        font-size: 14px;
-                        color: lighten($secondary, 6);
-                        white-space: nowrap;
-                        & .badge-dot {
-                            height: 10px;
-                            width: 10px;
-                            background-color: $orange;
-                        }
-                    }
-                    & .table-usericon {
-                        height: 30px;
-                        width: 30px;
-                        &:hover {
-                            z-index: 4 !important;
-                        }
-                    }
-                    & .table-per {
-                        font-size: 14px;
-                        white-space: nowrap;
-                        color: lighten($black, 40);
-                    }
-                    & .progress {
-                        width: 100px;
-                        height: 3px;
-                        & .progress-bar {
-                            width: 35%;
-                        }
-                    }
-                    & .viewall-btn {
-                        font-size: 13px;
-                        color: lighten($black, 20);
-                    }
-                    & .delete-btn {
-                        & .delete-icon {
-                            width: 10px;
-                            height: 10px;
-                            & .delete-img {
-                                filter:brightness(0);
-                                transition: all 0.3s ease-in-out;
-                            }
-                        }
-                        &:hover {
-                            & .delete-img {
-                                filter: brightness(1);
-                            }
-                        }
-                    }
-                    & .show-project {
-                        font-size: 13px;
-                        color: lighten($black, 50);
-                    }
-                }
-                & .Recent-Transactions {
-                    & .recent {
-                        font-size: 16px;
-                        color: lighten($black, 25);
-                    }
-                    & .trans-heading {
-                        font-size: 11px;
-                        color: lighten($secondary, 10);
-                        font-weight: 500;
-                        white-space: nowrap;
-                    }
-                    & .count {
-                        font-size: 16px;
-                        color: $black;
-                    }
-                    & .transuser-img {
-                        height: 36px;
-                        width: 36px;
-                    }
-                    & .trans-name {
-                        font-size: 14px;
-                        line-height: 20px;
-                        color: $black;
-                        white-space: nowrap;
-                    }
-                    & .trans-position {
-                        font-size: 13px;
-                        color: lighten($black, 70);
-                        white-space: nowrap;
-                    }
-                    & .priority {
-                        font-size: 13px;
-                        color: $white;
-                        line-height: 10px;
-                        padding: 4px 0;
-                    }
-                    & .Budget {
-                        font-size: 14px;
-                        color: lighten($black, 55);
-                    }
-                    & .time {
-                        font-size: 13px;
-                        color: lighten($black, 60);
-                        white-space: nowrap;
-                    }
-                }    
+    & .hero-content {
+        & .hero-icon {
+            height: 105px;
+            width: 105px;
+            & .hand-icon {
+                height: 50px;
+                width: 50px;
             }
         }
-        & .copyright {
-            height: 60px;
-            font-size: 13px;
-            color:lighten($black, 55);
-            & .copyright-logo {
-                height: 26px;
-                width: 110px;
+        & .hero-content2 {
+            height: 105px;
+            & .hero-checkout {
+                font-size: 10px;
+                letter-spacing: 3px;
+            }
+            & .hero-rates {
+                font-size: 16px;
             }
         }
     }
 }
-body{
-    &.expanded{
-        & .admin {
-            // transition: all 5s ease-in-out;
-            // position: absolute;
-            // left: -50%;
-            transform: translateX(-100%);
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-    }
-}
-
+// hero section end
 
 // Small devices (landscape phones, 576px and up)
-@mixin admin-panel-mixin-min-sm() {
-    .admin-panel {
-        & .adminpanel-leftmain {
-            & .adminpanel-left {  
-                & .panel-logo {
+@mixin heroSection-mixin-min-sm() {
+    .heroSection {
+        & .mySwiper {
+            & .swiper-slide{
+                & .sliderr1 {
                 }
-                & .panel-content {
-                    & .sidelink-main {
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                        &::after {
-                        }
-                        &.collapsed{
-                            &::after{
-                            }
-                        }
-                    }
-                    & .sidelink-main2 {
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                    }
-                    & .sidelink {
-                    }
-                    & .resource {
-                    }
+                & .sliderr2 {
+                }
+                & .sliderr3 {
+                }
+                & .sliderr4 {
+                }
+                & .sliderr5 {
                 }
             }
-        }
-        & .adminpanel-right {
-            & .dashboard-nav {
-               & .admin-navbar {
-                    & .menu-btn {
-                    }
-                    & .dash-logo {
-                    }
-                    & .search-btn {
-                    }
-                    & .icon-link {
-                        &::before {
-                        }
-                    }
-                    & .input-group {
-                        & .search-input {
-                           &:focus {
-                           }
-                        }
-                    }
-                    & .message {
-                        &::before {
-                        }
-                    }
-                    & .navbar-link {
-                        & .navuser-icon {
-                        }
-                    }
-                    & .dropdown-menu {
-                        & .user-name {
-                        }
-                        & .user-position {
-                        }
-                        & .user-link {
-                            &:active {
-                            }
-                            &:hover {
-                            }
-                            & .user-dataicon {
-                            }
-                        }
-                    }
-               }
+            & .swiper-pagination {
+                & .swiper-pagination-bullet {
+                }
+                & .swiper-pagination-bullet-active {
+                }
             }
-            & .dashboard-right {
-                & .notification-offcanvas {
-                    & .offcanvas-title {
-                    }
-                    & .btn-close {
-                    }
-                    & .notification-link {
-                        &:hover {
-                        }
-                        & .notification-icon {
-                        }
-                        & .notification-heading {
-                        }
-                        & .notification-time {
-                        }
-                        & .notification-title {
-                        }
-                    } 
+            & .hero-heading {
+                & .hero-subheading {
                 }
-                & .msg-offcanvas {
-                    & .offcanvas-header {
-                        & .offcanvas-title {
-                        }
-                        & .btn-close {
-                        }
-                        & .user-img2 {
-                        }
-                    }
-                    & .msguser-img {
-                        &::before {
-                        }
-                    }
-                    & .msguser-name {
-                    }
-                    & .msguser-status {
-                    }
-                    & .msguser-name {
-                    }
-                    & .msgusericon {
-                    }
-                    & .msg-detail {
-                        &::before {
-                        }
-                    }
-                    & .msgtime {
-                    }
-                    & .msg-input {
-                        &:focus {
-                        }
-                    }
-                    & .send-btn {
-                    }
-                }
-                & .search-offcanvas {
-                }
-                & .card {
-                    & .dash-card {
-                        & .recent-activity {
-                        }
-                        & .card {
-                            & .icon-shape {
-                            }
-                            & .card-budget {
-                            }
-                            & .card-price {
-                            }
-                            & .card-per {
-                                & .arrow {
-                                }
-                                & .per-title {
-                                }
-                            }
-                            & .card-time {
-                            }
-                            &:hover {
-                            }
-                        }
-                    }
-                    & .user-table {
-                        & .letest-project {
-                        }
-                        & .table-heading {
-                        }
-                        & .table-img {
-                        }
-                        & .table-title {
-                        }
-                        & .table-date {
-                        }
-                        & .table-status {
-                            & .badge-dot {
-                            }
-                        }
-                        & .table-usericon {
-                            &:hover {
-                            }
-                        }
-                        & .table-per {
-                        }
-                        & .progress {
-                            & .progress-bar {
-                            }
-                        }
-                        & .viewall-btn {
-                        }
-                        & .delete-btn {
-                            & .delete-icon {
-                                & .delete-img {
-                                }
-                            }
-                            &:hover {
-                                & .delete-img {
-                                }
-                            }
-                        }
-                    }
-                    & .Recent-Transactions {
-                        & .recent {
-                        }
-                        & .trans-heading {
-                        }
-                        & .count {
-                        }
-                        & .transuser-img {
-                        }
-                        & .trans-name {
-                        }
-                        & .trans-position {
-                        }
-                        & .priority {
-                        }
-                        & .Budget {
-                        }
-                        & .time {
-                        }
-                    }
-                }
+            }
+            & .hero-title {
             }
         }
     }
 }
 // Medium devices (tablets, 768px and up)
-@mixin admin-panel-mixin-min-md() {
-    .admin-panel {
-        & .adminpanel-leftmain {
-            & .adminpanel-left {  
-                & .panel-logo {
+@mixin heroSection-mixin-min-md() {
+    .heroSection {
+        & .mySwiper {
+            & .swiper-slide{
+                & .sliderr1 {
                 }
-                & .panel-content {
-                    & .sidelink-main {
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                        &::after {
-                        }
-                        &.collapsed{
-                            &::after{
-                            }
-                        }
-                    }
-                    & .sidelink-main2 {
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                    }
-                    & .sidelink {
-                    }
-                    & .resource {
-                    }
+                & .sliderr2 {
+                }
+                & .sliderr3 {
+                }
+                & .sliderr4 {
+                }
+                & .sliderr5 {
                 }
             }
-        }
-        & .adminpanel-right {
-            & .dashboard-nav {
-               & .admin-navbar {
-                    & .menu-btn {
-                    }
-                    & .dash-logo {
-                    }
-                    & .search-btn {
-                    }
-                    & .icon-link {
-                        &::before {
-                        }
-                    }
-                    & .input-group {
-                        & .search-input {
-                           &:focus {
-                           }
-                        }
-                    }
-                    & .message {
-                        &::before {
-                        }
-                    }
-                    & .navbar-link {
-                        & .navuser-icon {
-                        }
-                    }
-                    & .dropdown-menu {
-                        & .user-name {
-                        }
-                        & .user-position {
-                        }
-                        & .user-link {
-                            &:active {
-                            }
-                            &:hover {
-                            }
-                            & .user-dataicon {
-                            }
-                        }
-                    }
-               }
+            & .swiper-pagination {
+                & .swiper-pagination-bullet {
+                }
+                & .swiper-pagination-bullet-active {
+                }
             }
-            & .dashboard-right {
-                & .notification-offcanvas {
-                    & .offcanvas-title {
-                    }
-                    & .btn-close {
-                    }
-                    & .notification-link {
-                        &:hover {
-                        }
-                        & .notification-icon {
-                        }
-                        & .notification-heading {
-                        }
-                        & .notification-time {
-                        }
-                        & .notification-title {
-                        }
-                    } 
+            & .hero-heading {
+                & .hero-subheading {
                 }
-                & .msg-offcanvas {
-                    & .offcanvas-header {
-                        & .offcanvas-title {
-                        }
-                        & .btn-close {
-                        }
-                        & .user-img2 {
-                        }
-                    }
-                    & .msguser-img {
-                        &::before {
-                        }
-                    }
-                    & .msguser-name {
-                    }
-                    & .msguser-status {
-                    }
-                    & .msguser-name {
-                    }
-                    & .msgusericon {
-                    }
-                    & .msg-detail {
-                        &::before {
-                        }
-                    }
-                    & .msgtime {
-                    }
-                    & .msg-input {
-                        &:focus {
-                        }
-                    }
-                    & .send-btn {
-                    }
-                }
-                & .search-offcanvas {
-                }
-                & .card {
-                    & .dash-card {
-                        & .recent-activity {
-                        }
-                        & .card {
-                            & .icon-shape {
-                            }
-                            & .card-budget {
-                            }
-                            & .card-price {
-                            }
-                            & .card-per {
-                                & .arrow {
-                                }
-                                & .per-title {
-                                }
-                            }
-                            & .card-time {
-                            }
-                            &:hover {
-                            }
-                        }
-                    }
-                    & .user-table {
-                        & .letest-project {
-                        }
-                        & .table-heading {
-                        }
-                        & .table-img {
-                        }
-                        & .table-title {
-                        }
-                        & .table-date {
-                        }
-                        & .table-status {
-                            & .badge-dot {
-                            }
-                        }
-                        & .table-usericon {
-                            &:hover {
-                            }
-                        }
-                        & .table-per {
-                        }
-                        & .progress {
-                            & .progress-bar {
-                            }
-                        }
-                        & .viewall-btn {
-                        }
-                        & .delete-btn {
-                            & .delete-icon {
-                                & .delete-img {
-                                }
-                            }
-                            &:hover {
-                                & .delete-img {
-                                }
-                            }
-                        }
-                    }
-                    & .Recent-Transactions {
-                        & .recent {
-                        }
-                        & .trans-heading {
-                        }
-                        & .count {
-                        }
-                        & .transuser-img {
-                        }
-                        & .trans-name {
-                        }
-                        & .trans-position {
-                        }
-                        & .priority {
-                        }
-                        & .Budget {
-                        }
-                        & .time {
-                        }
-                    }
-                }
+            }
+            & .hero-title {
             }
         }
     }
 }
 // Large devices (desktops, 992px and up)
-@mixin admin-panel-mixin-min-lg() {
-    .admin-panel {
-        & .adminpanel-leftmain {
-            & .adminpanel-left {  
-                & .panel-logo {
+@mixin heroSection-mixin-min-lg() {
+    .heroSection {
+        & .mySwiper {
+            & .swiper-slide{
+                & .sliderr1 {
                 }
-                & .panel-content {
-                    & .sidelink-main {
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                        &::after {
-                        }
-                        &.collapsed{
-                            &::after{
-                            }
-                        }
-                    }
-                    & .sidelink-main2 {
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                    }
-                    & .sidelink {
-                    }
-                    & .resource {
-                    }
+                & .sliderr2 {
+                }
+                & .sliderr3 {
+                }
+                & .sliderr4 {
+                }
+                & .sliderr5 {
                 }
             }
-        }
-        & .adminpanel-right {
-            & .dashboard-nav {
-               & .admin-navbar {
-                    & .menu-btn {
-                    }
-                    & .dash-logo {
-                    }
-                    & .search-btn {
-                    }
-                    & .icon-link {
-                        &::before {
-                        }
-                    }
-                    & .input-group {
-                        & .search-input {
-                           &:focus {
-                           }
-                        }
-                    }
-                    & .message {
-                        &::before {
-                        }
-                    }
-                    & .navbar-link {
-                        & .navuser-icon {
-                        }
-                    }
-                    & .dropdown-menu {
-                        & .user-name {
-                        }
-                        & .user-position {
-                        }
-                        & .user-link {
-                            &:active {
-                            }
-                            &:hover {
-                            }
-                            & .user-dataicon {
-                            }
-                        }
-                    }
-               }
+            & .swiper-pagination {
+                & .swiper-pagination-bullet {
+                }
+                & .swiper-pagination-bullet-active {
+                }
             }
-            & .dashboard-right {
-                & .notification-offcanvas {
-                    & .offcanvas-title {
-                    }
-                    & .btn-close {
-                    }
-                    & .notification-link {
-                        &:hover {
-                        }
-                        & .notification-icon {
-                        }
-                        & .notification-heading {
-                        }
-                        & .notification-time {
-                        }
-                        & .notification-title {
-                        }
-                    } 
+            & .hero-heading {
+                & .hero-subheading {
                 }
-                & .msg-offcanvas {
-                    & .offcanvas-header {
-                        & .offcanvas-title {
-                        }
-                        & .btn-close {
-                        }
-                        & .user-img2 {
-                        }
-                    }
-                    & .msguser-img {
-                        &::before {
-                        }
-                    }
-                    & .msguser-name {
-                    }
-                    & .msguser-status {
-                    }
-                    & .msguser-name {
-                    }
-                    & .msgusericon {
-                    }
-                    & .msg-detail {
-                        &::before {
-                        }
-                    }
-                    & .msgtime {
-                    }
-                    & .msg-input {
-                        &:focus {
-                        }
-                    }
-                    & .send-btn {
-                    }
-                }
-                & .search-offcanvas {
-                }
-                & .card {
-                    & .dash-card {
-                        & .recent-activity {
-                        }
-                        & .card {
-                            & .icon-shape {
-                            }
-                            & .card-budget {
-                            }
-                            & .card-price {
-                            }
-                            & .card-per {
-                                & .arrow {
-                                }
-                                & .per-title {
-                                }
-                            }
-                            & .card-time {
-                            }
-                            &:hover {
-                            }
-                        }
-                    }
-                    & .user-table {
-                        & .letest-project {
-                        }
-                        & .table-heading {
-                        }
-                        & .table-img {
-                        }
-                        & .table-title {
-                        }
-                        & .table-date {
-                        }
-                        & .table-status {
-                            & .badge-dot {
-                            }
-                        }
-                        & .table-usericon {
-                            &:hover {
-                            }
-                        }
-                        & .table-per {
-                        }
-                        & .progress {
-                            & .progress-bar {
-                            }
-                        }
-                        & .viewall-btn {
-                        }
-                        & .delete-btn {
-                            & .delete-icon {
-                                & .delete-img {
-                                }
-                            }
-                            &:hover {
-                                & .delete-img {
-                                }
-                            }
-                        }
-                    }
-                    & .Recent-Transactions {
-                        & .recent {
-                        }
-                        & .trans-heading {
-                        }
-                        & .count {
-                        }
-                        & .transuser-img {
-                        }
-                        & .trans-name {
-                        }
-                        & .trans-position {
-                        }
-                        & .priority {
-                        }
-                        & .Budget {
-                        }
-                        & .time {
-                        }
-                    }
-                }
+            }
+            & .hero-title {
             }
         }
     }
 }
 // X-Large devices (large desktops, 1200px and up)
-@mixin admin-panel-mixin-min-xl() {
-    .admin-panel {
-        & .adminpanel-leftmain {
-            & .adminpanel-left {  
-                & .panel-logo {
+@mixin heroSection-mixin-min-xl() {
+    .heroSection {
+        & .mySwiper {
+            & .swiper-slide{
+                & .sliderr1 {
                 }
-                & .panel-content {
-                    & .sidelink-main {
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                        &::after {
-                        }
-                        &.collapsed{
-                            &::after{
-                            }
-                        }
-                    }
-                    & .sidelink-main2 {
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                    }
-                    & .sidelink {
-                    }
-                    & .resource {
-                    }
+                & .sliderr2 {
+                }
+                & .sliderr3 {
+                }
+                & .sliderr4 {
+                }
+                & .sliderr5 {
                 }
             }
-        }
-        & .adminpanel-right {
-            & .dashboard-nav {
-               & .admin-navbar {
-                    & .menu-btn {
-                    }
-                    & .dash-logo {
-                    }
-                    & .search-btn {
-                    }
-                    & .icon-link {
-                        &::before {
-                        }
-                    }
-                    & .input-group {
-                        & .search-input {
-                           &:focus {
-                           }
-                        }
-                    }
-                    & .message {
-                        &::before {
-                        }
-                    }
-                    & .navbar-link {
-                        & .navuser-icon {
-                        }
-                    }
-                    & .dropdown-menu {
-                        & .user-name {
-                        }
-                        & .user-position {
-                        }
-                        & .user-link {
-                            &:active {
-                            }
-                            &:hover {
-                            }
-                            & .user-dataicon {
-                            }
-                        }
-                    }
-               }
+            & .swiper-pagination {
+                & .swiper-pagination-bullet {
+                }
+                & .swiper-pagination-bullet-active {
+                }
             }
-            & .dashboard-right {
-                & .notification-offcanvas {
-                    & .offcanvas-title {
-                    }
-                    & .btn-close {
-                    }
-                    & .notification-link {
-                        &:hover {
-                        }
-                        & .notification-icon {
-                        }
-                        & .notification-heading {
-                        }
-                        & .notification-time {
-                        }
-                        & .notification-title {
-                        }
-                    } 
+            & .hero-heading {
+                & .hero-subheading {
                 }
-                & .msg-offcanvas {
-                    & .offcanvas-header {
-                        & .offcanvas-title {
-                        }
-                        & .btn-close {
-                        }
-                        & .user-img2 {
-                        }
-                    }
-                    & .msguser-img {
-                        &::before {
-                        }
-                    }
-                    & .msguser-name {
-                    }
-                    & .msguser-status {
-                    }
-                    & .msguser-name {
-                    }
-                    & .msgusericon {
-                    }
-                    & .msg-detail {
-                        &::before {
-                        }
-                    }
-                    & .msgtime {
-                    }
-                    & .msg-input {
-                        &:focus {
-                        }
-                    }
-                    & .send-btn {
-                    }
-                }
-                & .search-offcanvas {
-                }
-                & .card {
-                    & .dash-card {
-                        & .recent-activity {
-                        }
-                        & .card {
-                            & .icon-shape {
-                            }
-                            & .card-budget {
-                            }
-                            & .card-price {
-                            }
-                            & .card-per {
-                                & .arrow {
-                                }
-                                & .per-title {
-                                }
-                            }
-                            & .card-time {
-                            }
-                            &:hover {
-                            }
-                        }
-                    }
-                    & .user-table {
-
-                        & .letest-project {
-                        }
-                        & .table-heading {
-                        }
-                        & .table-img {
-                        }
-                        & .table-title {
-                        }
-                        & .table-date {
-                        }
-                        & .table-status {
-                            & .badge-dot {
-                            }
-                        }
-                        & .table-usericon {
-                            &:hover {
-                            }
-                        }
-                        & .table-per {
-                        }
-                        & .progress {
-                            & .progress-bar {
-                            }
-                        }
-                        & .viewall-btn {
-                        }
-                        & .delete-btn {
-                            & .delete-icon {
-                                & .delete-img {
-                                }
-                            }
-                            &:hover {
-                                & .delete-img {
-                                }
-                            }
-                        }
-                    }
-                    & .Recent-Transactions {
-                        & .recent {
-                        }
-                        & .trans-heading {
-                        }
-                        & .count {
-                        }
-                        & .transuser-img {
-                        }
-                        & .trans-name {
-                        }
-                        & .trans-position {
-                        }
-                        & .priority {
-                        }
-                        & .Budget {
-                        }
-                        & .time {
-                        }
-                    }
-                }
+            }
+            & .hero-title {
             }
         }
     }
 }
 // XX-Large devices (larger desktops, 1400px and up)
-@mixin admin-panel-mixin-min-xxl() {
-    .admin-panel {
-        & .adminpanel-leftmain {
-            & .adminpanel-left {  
-                & .panel-logo {
+@mixin heroSection-mixin-min-xxl() {
+    .heroSection {
+        & .mySwiper {
+            & .swiper-slide{
+                & .sliderr1 {
                 }
-                & .panel-content {
-                    & .sidelink-main {
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                        &::after {
-                        }
-                        &.collapsed{
-                            &::after{
-                            }
-                        }
-                    }
-                    & .sidelink-main2 {
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                    }
-                    & .sidelink {
-                    }
-                    & .resource {
-                    }
+                & .sliderr2 {
+                }
+                & .sliderr3 {
+                }
+                & .sliderr4 {
+                }
+                & .sliderr5 {
                 }
             }
-        }
-        & .adminpanel-right {
-            & .dashboard-nav {
-               & .admin-navbar {
-                    & .menu-btn {
-                    }
-                    & .dash-logo {
-                    }
-                    & .search-btn {
-                    }
-                    & .icon-link {
-                        &::before {
-                        }
-                    }
-                    & .input-group {
-                        & .search-input {
-                           &:focus {
-                           }
-                        }
-                    }
-                    & .message {
-                        &::before {
-                        }
-                    }
-                    & .navbar-link {
-                        & .navuser-icon {
-                        }
-                    }
-                    & .dropdown-menu {
-                        & .user-name {
-                        }
-                        & .user-position {
-                        }
-                        & .user-link {
-                            &:active {
-                            }
-                            &:hover {
-                            }
-                            & .user-dataicon {
-                            }
-                        }
-                    }
-               }
+            & .swiper-pagination {
+                & .swiper-pagination-bullet {
+                }
+                & .swiper-pagination-bullet-active {
+                }
             }
-            & .dashboard-right {
-                & .notification-offcanvas {
-                    & .offcanvas-title {
-                    }
-                    & .btn-close {
-                    }
-                    & .notification-link {
-                        &:hover {
-                        }
-                        & .notification-icon {
-                        }
-                        & .notification-heading {
-                        }
-                        & .notification-time {
-                        }
-                        & .notification-title {
-                        }
-                    } 
+            & .hero-heading {
+                & .hero-subheading {
                 }
-                & .msg-offcanvas {
-                    & .offcanvas-header {
-                        & .offcanvas-title {
-                        }
-                        & .btn-close {
-                        }
-                        & .user-img2 {
-                        }
-                    }
-                    & .msguser-img {
-                        &::before {
-                        }
-                    }
-                    & .msguser-name {
-                    }
-                    & .msguser-status {
-                    }
-                    & .msguser-name {
-                    }
-                    & .msgusericon {
-                    }
-                    & .msg-detail {
-                        &::before {
-                        }
-                    }
-                    & .msgtime {
-                    }
-                    & .msg-input {
-                        &:focus {
-                        }
-                    }
-                    & .send-btn {
-                    }
-                }
-                & .search-offcanvas {
-                }
-                & .card {
-                    & .dash-card {
-                        & .recent-activity {
-                        }
-                        & .card {
-                            & .icon-shape {
-                            }
-                            & .card-budget {
-                            }
-                            & .card-price {
-                            }
-                            & .card-per {
-                                & .arrow {
-                                }
-                                & .per-title {
-                                }
-                            }
-                            & .card-time {
-                            }
-                            &:hover {
-                            }
-                        }
-                    }
-                    & .user-table {
-
-                        & .letest-project {
-                        }
-                        & .table-heading {
-                        }
-                        & .table-img {
-                        }
-                        & .table-title {
-                        }
-                        & .table-date {
-                        }
-                        & .table-status {
-                            & .badge-dot {
-                            }
-                        }
-                        & .table-usericon {
-                            &:hover {
-                            }
-                        }
-                        & .table-per {
-                        }
-                        & .progress {
-                            & .progress-bar {
-                            }
-                        }
-                        & .viewall-btn {
-                        }
-                        & .delete-btn {
-                            & .delete-icon {
-                                & .delete-img {
-                                }
-                            }
-                            &:hover {
-                                & .delete-img {
-                                }
-                            }
-                        }
-                    }
-                    & .Recent-Transactions {
-                        & .recent {
-                        }
-                        & .trans-heading {
-                        }
-                        & .count {
-                        }
-                        & .transuser-img {
-                        }
-                        & .trans-name {
-                        }
-                        & .trans-position {
-                        }
-                        & .priority {
-                        }
-                        & .Budget {
-                        }
-                        & .time {
-                        }
-                    }
-                }
+            }
+            & .hero-title {
             }
         }
     }
 }
 // X-Large devices (large desktops, less than 1400px)
-@mixin admin-panel-mixin-max-xl() {
-    .admin-panel {
-        & .adminpanel-leftmain {
-            & .adminpanel-left {
-                & .panel-logo {
+@mixin heroSection-mixin-max-xl() {
+    .heroSection {
+        & .mySwiper {
+            & .swiper-slide{
+                & .sliderr1 {
                 }
-                & .panel-content {
-                    & .sidelink-main {
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                        &::after {
-                        }
-                        &.collapsed{
-                            &::after{
-                            }
-                        }
-                    }
-                    & .sidelink-main2 {
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                    }
-                    & .sidelink {
-                    }
-                    & .resource {
-                    }
+                & .sliderr2 {
+                }
+                & .sliderr3 {
+                }
+                & .sliderr4 {
+                }
+                & .sliderr5 {
                 }
             }
-        }
-        & .adminpanel-right {
-            & .dashboard-nav {
-               & .navbar {
-                    & .dash-logo {
-                    }
-                    & .icon-link {
-                        &::before {
-                        }
-                    }
-                    & .input-group {
-                        & .search-input {
-                           &:focus {
-                           }
-                        }
-                    }
-                    & .message {
-                        &::before {
-                        }
-                    }
-                    & .navbar-link {
-                        & .navuser-icon {
-                        }
-                    }
-                    & .dropdown-menu {
-                        & .user-name {
-                        }
-                        & .user-position {
-                        }
-                        & .user-link {
-                            &:active {
-                            }
-                            &:hover {
-                            }
-                            & .user-dataicon {
-                            }
-                        }
-                    }
-               }
+            & .swiper-pagination {
+                & .swiper-pagination-bullet {
+                }
+                & .swiper-pagination-bullet-active {
+                }
             }
-            & .dashboard-right {
-                & .notification-offcanvas {
-                    & .offcanvas-title {
-                    }
-                    & .btn-close {
-                    }
-                    & .notification-link {
-                        &:hover {
-                        }
-                        & .notification-icon {
-                        }
-                        & .notification-heading {
-                        }
-                        & .notification-time {
-                        }
-                        & .notification-title {
-                        }
-                    } 
+            & .hero-heading {
+                & .hero-subheading {
                 }
-                & .msg-offcanvas {
-                    & .offcanvas-header {
-                        & .offcanvas-title {
-                        }
-                        & .btn-close {
-                        }
-                        & .user-img2 {
-                        }
-                    }
-                    & .msguser-img {
-                        &::before {
-                        }
-                    }
-                    & .msguser-name {
-                    }
-                    & .msguser-status {
-                    }
-                    & .msguser-name {
-                    }
-                    & .msgusericon {
-                    }
-                    & .msg-detail {
-                        &::before {
-                        }
-                    }
-                    & .msgtime {
-                    }
-                    & .msg-input {
-                        &:focus {
-                        }
-                    }
-                    & .send-btn {
-                    }
-                }
-                & .card {
-                    & .dash-card {
-                        & .recent-activity {
-                        }
-                        & .card {
-                            & .icon-shape {
-                            }
-                            & .card-budget {
-                            }
-                            & .card-price {
-                            }
-                            & .card-per {
-                                & .arrow {
-                                }
-                                & .per-title {
-                                }
-                            }
-                            & .card-time {
-                            }
-                            &:hover {
-                            }
-                        }
-                    }
-                    & .user-table {
-
-                        & .letest-project {
-                        }
-                        & .table-heading {
-                        }
-                        & .table-img {
-                        }
-                        & .table-title {
-                        }
-                        & .table-date {
-                        }
-                        & .table-status {
-                            & .badge-dot {
-                            }
-                        }
-                        & .table-usericon {
-                            &:hover {
-                            }
-                        }
-                        & .table-per {
-                        }
-                        & .progress {
-                            & .progress-bar {
-                            }
-                        }
-                        & .viewall-btn {
-                        }
-                        & .delete-btn {
-                            & .delete-icon {
-                                & .delete-img {
-                                }
-                            }
-                            &:hover {
-                                & .delete-img {
-                                }
-                            }
-                        }
-                    }
-                    & .Recent-Transactions {
-                        & .recent {
-                        }
-                        & .trans-heading {
-                        }
-                        & .count {
-                        }
-                        & .transuser-img {
-                        }
-                        & .trans-name {
-                        }
-                        & .trans-position {
-                        }
-                        & .priority {
-                        }
-                        & .Budget {
-                        }
-                        & .time {
-                        }
-                    }
-                }
+            }
+            & .hero-title {
             }
         }
     }
 }
 // Large devices (desktops, less than 1200px)
-@mixin admin-panel-mixin-max-lg() {
-    .admin-panel {
-        & .adminpanel-leftmain {
-            // position: fixed;
-            // z-index: 10000;
-            & .adminpanel-left {  
-                & .panel-logo {
+@mixin heroSection-mixin-max-lg() {
+    .heroSection {
+        & .mySwiper {
+            & .swiper-slide{
+                & .sliderr1 {
                 }
-                & .panel-content {
-                    & .sidelink-main {
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                        &::after {
-                        }
-                        &.collapsed{
-                            &::after{
-                            }
-                        }
-                    }
-                    & .sidelink-main2 {
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                    }
-                    & .sidelink {
-                    }
-                    & .resource {
-                    }
+                & .sliderr2 {
+                }
+                & .sliderr3 {
+                }
+                & .sliderr4 {
+                }
+                & .sliderr5 {
                 }
             }
-        }
-        & .adminpanel-right {
-            & .dashboard-nav {
-               & .admin-navbar {
-                    & .menu-btn {
-                    }
-                    & .dash-logo {
-                    }
-                    & .search-btn {
-                    }
-                    & .icon-link {
-                        &::before {
-                        }
-                    }
-                    & .input-group {
-                        & .search-input {
-                           &:focus {
-                           }
-                        }
-                    }
-                    & .message {
-                        &::before {
-                        }
-                    }
-                    & .navbar-link {
-                        & .navuser-icon {
-                        }
-                    }
-                    & .dropdown-menu {
-                        & .user-name {
-                        }
-                        & .user-position {
-                        }
-                        & .user-link {
-                            &:active {
-                            }
-                            &:hover {
-                            }
-                            & .user-dataicon {
-                            }
-                        }
-                    }
-               }
+            & .swiper-pagination {
+                & .swiper-pagination-bullet {
+                }
+                & .swiper-pagination-bullet-active {
+                }
             }
-            & .dashboard-right {
-                & .notification-offcanvas {
-                    & .offcanvas-title {
-                    }
-                    & .btn-close {
-                    }
-                    & .notification-link {
-                        &:hover {
-                        }
-                        & .notification-icon {
-                        }
-                        & .notification-heading {
-                        }
-                        & .notification-time {
-                        }
-                        & .notification-title {
-                        }
-                    } 
+            & .hero-heading {
+                font-size: 55px;
+                & .hero-subheading {
                 }
-                & .msg-offcanvas {
-                    & .offcanvas-header {
-                        & .offcanvas-title {
-                        }
-                        & .btn-close {
-                        }
-                        & .user-img2 {
-                        }
-                    }
-                    & .msguser-img {
-                        &::before {
-                        }
-                    }
-                    & .msguser-name {
-                    }
-                    & .msguser-status {
-                    }
-                    & .msguser-name {
-                    }
-                    & .msgusericon {
-                    }
-                    & .msg-detail {
-                        &::before {
-                        }
-                    }
-                    & .msgtime {
-                    }
-                    & .msg-input {
-                        &:focus {
-                        }
-                    }
-                    & .send-btn {
-                    }
-                }
-                & .search-offcanvas {
-                }
-                & .card {
-                    & .dash-card {
-                        & .recent-activity {
-                        }
-                        & .card {
-                            & .icon-shape {
-                            }
-                            & .card-budget {
-                            }
-                            & .card-price {
-                            }
-                            & .card-per {
-                                & .arrow {
-                                }
-                                & .per-title {
-                                }
-                            }
-                            & .card-time {
-                            }
-                            &:hover {
-                            }
-                        }
-                    }
-                    & .user-table {
-
-                        & .letest-project {
-                        }
-                        & .table-heading {
-                        }
-                        & .table-img {
-                        }
-                        & .table-title {
-                        }
-                        & .table-date {
-                        }
-                        & .table-status {
-                            & .badge-dot {
-                            }
-                        }
-                        & .table-usericon {
-                            &:hover {
-                            }
-                        }
-                        & .table-per {
-                        }
-                        & .progress {
-                            & .progress-bar {
-                            }
-                        }
-                        & .viewall-btn {
-                        }
-                        & .delete-btn {
-                            & .delete-icon {
-                                & .delete-img {
-                                }
-                            }
-                            &:hover {
-                                & .delete-img {
-                                }
-                            }
-                        }
-                    }
-                    & .Recent-Transactions {
-                        & .recent {
-                        }
-                        & .trans-heading {
-                        }
-                        & .count {
-                        }
-                        & .transuser-img {
-                        }
-                        & .trans-name {
-                        }
-                        & .trans-position {
-                        }
-                        & .priority {
-                        }
-                        & .Budget {
-                        }
-                        & .time {
-                        }
-                    }
-                }
+            }
+            & .hero-title {
+                font-size: 15px;
             }
         }
     }
 }
 // Medium devices (tablets, less than 992px)
-@mixin admin-panel-mixin-max-md() {
-    .admin-panel {
-        & .adminpanel-leftmain {
-            & .adminpanel-left {  
-                & .panel-logo {
+@mixin heroSection-mixin-max-md() {
+    .heroSection {
+        & .mySwiper {
+            & .swiper-slide{
+                & .sliderr1 {
                 }
-                & .panel-content {
-                    & .sidelink-main {
-                        font-size: 14px;
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                        &::after {
-                        }
-                        &.collapsed{
-                            &::after{
-                            }
-                        }
-                    }
-                    & .sidelink-main2 {
-                        font-size: 14px;
-                        &:hover {
-                        }
-                        & .icon-link {
-                        }
-                    }
-                    & .sidelink {
-                    }
-                    & .resource {
-                    }
+                & .sliderr2 {
+                }
+                & .sliderr3 {
+                }
+                & .sliderr4 {
+                }
+                & .sliderr5 {
                 }
             }
-        }
-        & .adminpanel-right {
-            & .dashboard-nav {
-               & .admin-navbar {
-                    & .menu-btn {
-                    }
-                    & .dash-logo {
-                        font-size: 18px;
-                    }
-                    & .search-btn {
-                        height: 20px;
-                        width: 20px;
-                    }
-                    & .icon-link {
-                        height:22px;
-                        width: 22px;
-                        &::before {
-                            height: 18px;
-                            width: 18px;
-                        }
-                    }
-                    & .input-group {
-                        & .search-input {
-                           &:focus {
-                           }
-                        }
-                    }
-                    & .message {
-                        &::before {
-                        }
-                    }
-                    & .navbar-link {
-                        & .navuser-icon {
-                            height: 30px;
-                            width: 30px;
-                        }
-                    }
-                    & .dropdown-menu {
-                        & .user-name {
-                            font-size: 14px;
-                        }
-                        & .user-position {
-                            font-size: 12px;
-                        }
-                        & .user-link {
-                            font-size: 13px;
-                            &:active {
-                            }
-                            &:hover {
-                            }
-                            & .user-dataicon {
-                            }
-                        }
-                    }
-               }
+            & .swiper-pagination {
+                & .swiper-pagination-bullet {
+                }
+                & .swiper-pagination-bullet-active {
+                }
             }
-            & .dashboard-right {
-                & .notification-offcanvas {
-                    & .offcanvas-title {
-                        font-size: 20px;
-                    }
-                    & .btn-close {
-                    }
-                    & .notification-link {
-                        &:hover {
-                        }
-                        & .notification-icon {
-                            height: 32px;
-                            width: 32px;
-                        }
-                        & .notification-heading {
-                        }
-                        & .notification-time {
-                        }
-                        & .notification-title {
-                        }
-                    } 
+            & .hero-heading {
+                font-size: 44px;
+                line-height: 46px;
+                & .hero-subheading {
                 }
-                & .msg-offcanvas {
-                    & .offcanvas-header {
-                        & .btn-close {
-                        }
-                        & .user-img2 {
-                        }
-                    }
-                    & .msguser-img {
-                        height: 38px;
-                        width: 38px;
-                        &::before {
-                        }
-                    }
-                    & .msguser-status {
-                    }
-                    & .msguser-name {
-                        font-size: 14px;
-                    }
-                    & .msgusericon {
-                    }
-                    & .msg-detail {
-                        &::before {
-                        }
-                    }
-                    & .msgtime {
-                    }
-                    & .msg-input {
-                        &:focus {
-                        }
-                    }
-                    & .send-btn {
-                    }
-                }
-                & .search-offcanvas {
-                }
-                & .card {
-                    & .dash-card {
-                        & .recent-activity {
-                            font-size: 15px;
-                        }
-                        & .card {
-                            & .icon-shape {
-                                height: 45px;
-                                width: 45px;
-                                padding: 10px;
-                            }
-                            & .card-budget {
-                                font-size: 13px;
-                            }
-                            & .card-price {
-                                font-size: 19px;
-                            }
-                            & .card-per {
-                                & .arrow {
-                                }
-                                & .per-title {
-                                }
-                            }
-                            & .card-time {
-                            }
-                            &:hover {
-                            }
-                        }
-                    }
-                    & .user-table {
-                        & .letest-project {
-                            font-size: 15px;
-                        }
-                        & .table-heading {
-                        }
-                        & .table-img {
-                            height: 30px;
-                            width: 30px;
-                        }
-                        & .table-title {
-                        }
-                        & .table-date {
-                        }
-                        & .table-status {
-                            & .badge-dot {
-                            }
-                        }
-                        & .table-usericon {
-                            &:hover {
-                            }
-                        }
-                        & .table-per {
-                        }
-                        & .progress {
-                            & .progress-bar {
-                            }
-                        }
-                        & .viewall-btn {
-                           
-                        }
-                        & .delete-btn {
-                            & .delete-icon {
-                                & .delete-img {
-                                }
-                            }
-                            &:hover {
-                                & .delete-img {
-                                }
-                            }
-                        }
-                    }
-                    & .Recent-Transactions {
-                        & .recent {
-                            font-size: 15px;
-                        }
-                        & .trans-heading {
-                        }
-                        & .count {
-                            font-size: 14px;
-                        }
-                        & .transuser-img {
-                            height: 33px;
-                            width: 33px;
-                        }
-                        & .trans-name {
-                        }
-                        & .trans-position {
-                            font-size: 12px;
-                        }
-                        & .priority {
-                            font-size: 12px;
-                        }
-                        & .Budget {
-                            font-size: 13px;
-                        }
-                        & .time {
-                            font-size: 12px;
-                        }
-                    }
-                }
+            }
+            & .hero-title {
+                font-size: 14px;
             }
         }
     }
-    
 }
 // Small devices (landscape phones, less than 768px)
-@mixin admin-panel-mixin-max-sm() {
-    .admin-panel {
-        & .adminpanel-leftmain {
-            & .adminpanel-left {  
-                & .panel-logo {
+@mixin heroSection-mixin-max-sm() {
+    .heroSection {
+        & .mySwiper {
+            & .swiper-slide{
+                & .sliderr1 {
                 }
-                & .panel-content {
-                    & .sidelink-main {
-                        font-size: 13px;
-                        &:hover {
-                        }
-                        & .icon-link {
-                            height: 14px;
-                            width: 14px;
-                        }
-                        &::after {
-                        }
-                        &.collapsed{
-                            &::after{
-                            }
-                        }
-                    }
-                    & .sidelink-main2 {
-                        font-size: 13px;
-                        &:hover {
-                        }
-                        & .icon-link {
-                            height: 14px;
-                            width: 14px;
-                        }
-                    }
-                    & .sidelink {
-                        font-size: 12px;
-                    }
-                    & .resource {
-                        font-size: 13px;
-                    }
+                & .sliderr2 {
+                }
+                & .sliderr3 {
+                }
+                & .sliderr4 {
+                }
+                & .sliderr5 {
                 }
             }
-        }
-        & .adminpanel-right {
-            & .dashboard-nav {
-               & .admin-navbar {
-                    & .menu-btn {
-                        height: 18px;
-                        width: 18px;
-                    }
-                    & .dash-logo {
-                        font-size: 17px;
-                    }
-                    & .search-btn {
-                        height: 18px;
-                        width: 18px;
-                    }
-                    & .icon-link {
-                        height:20px;
-                        width: 20px;
-                        &::before {
-                            height: 16px;
-                            width: 16px;
-                            font-size: 9px;
-                        }
-                    }
-                    & .input-group {
-                        & .search-input {
-                           &:focus {
-                           }
-                        }
-                    }
-                    & .message {
-                        &::before {
-                        }
-                    }
-                    & .navbar-link {
-                        font-size: 13px;
-                        & .navuser-icon {
-                            height: 28px;
-                            width: 28px;
-                        }
-                    }
-                    & .dropdown-menu {
-                        & .user-name {
-                            font-size: 13px;
-                        }
-                        & .user-position {
-                            font-size: 11px;
-                        }
-                        & .user-link {
-                            font-size: 12px;
-                            &:active {
-                            }
-                            &:hover {
-                            }
-                            & .user-dataicon {
-                            }
-                        }
-                    }
-               }
-            }
-            & .dashboard-right {
-                & .notification-offcanvas {
-                    width: 350px;
-                    & .offcanvas-title {
-                        font-size: 18px;
-                    }
-                    & .btn-close {
-                        font-size: 13px;
-                    }
-                    & .notification-link {
-                        &:hover {
-                        }
-                        & .notification-icon {
-                            height: 30px;
-                            width: 30px;
-                        }
-                        & .notification-heading {
-                            font-size: 13px;
-                        }
-                        & .notification-time {
-                            font-size: 11px;
-                        }
-                        & .notification-title {
-                            font-size: 12px;
-                        }
-                    } 
+            & .swiper-pagination {
+                & .swiper-pagination-bullet {
+                    height: 12px;
+                    width: 12px;
                 }
-                & .msg-offcanvas {
-                    width: 350px;
-                    & .offcanvas-header {
-                        & .btn-close {
-                            font-size: 13px;
-                        }
-                        & .user-img2 {
-                        }
-                    }
-                    & .msguser-img {
-                        height: 36px;
-                        width: 36px;
-                        &::before {
-                        }
-                    }
-                    & .msguser-status {
-                        font-size: 12px;
-                    }
-                    & .msguser-name {
-                        font-size: 13px;
-                    }
-                    & .msgusericon {
-                    }
-                    & .msg-detail {
-                        font-size: 11px;
-                        &::before {
-                        }
-                    }
-                    & .msgtime {
-                        font-size: 9px;
-                    }
-                    & .msg-input {
-                        font-size: 12px;
-                        &:focus {
-                        }
-                    }
-                    & .send-btn {
-                        font-size: 12px;
-                    }
-                }
-                & .search-offcanvas {
-                }
-                & .card {
-                    & .dash-card {
-                        & .recent-activity {
-                            font-size: 14px;
-                        }
-                        & .card {
-                            & .icon-shape {
-                                height: 40px;
-                                width: 40px;
-                                padding: 10px;
-                            }
-                            & .card-budget {
-                                font-size: 12px;
-                            }
-                            & .card-price {
-                                font-size: 17px;
-                            }
-                            & .card-per {
-                                & .arrow {
-                                    height: 10px;
-                                }
-                                & .per-title {
-                                    font-size: 11px;
-                                }
-                            }
-                            & .card-time {
-                                font-size: 12px;
-                            }
-                            &:hover {
-                            }
-                        }
-                    }
-                    & .user-table {
-                        & .letest-project {
-                            font-size: 14px;
-                        }
-                        & .table-heading {
-                        }
-                        & .table-img {
-                            height: 28px;
-                            width: 28px;
-                        }
-                        & .table-title {
-                            font-size: 13px;
-                        }
-                        & .table-date {
-                            font-size: 12px;
-                        }
-                        & .table-status {
-                            font-size: 13px;
-                            & .badge-dot {
-                            }
-                        }
-                        & .table-usericon {
-                            height: 28px;
-                            width: 28px;
-                            &:hover {
-                            }
-                        }
-                        & .table-per {
-                            font-size: 13px;
-                        }
-                        & .progress {
-                            width: 85px;
-                            & .progress-bar {
-                            }
-                        }
-                        & .viewall-btn {
-                            font-size: 11px;
-                        }
-                        & .delete-btn {
-                            & .delete-icon {
-                                & .delete-img {
-                                }
-                            }
-                            &:hover {
-                                & .delete-img {
-                                }
-                            }
-                        }
-                        & .show-project {
-                            font-size: 12px;
-                        }
-                    }
-                    & .Recent-Transactions {
-                        & .recent {
-                            font-size: 14px;
-                        }
-                        & .trans-heading {
-                        }
-                        & .count {
-                            font-size: 13px;
-                        }
-                        & .transuser-img {
-                            height: 29px;
-                            width: 29px;
-                        }
-                        & .trans-name {
-                            font-size: 13px;
-                        }
-                        & .trans-position {
-                            font-size: 11px;
-                        }
-                        & .priority {
-                            font-size: 11px;
-                        }
-                        & .Budget {
-                            font-size: 12px;
-                        }
-                        & .time {
-                            font-size: 11px;
-                        }
-                    }
+                & .swiper-pagination-bullet-active {
                 }
             }
-            & .copyright {
-                font-size: 11px;
-                & .copyright-logo {
-                    height: 25px;
-                    width: 100px;
+            & .hero-heading {
+                font-size: 36px;
+                line-height: 40px;
+                & .hero-subheading {
                 }
+            }
+            & .hero-title {
+                font-size: 13px ;
             }
         }
     }
 }
 // X-Small devices (portrait phones, less than 576px)
-@mixin admin-panel-mixin-max-xs() {
-    .admin-panel {
-        & .adminpanel-leftmain {
-            & .adminpanel-left {  
-                & .panel-logo {
-                    & .logo-img {
-                        width: 105px;
-                    }
+@mixin heroSection-mixin-max-xs() {
+    .heroSection {
+        & .mySwiper {
+            & .swiper-slide{
+                & .sliderr1 {
                 }
-                & .panel-content {
-                    & .sidelink-main {
-                        font-size: 12px;
-                        &:hover {
-                        }
-                        & .icon-link {
-                            height: 12px;
-                            width: 12px;
-                        }
-                        &::after {
-                            top: 32%;
-                        }
-                        &.collapsed{
-                            &::after{
-                            }
-                        }
-                    }
-                    & .sidelink-main2 {
-                        font-size: 12px;
-                        &:hover {
-                        }
-                        & .icon-link {
-                            height: 12px;
-                            width: 12px;
-                        }
-                    }
-                    & .sidelink {
-                        font-size: 11px;
-                    }
-                    & .resource {
-                        font-size: 12px
-                    }
+                & .sliderr2 {
+                }
+                & .sliderr3 {
+                }
+                & .sliderr4 {
+                }
+                & .sliderr5 {
+                }
+            }
+            & .swiper-pagination {
+                & .swiper-pagination-bullet {
+                    height: 10px;
+                    width: 10px;
+                    border-width: 2px;
+                }
+                & .swiper-pagination-bullet-active {
+                }
+            }
+            & .hero-heading {
+                font-size: 28px;
+                line-height: 35px;
+                & .hero-subheading {
+                }
+            }
+            & .hero-title {
+                font-size: 12px;
+            }
+        }
+    }
+}
+// hero section end
+
+
+// about us section start
+.about-us {
+    &::before {
+        content: 'FINANCE';
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        font-size: 120px;
+        font-weight: bold;
+        height: 100px;
+        width: 100%;
+        top: 0;
+        color: $white;
+        transform: rotate(90deg);
+        background-color: lighten($theme1, 45);
+    }
+    & .about-left {
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            height: 132px;
+            width: 100px;
+            top: -15px;
+            left: 10%;
+            background: url(../img/Index/about-animation.png) no-repeat;
+            animation: aboutus 4s infinite linear;
+        }
+        @keyframes aboutus {
+            0%, 100% {
+                transform: perspective(400px) translateY(0) rotate(0deg) translateZ(0px) translateX(0);
+            }
+            50% {
+                transform: perspective(400px) rotate(-20deg) translateZ(10px) translateY(10px) translateX(10px);
+            }
+        }
+        & .about-loanicon {
+            height: 55px;
+            width:86px;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: -7px;
+                height: 55px;
+                width: 55px;
+                background-color: lighten($black, 90) ;
+                z-index: -1;
+                border-radius: 50%;
+            }
+        }
+        & .about-title {
+        font-size: 18px;
+        color: lighten($black,10);
+        line-height: 28px;
+        
+        }
+        & .about-title2 {
+            font-size: 15px;
+            font-weight: 200;
+            color: lighten($black, 50);
+            line-height: 26px;
+        }
+        & .about-card {
+            & .about-card-heading {
+                font-size: 16px;
+                & .about-card-icon {
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+            & .about-card-title {
+                font-size: 14px;
+                color: lighten($black, 40);
+            }
+        }
+    }
+    & .about-us-img {
+        max-width: 440px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: 0;
+            bottom: 20px;
+            height: 94%;
+            width: 100%;
+            background-color: $theme1;
+            // width: 100%;
+            // height: 100%;
+            z-index: -1;
+            transform: rotate(4deg);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            background: url(../img/Index/about-dot.png) no-repeat;
+            top: -10%;
+            right: -20%;
+            height: 190px;
+            width: 190px;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin aboutus-mixin-min-sm() {
+    .aboutus {
+        & .about-card {
+            &:hover {
+            }
+            & .about-img {
+            }
+            & .about-heading {
+            }
+            & .about-title{
+            }
+        }
+    }
+}
+// Medium devices (tablets, 768px and up)
+@mixin aboutus-mixin-min-md() {
+    .aboutus {
+        & .about-card {
+            &:hover {
+            }
+            & .about-img {
+            }
+            & .about-heading {
+            }
+            & .about-title{
+            }
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@mixin aboutus-mixin-min-lg() {
+    .aboutus {
+        & .about-card {
+            &:hover {
+            }
+            & .about-img {
+            }
+            & .about-heading {
+            }
+            & .about-title{
+            }
+        }
+    }
+}
+// X-Large devices (large desktops, 1200px and up)
+@mixin aboutus-mixin-min-xl() {
+    .aboutus {
+        & .about-card {
+            &:hover {
+            }
+            & .about-img {
+            }
+            & .about-heading {
+            }
+            & .about-title{
+            }
+        }
+    }
+}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin aboutus-mixin-min-xxl() {
+    .aboutus {
+        & .about-card {
+            &:hover {
+            }
+            & .about-img {
+            }
+            & .about-heading {
+            }
+            & .about-title{
+            }
+        }
+    }
+}
+// X-Large devices (large desktops, less than 1400px)
+@mixin aboutus-mixin-max-xl() {
+    .aboutus {
+        & .about-card {
+            &:hover {
+            }
+            & .about-img {
+            }
+            & .about-heading {
+            }
+            & .about-title{
+            }
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin aboutus-mixin-max-lg() {
+    .aboutus {
+        & .about-card {
+            height: 290px;
+            width: 290px;
+            &:hover {
+            }
+            & .about-img {
+                height: 95px;
+                width: 95px;
+            }
+            & .about-heading {
+            }
+            & .about-title{
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin aboutus-mixin-max-md() {
+    .aboutus {
+        & .about-card {
+            height: 300px;
+            width: 300px;
+            &:hover {
+            }
+            & .about-img {
+                height: 90px;
+                width: 90px;
+            }
+            & .about-heading {
+                font-size: 20px;
+            }
+            & .about-title{
+                font-size: 14px;
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin aboutus-mixin-max-sm() {
+    .aboutus {
+        & .about-card {
+            height:270px ;
+            width: 270px;
+            &:hover {
+            }
+            & .about-img {
+                height: 75px;
+                width: 75px;
+            }
+            & .about-heading {
+                font-size: 18px;
+            }
+            & .about-title{
+                font-size: 13px;
+            }
+        }
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin aboutus-mixin-max-xs() {
+    .aboutus {
+        & .about-card {
+            height: 250px;
+            width: 250px;
+            border-width: 8px;
+            &:hover {
+            }
+            & .about-img {
+                height: 65px;
+                width: 65px;
+            }
+            & .about-heading {
+                font-size: 16px;
+            }
+            & .about-title{
+                font-size: 12px;
+                line-height: 19px;
+            }
+        }
+    }
+}
+// about us section end
+
+
+// how to play section start
+.howplay {
+    // background: url(../img/Index/bg5.jpg);
+    // background-position: center;
+    // background-size: cover;
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     height: 100%;
+    //     width: 100%;
+    //     background: rgba($black, 0.5);
+    // }
+    & .playcard {
+        transition: all 0.3s ease-in-out;
+        &::before {
+            border-left: 0 solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid $theme1;
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 5px;
+        }
+        & .playimg {
+            height: 60px;
+            width: 60px;
+        }
+        & .playheading {
+            font-size: 18px;
+            color: $white;
+        }
+        & .playline {
+            height: 2px;
+            width: 20px;
+            background-color: $theme1;
+            transition: all 0.3s ease-in-out;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: auto;
+                width: 70px;
+                right: 40px;
+                height: 2px;
+                background: $white;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-60%);
+                transition: all 0.3s ease-in-out;
+            }
+            &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 40px;
+                    width: 70px;
+                    height: 2px;
+                    background: $white;
+                    -webkit-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    transform: translateY(-60%);
+                    transition: all 0.3s ease-in-out;
+            }
+        }
+        & .playtitle {
+            font-size: 14px;
+            color: lighten($white, 10);
+        }
+        &:hover {
+            transform: translateY(-30px);
+            & .playline {
+                width: 40px !important;
+                &::before {
+                    background: $theme1;
+                }
+                &::after {
+                        background: $theme1;
                 }
             }
         }
-        & .adminpanel-right {
-            & .dashboard-nav {
-               & .admin-navbar {
-                    & .menu-btn {
-                        height: 16px;
-                        width: 16px;
-                    }
-                    & .dash-logo {
-                        font-size: 16px;
-                    }
-                    & .search-btn {
-                        height: 16px;
-                        width: 16px;
-                    }
-                    & .icon-link {
-                        height:17px;
-                        width: 17px;
-                        &::before {
-                            height: 12px;
-                            width: 12px;
-                            font-size: 8px;
-                        }
-                    }
-                    & .input-group {
-                        & .search-input {
-                           &:focus {
-                           }
-                        }
-                    }
-                    & .message {
-                        &::before {
-                        }
-                    }
-                    & .navbar-link {
-                        font-size: 12px;
-                        & .navuser-icon {
-                            height: 22px;
-                            width: 22px;
-                        }
-                    }
-                    & .dropdown-menu {
-                        & .user-name {
-                            font-size: 12px;
-                        }
-                        & .user-position {
-                            font-size: 10px;
-                        }
-                        & .user-link {
-                            font-size: 11px;
-                            &:active {
-                            }
-                            &:hover {
-                            }
-                            & .user-dataicon {
-                                height: 12px;
-                                width: 12px;
-                            }
-                        }
-                    }
-               }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin howplay-mixin-min-sm() {
+    .howplay {
+        & .playcard {
+            &::before {
             }
-            & .dashboard-right {
-                height: calc(100% - 110px);
-                & .notification-offcanvas {
-                    width: 280px;
-                    & .offcanvas-title {
-                        font-size: 16px;
-                    }
-                    & .btn-close {
-                        font-size: 12px;
-                    }
-                    & .notification-link {
-                        &:hover {
-                        }
-                        & .notification-icon {
-                            height: 26px;
-                            width: 26px;
-                        }
-                        & .notification-heading {
-                            font-size: 12px;
-                        }
-                        & .notification-time {
-                            font-size: 10px;
-                        }
-                        & .notification-title {
-                            font-size: 11px;
-                            line-height: 16px;
-                        }
-                    } 
+            & .playimg {
+            }
+            & .playheading {
+            }
+            & .playline {
+                &::before {
                 }
-                & .msg-offcanvas {
-                    width: 280px;
-                    & .offcanvas-header {
-                        & .btn-close {
-                            font-size: 12px;
-                        }
-                        & .user-img2 {
-                        }
-                    }
-                    & .msguser-img {
-                        height: 32px;
-                        width: 32px;
-                        &::before {
-                        }
-                    }
-                    & .msguser-status {
-                        font-size: 11px;
-                    }
-                    & .msguser-name {
-                        font-size: 12px;
-                    }
-                    & .msgusericon {
-                    }
-                    & .msg-detail {
-                        font-size: 10px;
-                        &::before {
-                        }
-                    }
-                    & .msgtime {
-                        font-size: 8px;
-                    }
-                    & .msg-input {
-                        font-size: 11px;
-                        &:focus {
-                        }
-                    }
-                    & .send-btn {
-                        font-size: 11px;
-                    }
-                }
-                & .search-offcanvas {
-                    height: 70px;
-                    & .search-inputt {
-                        font-size: 12px;
-                        &:focus {
-                            border-color: lighten($secondary, 46);
-                        }
-                    }
-                    & .search-btn {
-                        font-size: 12px;
-                    }
-                }
-                & .card {
-                    & .dash-card {
-                        & .recent-activity {
-                            font-size: 13px;
-                        }
-                        & .card {
-                            & .icon-shape {
-                                height: 35px;
-                                width: 35px;
-                                padding: 9px;
-                            }
-                            & .card-budget {
-                                font-size: 11px;
-                            }
-                            & .card-price {
-                                font-size: 15px;
-                            }
-                            & .card-per {
-                                & .arrow {
-                                    height: 8px;
-                                }
-                                & .per-title {
-                                    font-size: 10px;
-                                }
-                            }
-                            & .card-time {
-                                font-size: 11px;
-                            }
-                            &:hover {
-                            }
-                        }
-                    }
-                    & .user-table {
-                        & .letest-project {
-                            font-size: 13px;
-                        }
-                        & .table-heading {
-                            font-size: 10px;
-                        }
-                        & .table-img {
-                            height: 26px;
-                            width: 26px;
-                        }
-                        & .table-title {
-                            font-size: 12px;
-                        }
-                        & .table-date {
-                            font-size: 11px;
-                        }
-                        & .table-status {
-                            font-size: 12px;
-                            & .badge-dot {
-                                height: 8px;
-                                width: 8px;
-                            }
-                        }
-                        & .table-usericon {
-                            height: 25px;
-                            width: 25px;
-                            &:hover {
-                            }
-                        }
-                        & .table-per {
-                            font-size: 12px;
-                        }
-                        & .progress {
-                            width: 70px;
-                            & .progress-bar {
-                            }
-                        }
-                        & .viewall-btn {
-                            font-size: 10px;
-                        }
-                        & .delete-btn {
-                            & .delete-icon {
-                                & .delete-img {
-                                }
-                            }
-                            &:hover {
-                                & .delete-img {
-                                }
-                            }
-                        }
-                        & .show-project {
-                            font-size: 11px;
-                        }
-                    }
-                    & .Recent-Transactions {
-                        & .recent {
-                            font-size: 13px;
-                        }
-                        & .trans-heading {
-                            font-size: 10px;
-                        }
-                        & .count {
-                            font-size: 12px;
-                        }
-                        & .transuser-img {
-                            height: 26px;
-                            width: 26px;
-                        }
-                        & .trans-name {
-                            font-size: 12px;
-                        }
-                        & .trans-position {
-                            font-size: 10px;
-                        }
-                        & .priority {
-                            font-size: 10px;
-                        }
-                        & .Budget {
-                            font-size: 11px;
-                        }
-                        & .time {
-                            font-size: 10px;
-                        }
-                    }
+                &::after {
                 }
             }
-            & .copyright {
+            & .playtitle {
+            }
+            &:hover {
+            }
+        }
+    }
+}
+// Medium devices (tablets, 768px and up)
+@mixin howplay-mixin-min-md() {
+    .howplay {
+        & .playcard {
+            &::before {
+            }
+            & .playimg {
+            }
+            & .playheading {
+            }
+            & .playline {
+                &::before {
+                }
+                &::after {
+                }
+            }
+            & .playtitle {
+            }
+            &:hover {
+            }
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@mixin howplay-mixin-min-lg() {
+    .howplay {
+        & .playcard {
+            &::before {
+            }
+            & .playimg {
+            }
+            & .playheading {
+            }
+            & .playline {
+                &::before {
+                }
+                &::after {
+                }
+            }
+            & .playtitle {
+            }
+            &:hover {
+            }
+        }
+    }
+}
+// X-Large devices (large desktops, 1200px and up)
+@mixin howplay-mixin-min-xl() {
+    .howplay {
+        & .playcard {
+            &::before {
+            }
+            & .playimg {
+            }
+            & .playheading {
+            }
+            & .playline {
+                &::before {
+                }
+                &::after {
+                }
+            }
+            & .playtitle {
+            }
+            &:hover {
+            }
+        }
+    }
+}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin howplay-mixin-min-xxl() {
+    .howplay {
+        & .playcard {
+            &::before {
+            }
+            & .playimg {
+            }
+            & .playheading {
+            }
+            & .playline {
+                &::before {
+                }
+                &::after {
+                }
+            }
+            & .playtitle {
+            }
+            &:hover {
+            }
+        }
+    }
+}
+// X-Large devices (large desktops, less than 1400px)
+@mixin howplay-mixin-max-xl() {
+    .howplay {
+        & .playcard {
+            &::before {
+            }
+            & .playimg {
+            }
+            & .playheading {
+            }
+            & .playline {
+                &::before {
+                }
+                &::after {
+                }
+            }
+            & .playtitle {
+            }
+            &:hover {
+            }
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin howplay-mixin-max-lg() {
+    .howplay {
+        & .playcard {
+            &::before {
+            }
+            & .playimg {
+            }
+            & .playheading {
+                font-size: 17px;
+            }
+            & .playline {
+                &::before {
+                }
+                &::after {
+                }
+            }
+            & .playtitle {
+            }
+            &:hover {
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin howplay-mixin-max-md() {
+    .howplay {
+        & .playcard {
+            &::before {
+            }
+            & .playimg {
+            }
+            & .playheading {
+                font-size: 16px;
+            }
+            & .playline {
+                &::before {
+                }
+                &::after {
+                }
+            }
+            & .playtitle {
+                font-size: 13px;
+            }
+            &:hover {
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin howplay-mixin-max-sm() {
+    .howplay {
+        & .playcard {
+            &::before {
+            }
+            & .playimg {
                 height: 50px;
-                font-size: 10px;
-                & .copyright-logo {
-                    height: 20px;
-                    width: 90px;
+                width: 50px;
+            }
+            & .playheading {
+                font-size: 15px;
+            }
+            & .playline {
+                &::before {
+                }
+                &::after {
+                }
+            }
+            & .playtitle {
+                font-size: 12px;
+            }
+            &:hover {
+            }
+        }
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin howplay-mixin-max-xs() {
+    .howplay {
+        & .playcard {
+            &::before {
+            }
+            & .playimg {
+                height: 40px;
+                width: 40px;
+            }
+            & .playheading {
+                font-size: 14px;
+            }
+            & .playline {
+                &::before {
+                }
+                &::after {
+                }
+            }
+            & .playtitle {
+                font-size: 11px;
+            }
+            &:hover {
+                transform: translateY(-15px);
+            }
+        }
+    }
+}
+// how to play section end
+
+
+// testimonal start 
+.testimonal {
+    & .testimonial-card {
+        & .testimonial-pic {
+            height: 110px;
+            width: 110px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            // left: 0;
+            left:-70px;
+            height: 100%;
+            width: 25%;
+            background-color: $black;
+            z-index: 1;
+            transform: skewX(-30deg);
+            // transform: rotate(35deg);
+            border-right: 5px solid $theme1;
+        }
+        &::after {
+            bottom: 0;
+            right: 0;
+            content: '';
+            z-index: 0;
+            position: absolute;
+            border: 35px solid $theme1;
+            border-radius: 0 0 5px 0;
+            border-top-color: transparent!important;
+            border-left-color: transparent!important;
+        }
+        & .testimonial-content{
+            & .start-icon {
+                height: 15px;
+                width: 15px;
+            }
+            & .quote{
+                height: 20px;
+                width: 45px;
+                right: -5px;
+                bottom: 10px;
+            }
+            & .user-review {
+                font-size: 16px;
+                color: $black;
+                text-align: justify;
+            }
+            & .user-name {
+                font-size: 18px;
+                color: $black;
+            }
+        }
+        
+    }
+    & .swiper-pagination {
+        bottom: 0 !important;
+        & .swiper-pagination-bullet {
+            height: 7px;
+            width: 7px;
+            opacity: 5;
+            background-color: $theme1;
+        }
+        & .swiper-pagination-bullet-active {
+            height: 11px;
+            width: 11px;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin testimonal-mixin-min-sm() {
+    .testimonal {
+        & .testimonial-card {
+            & .testimonial-pic {
+            }
+            &::before {
+            }
+            &::after {
+            }
+            & .testimonial-content{
+                & .start-icon {
+                }
+                & .quote{
+                }
+                & .user-review {
+                }
+                & .user-name {
+                }
+            }
+            
+        }
+        & .swiper-pagination {
+            & .swiper-pagination-bullet {
+            }
+            & .swiper-pagination-bullet-active {
+
+            }
+        }
+    }
+}
+// Medium devices (tablets, 768px and up)
+@mixin testimonal-mixin-min-md() {
+    .testimonal {
+        & .testimonial-card {
+            & .testimonial-pic {
+            }
+            &::before {
+            }
+            &::after {
+            }
+            & .testimonial-content{
+                & .start-icon {
+                }
+                & .quote{
+                }
+                & .user-review {
+                }
+                & .user-name {
+                }
+            }
+            
+        }
+        & .swiper-pagination {
+            & .swiper-pagination-bullet {
+            }
+            & .swiper-pagination-bullet-active {
+
+            }
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@mixin testimonal-mixin-min-lg() {
+    .testimonal {
+        & .testimonial-card {
+            & .testimonial-pic {
+            }
+            &::before {
+            }
+            &::after {
+            }
+            & .testimonial-content{
+                & .start-icon {
+                }
+                & .quote{
+                }
+                & .user-review {
+                }
+                & .user-name {
                 }
             }
         }
-    }
-}
-// mobile screen (less than 400px)
-@media screen and (max-width:400px) {
-    .icon {
-        gap: 10px !important;
-    }
-}
-@media screen and (max-width:1110px) {
-    .admin {
-        position: absolute !important;
-        left: -300px !important;
-        top: 0 !important;
-    }
-    body{
-        &.expanded{
-            & .admin {
-                transform: translateX(0) !important;
-                position: absolute !important;
-                left: 0 !important;
-                top: 0 !important;
-                z-index: 1 !important;
+        & .swiper-pagination {
+            & .swiper-pagination-bullet {
+            }
+            & .swiper-pagination-bullet-active {
             }
         }
     }
 }
+// X-Large devices (large desktops, 1200px and up)
+@mixin testimonal-mixin-min-xl() {
+    .testimonal {
+        & .testimonial-card {
+            & .testimonial-pic {
+            }
+            &::before {
+            }
+            &::after {
+            }
+            & .testimonial-content{
+                & .start-icon {
+                }
+                & .quote{
+                }
+                & .user-review {
+                }
+                & .user-name {
+                }
+            }
+        }
+        & .swiper-pagination {
+            & .swiper-pagination-bullet {
+            }
+            & .swiper-pagination-bullet-active {
+
+            }
+        }
+    }
+}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin testimonal-mixin-min-xxl() {
+    .testimonal {
+        & .testimonial-card {
+            & .testimonial-pic {
+            }
+            &::before {
+            }
+            &::after {
+            }
+            & .testimonial-content{
+                & .start-icon {
+                }
+                & .quote{
+                }
+                & .user-review {
+                }
+                & .user-name {
+                }
+            }
+        }
+        & .swiper-pagination {
+            & .swiper-pagination-bullet {
+            }
+            & .swiper-pagination-bullet-active {
+
+            }
+        }
+    }
+}
+// X-Large devices (large desktops, less than 1400px)
+@mixin testimonal-mixin-max-xl() {
+    .testimonal {
+        & .testimonial-card {
+            & .testimonial-pic {
+            }
+            &::before {
+            }
+            &::after {
+            }
+            & .testimonial-content{
+                & .start-icon {
+                }
+                & .quote{
+                }
+                & .user-review {
+                }
+                & .user-name {
+                }
+            }
+        }
+        & .swiper-pagination {
+            & .swiper-pagination-bullet {
+            }
+            & .swiper-pagination-bullet-active {
+
+            }
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin testimonal-mixin-max-lg() {
+    .testimonal {
+        & .testimonial-card {
+            & .testimonial-pic {
+            }
+            &::before {
+                left: -76px;
+                width: 34%;
+            }
+            &::after {
+            }
+            & .testimonial-content{
+                & .start-icon {
+                }
+                & .quote{
+                }
+                & .user-review {
+                }
+                & .user-name {
+                }
+            }
+        }
+        & .swiper-pagination {
+            & .swiper-pagination-bullet {
+            }
+            & .swiper-pagination-bullet-active {
+
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin testimonal-mixin-max-md() {
+    .testimonal {
+        & .testimonial-card {
+            & .testimonial-pic {
+            }
+            &::before {
+                left: -60px;
+                width:16%;
+                transform: skewX(-30deg);
+            }
+            &::after {
+            }
+            & .testimonial-content{
+                & .start-icon {
+                }
+                & .quote{
+                    width: 42px;
+                }
+                & .user-review {
+                    font-size: 15px;
+                    line-height: 21px;
+                }
+                & .user-name {
+                    font-size: 16px;
+                }
+            }
+        }
+        & .swiper-pagination {
+            & .swiper-pagination-bullet {
+            }
+            & .swiper-pagination-bullet-active {
+
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin testimonal-mixin-max-sm() {
+    .testimonal {
+        & .testimonial-card {
+            & .testimonial-pic {
+                height: 90px;
+                width: 90px;
+            }
+            &::before {
+                left: -50px;
+                width: 20%;
+                transform: skewX(-30deg);
+            }
+            &::after {
+            }
+            & .testimonial-content{
+                & .start-icon {
+                    height: 12px;
+                    width: 12px;
+                }
+                & .quote{
+                }
+                & .user-review {
+                    font-size: 14px;
+                }
+                & .user-name {
+                    font-size: 15px;
+                }
+            }
+        }
+        & .swiper-pagination {
+            & .swiper-pagination-bullet {
+            }
+            & .swiper-pagination-bullet-active {
+
+            }
+        }
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin testimonal-mixin-max-xs() {
+    .testimonal {
+        & .testimonial-card {
+            & .testimonial-pic {
+                height: 70px;
+                width: 70px;
+            }
+            &::before {
+                left: -75px;
+                width: 30%;
+                transform: skewX(-20deg);
+            }
+            &::after {
+                border-width: 23px;
+            }
+            & .testimonial-content{
+                & .start-icon {
+                    height: 10px;
+                    width: 10px;
+                }
+                & .quote{
+                    width: 40px;
+                    height: auto;
+                    bottom: 3px;
+                    right: -5px;
+                }
+                & .user-review {
+                    font-size: 12px;
+                    line-height: 17px;
+                }
+                & .user-name {
+                    font-size: 14px;
+                }
+            }
+        }
+        & .swiper-pagination {
+            & .swiper-pagination-bullet {
+            }
+            & .swiper-pagination-bullet-active {
+
+            }
+        }
+    }
+}
+// less than 400px
+@media  screen and (max-width:420px) {
+    .testimonal {
+        & .testimonial-card {
+            & .testimonial-pic {
+            }
+            &::before {
+                left: -50px !important;
+                width: 30% !important;
+            }
+            &::after {
+            }
+            & .testimonial-content{
+                & .start-icon {
+                }
+                & .quote{
+                }
+                & .user-review {
+                    line-height: 16px !important;
+                }
+                & .user-name {
+                }
+            }
+        }
+        & .swiper-pagination {
+            & .swiper-pagination-bullet {
+            }
+            & .swiper-pagination-bullet-active {
+
+            }
+        }
+    }
+}
+// .testimonal end
+
+
+// faq section start
+.faq {
+    // & .faq-img {
+    //     height: 400px;
+    //     width: 400px;
+    // }
+    & .question {
+        & .faq-btn {
+            font-size: 15px;
+            color: $white;
+            &:not(.collapsed) {
+                color: $theme1;
+                // background-color: $theme1 !important;
+                &::after {
+                    background: url(../img/Index/minus.svg) no-repeat;
+                    border-color:$theme1;
+                    background-position: center;
+                    background-size: 14px;
+                }
+            }
+            &::after {
+                content: '';
+                background: url(../img/Index/plus.svg) no-repeat;
+                transition: all 0.3s ease-in-out;
+                border: 2px solid $white;
+                height: 25px;
+                width: 25px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-position: center;
+                background-size: 14px;
+            }
+        }
+        & .faq-title {
+            font-size: 14px;
+            color: $white;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin faq-mixin-min-sm() {
+    .faq {
+        & .question {
+            & .faq-btn {
+                &:not(.collapsed) {
+                    &::after {
+                    }
+                }
+                &::after {
+                }
+            }
+            & .faq-title {
+            }
+        }
+    }
+}
+// Medium devices (tablets, 768px and up)
+@mixin faq-mixin-min-md() {
+    .faq {
+        & .question {
+            & .faq-btn {
+                &:not(.collapsed) {
+                    &::after {
+                    }
+                }
+                &::after {
+                }
+            }
+            & .faq-title {
+            }
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@mixin faq-mixin-min-lg() {
+    .faq {
+        & .question {
+            & .faq-btn {
+                &:not(.collapsed) {
+                    &::after {
+                    }
+                }
+                &::after {
+                }
+            }
+            & .faq-title {
+            }
+        }
+    }
+}
+// X-Large devices (large desktops, 1200px and up)
+@mixin faq-mixin-min-xl() {
+    .faq {
+        & .question {
+            & .faq-btn {
+                &:not(.collapsed) {
+                    &::after {
+                    }
+                }
+                &::after {
+                }
+            }
+            & .faq-title {
+            }
+        }
+    }
+}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin faq-mixin-min-xxl() {
+    .faq {
+        & .question {
+            & .faq-btn {
+                &:not(.collapsed) {
+                    &::after {
+                    }
+                }
+                &::after {
+                }
+            }
+            & .faq-title {
+            }
+        }
+    }
+}
+// X-Large devices (large desktops, less than 1400px)
+@mixin faq-mixin-max-xl() {
+    .faq {
+        & .question {
+            & .faq-btn {
+                &:not(.collapsed) {
+                    &::after {
+                    }
+                }
+                &::after {
+                }
+            }
+            & .faq-title {
+            }
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin faq-mixin-max-lg() {
+    .faq {
+        & .question {
+            & .faq-btn {
+                &:not(.collapsed) {
+                    &::after {
+                    }
+                }
+                &::after {
+                }
+            }
+            & .faq-title {
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin faq-mixin-max-md() {
+    .faq {
+        & .question {
+            & .faq-btn {
+                font-size: 14px;
+                &:not(.collapsed) {
+                    &::after {
+                    }
+                }
+                &::after {
+                }
+            }
+            & .faq-title {
+                font-size: 13px;
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin faq-mixin-max-sm() {
+    .faq {
+        & .question {
+            & .faq-btn {
+                font-size: 13px;
+                &:not(.collapsed) {
+                    &::after {
+                        background-size: 10px;
+                    }
+                }
+                &::after {
+                    height: 20px;
+                    width: 20px;
+                    background-size: 10px;
+                }
+            }
+            & .faq-title {
+                font-size: 12px;
+            }
+        }
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin faq-mixin-max-xs() {
+    .faq {
+        & .question {
+            & .faq-btn {
+                font-size: 12px;
+                &:not(.collapsed) {
+                    &::after {
+                    }
+                }
+                &::after {
+                }
+            }
+            & .faq-title {
+                font-size: 11px;
+            }
+        }
+    }
+}
+// faq section end

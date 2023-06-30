@@ -10,7 +10,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: lighten($secondary,40);
+  background-color: $theme1;
 }
 body {
   scroll-behavior: smooth;
@@ -19,3 +19,150 @@ body {
   // background-color: rgba(13,110,253,.01);
 }
 
+// cursor animation start
+.custom-cursor__cursor {
+	width: 25px;
+	height: 25px;
+	border-radius: 100%;
+	border: 1px solid $theme1;
+	-webkit-transition: all 200ms ease-out;
+	transition: all 200ms ease-out;
+	position: fixed;
+	pointer-events: none;
+	left: 0;
+	top: 0;
+	-webkit-transform: translate(calc(-50% + 5px), -50%);
+	transform: translate(calc(-50% + 5px), -50%);
+	z-index: 999991;
+}
+
+.custom-cursor__cursor-two {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background-color: $theme1;
+	opacity: .3;
+	position: fixed;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	-webkit-transition: width .3s, height .3s, opacity .3s;
+	transition: width .3s, height .3s, opacity .3s;
+	z-index: 999991;
+}
+
+.custom-cursor__hover {
+	background-color: $theme1;
+	opacity: 0.4;
+}
+
+.custom-cursor__innerhover {
+	width: 25px;
+	height: 25px;
+	opacity: .4;
+}
+// cursor animation end
+
+
+
+
+// Small devices (landscape phones, 576px and up)
+@mixin main-mixin-min-sm() {
+  .heading {
+      // font-size: 80px !important;
+          &::before {
+          }
+  }
+  .sub-heading {
+  }
+}
+// Medium devices (tablets, 768px and up)
+@mixin main-mixin-min-md() {
+  .heading {
+      &::before {
+      }
+}
+.sub-heading {
+}
+}
+// Large devices (desktops, 992px and up)
+@mixin main-mixin-min-lg() {
+  .heading {
+      &::before {
+      }
+  }
+  .sub-heading {
+  }
+}
+// X-Large devices (large desktops, 1200px and up)
+@mixin main-mixin-min-xl() {
+  .heading {
+      &::before {
+      }
+}
+.sub-heading {
+}
+}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin main-mixin-min-xxl() {
+  .heading {
+      &::before {
+      }
+}
+.sub-heading {
+}
+}
+// X-Large devices (large desktops, less than 1400px)
+@mixin main-mixin-max-xl() {
+  .heading {
+      &::before {
+      }
+}
+.sub-heading {
+}
+}
+// Large devices (desktops, less than 1200px)
+@mixin main-mixin-max-lg() {
+  .heading {
+      font-size: 38px;
+      &::before {
+      }
+  }
+  .sub-heading {
+      font-size: 26px;
+  }
+}
+// Medium devices (tablets, less than 992px)
+@mixin main-mixin-max-md() {
+  .heading {
+      font-size: 36px;
+      &::before {
+      }
+  }
+  .sub-heading {
+      font-size: 24px;
+  }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin main-mixin-max-sm() {
+  .heading {
+      font-size: 32px;
+      &::before {
+      }
+  }
+  .sub-heading {
+      font-size: 21px;
+  }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin main-mixin-max-xs() {
+  .heading {
+      font-size: 22px;
+      line-height: 28px;
+      &::before {
+      }
+  }
+  .sub-heading {
+      font-size: 15px;
+  }
+}
