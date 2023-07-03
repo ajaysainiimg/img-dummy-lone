@@ -1,127 +1,92 @@
 // footer start
+// footer start
 .footer {
+    background-image: linear-gradient(to right, darken($primary, 45), darken($primary, 45)), url(../img/Index/footer-bg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-blend-mode: luminosity;
     & .footer-logo {
-        height: auto;
-        width: 200px;
+        height: 51px;
+        width: 140px;
     }
-    & .footer-icon {
-        height: 22px;
-        width: 22px;
-    }
-    & .footer-data {
-        font-size: 15px;
-        color: $white;
-    }
-    & .footer-detail {
+    & .footer-para {
         font-size: 14px;
-        color: lighten($black,85);
-        font-weight: 400;
-        transition: all 0.3s ease-in-out;
-        &:hover {
-            color: $white;
-        }
+        line-height: 25px;
     }
-    & .subscibe-title {
+    & .footer-contact {
         font-size: 14px;
         color: $white;
-    }
-    // & .footer-title {
-    //     font-size: 15px;
-    //     color: $white;
-    // }
-    & .subscribe-main {
-        & .subscibe-input {
-            color: $white;
-            font-size: 14px;
-            &:focus {
-                border-color: $white;
-            }
-            &::placeholder {
-                color: $white !important;
-            }
-        }
-    }
-    & .footer-subheading {
-        font-size: 18px;
-        color: $theme1;
-        letter-spacing: 1px;
-    }
-    & .main-link {
-        font-size: 15px;
-        color: $white;
         transition: all 0.3s ease-in-out;
-        &::before {
-            content:'';
-            position: absolute;
-            left: -10px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: $theme1;
-            height: 8px;
-            width: 8px;
-            opacity: 0;
-            border-radius: 50%;
-            transition: all  0.3s ease-in-out;
-            visibility: hidden;
-        }
         &:hover {
             color: $theme1;
-            transform: translateX(6px);
-            &::before {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-    }
-    & .social-media {
-        & .social-link {
-            height:20px;
-            width: 20px;
-            transition: all 0.3s ease-in-out;
-            & .social-img {
-                transition: all 0.3s ease-in-out;
-            }
-            &:hover {
-               transform: scale(1.2);
-                & .social-img {
+            & .footer-icon {
+                & .footer-contact-img {
                     filter: invert(1);
                 }
             }
-            
         }
-        // & .slider {
-        //     position: absolute;
-        //     top: 0;
-        //     left: 51px;
-        //     width: 0;
-        //     height: 45px;
-        //     background: $theme1;
-        //     border-radius: 3px;
-        //     transition: all 0.5s 0.3s ease;
-           
-        // }
-    } 
-    & .copyright-title {
-        font-size: 13px;
+        & .footer-icon {
+            height: 15px;
+            width:15px;
+            & .footer-contact-img {
+                transition:all 0.3s ease-in-out ;
+            }
+        }
+        
+    }
+    & .footer-heading {
+        font-size: 18px;
         color: $white;
-        & .img {
-            font-size: 14px;
-            color: $theme1;          
-        }
-        & .copyright-logo {
-            height: 35px;
-            width: auto;
+        & .footer-slash {
+            font-size: 13px;
+            color: $theme1;
+            padding-top: 2px;
         }
     }
-    & .policy-title {
-        font-size: 13px;
-        color: $white;
+    & .footer-link {
+        font-size: 14px;
+        color: darken($white, 38);
         transition: all 0.3s ease-in-out;
         &:hover {
             color: $theme1;
+            transform: translateX(7px);
         }
     }
+    & .footer-time {
+        font-size: 14px;
+        color: darken($white, 38);
+    }
+    & .social-icon {
+        height: 35px;
+        width: 35px;
+        padding: 11px;
+        transition: all 0.3s ease-in-out;
+        & img {
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+            background-color: $white !important;
+            & img {
+                filter: invert(1);
+            }
+        }
+    }
+    & .footer-input {
+        color:darken($white, 45);
+        font-size: 13px;
+        &::placeholder {
+            color:darken($white, 45);
+        }
+    }
+    & .check-input {
+        background-color: transparent;
+    }
+    & .subscribe-label {
+        font-size: 13px;
+        color: darken($white, 45);
+    }
 }
+// footer end
 
 // Small devices (landscape phones, 576px and up)
 @mixin footer-mixin-min-sm() {

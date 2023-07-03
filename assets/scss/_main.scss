@@ -77,7 +77,14 @@ body {
   }
 }
 
-
+// copyright start
+.copyright {
+  & .copyright-title {
+      font-size: 13px;
+      color: darken($white, 45);
+  }
+}
+// copyright end
 
 // Small devices (landscape phones, 576px and up)
 @mixin main-mixin-min-sm() {
