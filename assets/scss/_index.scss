@@ -508,17 +508,17 @@
         right: 0;
         background-color: lighten($theme1, 45);
     }
-    &::after {
-        content: 'FINANCE';
-        position: absolute;
-        z-index: 0;
-        font-size: 120px;
-        font-weight: bold;
-        color: $white;
-        top: 38%;
-        left: 72%;
-        transform: rotate(90deg)
-    }
+    // &::after {
+    //     content: 'FINANCE';
+    //     position: absolute;
+    //     z-index: 0;
+    //     font-size: 120px;
+    //     font-weight: bold;
+    //     color: $white;
+    //     top: 38%;
+    //     left: 72%;
+    //     transform: rotate(90deg)
+    // }
     & .about-left {
         &::before {
             content: '';
@@ -1572,3 +1572,12 @@
     }
 }
 // footer end
+
+// copyright start
+.copyright {
+    & .copyright-title {
+        font-size: 13px;
+        color: darken($white, 45);
+    }
+}
+// copyright end
