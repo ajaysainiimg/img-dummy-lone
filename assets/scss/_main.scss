@@ -63,6 +63,19 @@ body {
 }
 // cursor animation end
 
+// top scroll
+.top-scroll {
+  height: 40px;
+  width: 40px;
+  background-color: $theme1;
+  bottom: 50px;
+  right: 50px;
+  z-index: 5;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: $black;
+  }
+}
 
 
 

@@ -67,12 +67,15 @@
     <!-- aos -->
     <!-- <link rel="stylesheet" href="assets/libs/aos/css/aos.css"> -->
 </head>
-
 <body class="custom-cursor">
   <!-- cursor animation start-->
   <div class="custom-cursor__cursor"></div>
   <div class="custom-cursor__cursor-two"></div>
   <!-- cursor animation end -->
+
+  <!-- scroll top start -->
+  <a href="#" class="d-inline-flex position-fixed top-scroll"><img src="assets/img/Footer/Up.svg" alt="Down to up" class="h-100 w-100 img-fluid"></a>
+  <!-- scroll top end -->
 
 <!-- navbar start -->
 <div class="container-fluid bg-dark top-bar py-2 ">
@@ -469,7 +472,7 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <div class=""><span class="heading fw-semibold position-relative ps-4">CALCULATE YOUR RATE</span></div>
+        <div><span class="heading fw-semibold position-relative ps-4">CALCULATE YOUR RATE</span></div>
         <div class="sub-heading pt-1">How much do you need loan for you?</div>
       </div>
       <div class="col-md-6 calculate-title">
@@ -477,7 +480,40 @@
       </div>
       <div class="col-12 pt-5">
         <div class="row mx-0 shadow-sm bg-white">
-          <div class="col-md-6"></div>
+          <div class="col-md-6">
+            <div class="row p-5">
+              <div class="col-12 pt-3">
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="count">Rs.1000</span>
+                  <span class="count">Rs.40000</span>
+                </div>   
+                <div class="range-wrap position-relative">
+                  <input type="range" class="range w-100" step="1000" min="1000" max="40000">
+                  <output class="bubble mt-3 position-absolute"></output>
+                </div>
+                
+              </div>
+              <div class="col-12 pt-5">
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="count fw-medium">1 Months</span>
+                  <span class="count fw-medium">12 Months</span>
+                </div>
+                <div class="range-wrap position-relative ">
+                  <input type="range" class="range w-100" min="1" max="12">
+                  <span class="bubble position-absolute mt-3"></span>
+                </div>
+              </div>
+             <div class="col-12 pt-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="calculate-data">Pay Monthly</div>
+                <div class="calculate-data text-black">Rs.4500</div>
+              </div>
+             </div>
+              
+            
+            </div>
+           
+          </div>
           <div class="col-md-6 pe-0" >
             <div class="calculate-img ms-auto"><img src="assets/img/Index/loan-calculator.png" alt="calculate" class="h-100 w-100 img-fluid object-fit-cover"></div>
           </div>
@@ -652,7 +688,6 @@
 </div>
 <!-- our-benefits section end -->
 
-
 <!-- offer section start -->
 <div class="container-fluid news-blog py-5 mb-5">
   <div class="container">
@@ -776,9 +811,47 @@
     <div class="row">
       <div class="col-lg-4">
         <div class="footer-logo"><img src="assets/img/Footer/footerlogo.png" alt="footer logo" class="h-100 w-100 img-fluid"></div>
-        <div class="footer-para text-white-50 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst.</div>
-        <a href="javascript:;" class="text-decoration-none footer-contact fw-medium"><span class="footer-icon"><img src="a" alt=""></span>Needhelp@gmail.com</a>
-        <a href="javascript:;" class="text-decoration-none footer-contact"><span class="footer-icon"><img src="a" alt=""></span></a>
+        <div class="footer-para text-white-50 pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst.</div>
+        <div class="d-flex flex-column gap-2 pt-3">
+          <a href="javascript:;" class="text-decoration-none footer-contact fw-medium d-flex align-items-center gap-2"><span class="footer-icon d-inline-flex align-items-center justify-content-center"><img src="assets/img/Footer/Email.svg" alt="Email" class="h-100 w-100 img-fluid footer-contact-img"></span>Needhelp@gmail.com</a>
+          <a href="javascript:;" class="text-decoration-none footer-contact fw-medium d-flex align-items-center gap-2"><span class="footer-icon d-inline-flex align-items-center justify-content-center"><img src="assets/img/Footer/call.svg" alt="call" class="h-100 w-100 img-fluid footer-contact-img"></span>+91 123456789</a>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="footer-heading d-flex gap-1 pb-2"><span class="footer-slash">||</span>Explore</div>
+        <ul class="d-flex flex-column gap-2 list-unstyled pt-4">
+          <li><a href="javascript:;" class="text-decoration-none footer-link d-inline-flex">About</a></li>
+          <li><a href="javascript:;" class="text-decoration-none footer-link d-inline-flex">Our Services</a></li>
+          <li><a href="javascript:;" class="text-decoration-none footer-link d-inline-flex">Latest News</a></li>
+          <li><a href="javascript:;" class="text-decoration-none footer-link d-inline-flex">Apply For Loan</a></li>
+          <li><a href="javascript:;" class="text-decoration-none footer-link d-inline-flex">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <div class="footer-heading d-flex gap-1 pb-2"><span class="footer-slash">||</span>Timing</div>
+        <ul class="d-flex flex-column gap-2 list-unstyled pt-4">
+          <li class="footer-time">Mon Fri: 7:00am - 6:00pm</li>
+          <li class="footer-time">Saturday: 9:00am - 5:00pm</li>
+          <li class="footer-time">Sunday: Closed</li>
+        </ul>
+        <div class="d-flex align-items-center gap-2 pt-3">
+          <a href="javascript:;" class="text-decoration-none social-icon rounded-pill bg-dark d-inline-flex justify-content-center align-items-center"><img src="assets/img/Footer/twittter.svg" alt="facebook" class="h-100 w-100 img-fluid"></a>
+          <a href="javascript:;" class="text-decoration-none social-icon rounded-pill bg-dark d-inline-flex justify-content-center align-items-center"><img src="assets/img/Footer/facebook.svg" alt="facebook" class="h-100 w-100 img-fluid"></a>
+          <a href="javascript:;" class="text-decoration-none social-icon rounded-pill bg-dark d-inline-flex justify-content-center align-items-center"><img src="assets/img/Footer/instagram.svg" alt="facebook" class="h-100 w-100 img-fluid"></a>
+          <a href="javascript:;" class="text-decoration-none social-icon rounded-pill bg-dark d-inline-flex justify-content-center align-items-center"><img src="assets/img/Footer/whatsapp.svg" alt="facebook" class="h-100 w-100 img-fluid"></a>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="footer-heading d-flex gap-1 pb-2"><span class="footer-slash">||</span>Timing</div>
+        <form action="subscribe">
+          <input type="text" class="form-control bg-transparent border-0 shadow-none footer-input border-bottom border-2 rounded-0 pb-3 border-secondary border-opacity-50" placeholder="Email">
+          <div class="form-check pt-4">
+            <input class="form-check-input rounded-pill check-input shadow-none" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label subscribe-label" for="flexCheckDefault">
+              I agree to your all <a href="javascript:;" class="text-decoration-none subscribe-label">Terms & Condition</a>
+            </label>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -810,5 +883,10 @@
      
     });
   </script>
+
+
+
+  <!-- range 2 -->
+
 </body>
 </html>

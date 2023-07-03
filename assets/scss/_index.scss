@@ -1009,6 +1009,7 @@
                         width: 85px;
                         background-color: $white;
                         padding: 21px;
+                        transition: all 0.3s ease-in-out;
                         & .service-icontwo {
                             transition: all 0.3s ease-in-out;
                         }
@@ -1065,7 +1066,7 @@
                         & .service-card-icon {
                             background-color: $theme1;
                             & .service-icontwo {
-                                filter:grayscale(100%);
+                                filter:brightness(10);
                             }
                         }
                         & .service-card-heading {
@@ -1138,14 +1139,28 @@
         background: url(../img/Index/calculate-bg.png) no-repeat;
         background-position: top center
     }
+    & .count {
+        font-size: 14px;
+        color: darken($white, 45);
+    }
     & .calculate-title {
         font-size: 14px;
         color: lighten($black, 50);
     }
     & .calculate-img {
         height: 480px;
-        max-width: 480px;
+        width: auto;
     }
+      .bubble {
+        color:darken($white, 45);
+        padding: 4px 12px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      & .calculate-data {
+        font-size: 16px;
+        color: darken($white, 45);
+      }
 }
 // calculate section end
 
@@ -1482,6 +1497,78 @@
     & .footer-para {
         font-size: 14px;
         line-height: 25px;
+    }
+    & .footer-contact {
+        font-size: 14px;
+        color: $white;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $theme1;
+            & .footer-icon {
+                & .footer-contact-img {
+                    filter: invert(1);
+                }
+            }
+        }
+        & .footer-icon {
+            height: 15px;
+            width:15px;
+            & .footer-contact-img {
+                transition:all 0.3s ease-in-out ;
+            }
+        }
+        
+    }
+    & .footer-heading {
+        font-size: 18px;
+        color: $white;
+        & .footer-slash {
+            font-size: 13px;
+            color: $theme1;
+            padding-top: 2px;
+        }
+    }
+    & .footer-link {
+        font-size: 14px;
+        color: darken($white, 38);
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $theme1;
+            transform: translateX(7px);
+        }
+    }
+    & .footer-time {
+        font-size: 14px;
+        color: darken($white, 38);
+    }
+    & .social-icon {
+        height: 35px;
+        width: 35px;
+        padding: 11px;
+        transition: all 0.3s ease-in-out;
+        & img {
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+            background-color: $white !important;
+            & img {
+                filter: invert(1);
+            }
+        }
+    }
+    & .footer-input {
+        color:darken($white, 45);
+        font-size: 13px;
+        &::placeholder {
+            color:darken($white, 45);
+        }
+    }
+    & .check-input {
+        background-color: transparent;
+    }
+    & .subscribe-label {
+        font-size: 13px;
+        color: darken($white, 45);
     }
 }
 // footer end
