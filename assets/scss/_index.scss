@@ -498,24 +498,32 @@
 // about us section start
 .about-us {
     &::before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        height: 100%;
+        width: 25%;
+        color: $white;
+        top: 0;
+        right: 0;
+        background-color: lighten($theme1, 45);
+    }
+    &::after {
         content: 'FINANCE';
         position: absolute;
-        z-index: -1;
-        right: 0;
+        z-index: 0;
         font-size: 120px;
         font-weight: bold;
-        height: 100px;
-        width: 100%;
-        top: 0;
         color: $white;
-        transform: rotate(90deg);
-        background-color: lighten($theme1, 45);
+        top: 38%;
+        left: 72%;
+        transform: rotate(90deg)
     }
     & .about-left {
         &::before {
             content: '';
             position: absolute;
-            z-index: -1;
+            z-index: 0;
             height: 132px;
             width: 100px;
             top: -15px;
@@ -597,6 +605,86 @@
             right: -20%;
             height: 190px;
             width: 190px;
+        }
+        & .about-img-content-main {
+            padding: 30px 35px;
+            right: -38px;
+            bottom: 14%;
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 100%;
+                height: 40px;
+                width: 40px;
+                z-index: -1;
+                background-color: $theme1;
+                clip-path: polygon(0 0, 0 100%, 100% 0);
+            }
+            & .about-year {
+                font-size:40px;
+                color: $white;
+                line-height: 10px;
+                & sup {
+                    font-size: 28px;
+                    right: 5px;
+                    top: -0.3em;
+                }
+            }
+            & .about-experience {
+                font-size: 12px;
+                color: $white;
+                line-height: 14px;
+            }
+        }
+    }
+    & .about-cardd {
+        margin-bottom: -100px;
+        .about-card2 {
+            padding: 30px 0;
+            & .about-card2-img {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0%;
+                    top: 50%;
+                    width: 50%;
+                    height:65%;
+                    transform: translateY(-50%);
+                    background-color: $theme2;
+                    background-image: linear-gradient(92deg, $white 0%, lighten($theme1,  39) 100%);
+                }
+                & .about-card2-icon {
+                    height: 75px;
+                    width: auto;
+                }
+            }
+            & .about-card1-heading {
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 29px;
+                transition: all 0.3s ease-in-out;
+            }
+            & .about-card1-title {
+                font-size: 14px;
+                color: lighten($black, 45);
+                line-height: 26px;
+            }
+            & .moredetail-btn {
+                font-size: 11px;
+                color: $black;
+                letter-spacing: 2px;
+                transition: all 0.3s ease-in-out;
+            }
+            &:hover {
+                & .about-card1-heading {
+                    color: $theme1;
+                }
+                & .moredetail-btn {
+                    color: $theme1;
+                    border-color: $theme1 !important;
+                }
+            }
         }
     }
 }
@@ -778,996 +866,622 @@
 // about us section end
 
 
-// how to play section start
-.howplay {
-    // background: url(../img/Index/bg5.jpg);
-    // background-position: center;
-    // background-size: cover;
-    // &::before {
-    //     content: '';
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     height: 100%;
-    //     width: 100%;
-    //     background: rgba($black, 0.5);
-    // }
-    & .playcard {
-        transition: all 0.3s ease-in-out;
-        &::before {
-            border-left: 0 solid transparent;
-            border-right: 15px solid transparent;
-            border-top: 15px solid $theme1;
-            content: "";
-            position: absolute;
-            left: 5px;
-            top: 5px;
-        }
-        & .playimg {
-            height: 60px;
-            width: 60px;
-        }
-        & .playheading {
-            font-size: 18px;
-            color: $white;
-        }
-        & .playline {
-            height: 2px;
-            width: 20px;
+// trust-section start
+.trust-section {
+    background-image: linear-gradient(rgba($black, .4), rgba($black, .4)),url(../img/Index/trust.jpg);
+    // background: url(../img/Index/trust.jpg) no-repeat rgba(255, 0, 150, 0.3);
+    background-size: cover;
+    background-position: center center;
+    padding: 10rem;
+    background-attachment: fixed;
+    &::before {
+        content: '';
+        position: absolute;
+        left: -8%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: url(../img/Index/trust-bg.png) no-repeat;
+    }
+    & .trust-heading {
+        font-size: 45px;
+        color: $white;
+        line-height: normal;
+    }
+    & .trust-video {
+        height: 95px;
+        width: 95px;
+        animation: pulse 1.2s infinite;
+        & .play-icon {
+            height: 50px;
+            width: 50px;
             background-color: $theme1;
             transition: all 0.3s ease-in-out;
-            &::before {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: auto;
-                width: 70px;
-                right: 40px;
-                height: 2px;
-                background: $white;
-                -webkit-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                transform: translateY(-60%);
+            & .play-img {
+                height: 12px;
+                width: 12px;
                 transition: all 0.3s ease-in-out;
             }
-            &::after {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    left: 40px;
-                    width: 70px;
-                    height: 2px;
-                    background: $white;
-                    -webkit-transform: translateY(-50%);
-                    -ms-transform: translateY(-50%);
-                    transform: translateY(-60%);
-                    transition: all 0.3s ease-in-out;
-            }
-        }
-        & .playtitle {
-            font-size: 14px;
-            color: lighten($white, 10);
         }
         &:hover {
-            transform: translateY(-30px);
-            & .playline {
-                width: 40px !important;
-                &::before {
-                    background: $theme1;
-                }
-                &::after {
-                        background: $theme1;
-                }
+            & .play-icon {
+                background-color: $white;
             }
+            & .play-img {
+                filter: brightness(0.2);
+            }
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0px rgba(252, 251, 251, 0.4);
+              }
+              100% {
+                box-shadow: 0 0 0 20px rgba(248, 246, 246, 0);
+              }
         }
     }
-}
-
-// Small devices (landscape phones, 576px and up)
-@mixin howplay-mixin-min-sm() {
-    .howplay {
-        & .playcard {
-            &::before {
-            }
-            & .playimg {
-            }
-            & .playheading {
-            }
-            & .playline {
-                &::before {
-                }
-                &::after {
-                }
-            }
-            & .playtitle {
-            }
-            &:hover {
-            }
-        }
-    }
-}
-// Medium devices (tablets, 768px and up)
-@mixin howplay-mixin-min-md() {
-    .howplay {
-        & .playcard {
-            &::before {
-            }
-            & .playimg {
-            }
-            & .playheading {
-            }
-            & .playline {
-                &::before {
-                }
-                &::after {
-                }
-            }
-            & .playtitle {
-            }
-            &:hover {
-            }
-        }
-    }
-}
-// Large devices (desktops, 992px and up)
-@mixin howplay-mixin-min-lg() {
-    .howplay {
-        & .playcard {
-            &::before {
-            }
-            & .playimg {
-            }
-            & .playheading {
-            }
-            & .playline {
-                &::before {
-                }
-                &::after {
-                }
-            }
-            & .playtitle {
-            }
-            &:hover {
-            }
-        }
-    }
-}
-// X-Large devices (large desktops, 1200px and up)
-@mixin howplay-mixin-min-xl() {
-    .howplay {
-        & .playcard {
-            &::before {
-            }
-            & .playimg {
-            }
-            & .playheading {
-            }
-            & .playline {
-                &::before {
-                }
-                &::after {
-                }
-            }
-            & .playtitle {
-            }
-            &:hover {
-            }
-        }
-    }
-}
-// XX-Large devices (larger desktops, 1400px and up)
-@mixin howplay-mixin-min-xxl() {
-    .howplay {
-        & .playcard {
-            &::before {
-            }
-            & .playimg {
-            }
-            & .playheading {
-            }
-            & .playline {
-                &::before {
-                }
-                &::after {
-                }
-            }
-            & .playtitle {
-            }
-            &:hover {
-            }
-        }
-    }
-}
-// X-Large devices (large desktops, less than 1400px)
-@mixin howplay-mixin-max-xl() {
-    .howplay {
-        & .playcard {
-            &::before {
-            }
-            & .playimg {
-            }
-            & .playheading {
-            }
-            & .playline {
-                &::before {
-                }
-                &::after {
-                }
-            }
-            & .playtitle {
-            }
-            &:hover {
-            }
-        }
-    }
-}
-// Large devices (desktops, less than 1200px)
-@mixin howplay-mixin-max-lg() {
-    .howplay {
-        & .playcard {
-            &::before {
-            }
-            & .playimg {
-            }
-            & .playheading {
-                font-size: 17px;
-            }
-            & .playline {
-                &::before {
-                }
-                &::after {
-                }
-            }
-            & .playtitle {
-            }
-            &:hover {
-            }
-        }
-    }
-}
-// Medium devices (tablets, less than 992px)
-@mixin howplay-mixin-max-md() {
-    .howplay {
-        & .playcard {
-            &::before {
-            }
-            & .playimg {
-            }
-            & .playheading {
-                font-size: 16px;
-            }
-            & .playline {
-                &::before {
-                }
-                &::after {
-                }
-            }
-            & .playtitle {
-                font-size: 13px;
-            }
-            &:hover {
-            }
-        }
-    }
-}
-// Small devices (landscape phones, less than 768px)
-@mixin howplay-mixin-max-sm() {
-    .howplay {
-        & .playcard {
-            &::before {
-            }
-            & .playimg {
-                height: 50px;
-                width: 50px;
-            }
-            & .playheading {
-                font-size: 15px;
-            }
-            & .playline {
-                &::before {
-                }
-                &::after {
-                }
-            }
-            & .playtitle {
-                font-size: 12px;
-            }
-            &:hover {
-            }
-        }
-    }
-}
-// X-Small devices (portrait phones, less than 576px)
-@mixin howplay-mixin-max-xs() {
-    .howplay {
-        & .playcard {
-            &::before {
-            }
-            & .playimg {
-                height: 40px;
-                width: 40px;
-            }
-            & .playheading {
-                font-size: 14px;
-            }
-            & .playline {
-                &::before {
-                }
-                &::after {
-                }
-            }
-            & .playtitle {
-                font-size: 11px;
-            }
-            &:hover {
-                transform: translateY(-15px);
-            }
-        }
-    }
-}
-// how to play section end
-
-
-// testimonal start 
-.testimonal {
-    & .testimonial-card {
-        & .testimonial-pic {
-            height: 110px;
-            width: 110px;
-        }
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            // left: 0;
-            left:-70px;
-            height: 100%;
-            width: 25%;
-            background-color: $black;
-            z-index: 1;
-            transform: skewX(-30deg);
-            // transform: rotate(35deg);
-            border-right: 5px solid $theme1;
-        }
-        &::after {
-            bottom: 0;
-            right: 0;
-            content: '';
-            z-index: 0;
-            position: absolute;
-            border: 35px solid $theme1;
-            border-radius: 0 0 5px 0;
-            border-top-color: transparent!important;
-            border-left-color: transparent!important;
-        }
-        & .testimonial-content{
-            & .start-icon {
-                height: 15px;
-                width: 15px;
-            }
-            & .quote{
-                height: 20px;
-                width: 45px;
-                right: -5px;
-                bottom: 10px;
-            }
-            & .user-review {
-                font-size: 16px;
-                color: $black;
-                text-align: justify;
-            }
-            & .user-name {
-                font-size: 18px;
-                color: $black;
-            }
-        }
-        
-    }
-    & .swiper-pagination {
-        bottom: 0 !important;
-        & .swiper-pagination-bullet {
-            height: 7px;
-            width: 7px;
-            opacity: 5;
-            background-color: $theme1;
-        }
-        & .swiper-pagination-bullet-active {
-            height: 11px;
-            width: 11px;
-        }
-    }
-}
-
-// Small devices (landscape phones, 576px and up)
-@mixin testimonal-mixin-min-sm() {
-    .testimonal {
-        & .testimonial-card {
-            & .testimonial-pic {
-            }
-            &::before {
-            }
-            &::after {
-            }
-            & .testimonial-content{
-                & .start-icon {
-                }
-                & .quote{
-                }
-                & .user-review {
-                }
-                & .user-name {
-                }
-            }
-            
-        }
-        & .swiper-pagination {
-            & .swiper-pagination-bullet {
-            }
-            & .swiper-pagination-bullet-active {
-
-            }
-        }
-    }
-}
-// Medium devices (tablets, 768px and up)
-@mixin testimonal-mixin-min-md() {
-    .testimonal {
-        & .testimonial-card {
-            & .testimonial-pic {
-            }
-            &::before {
-            }
-            &::after {
-            }
-            & .testimonial-content{
-                & .start-icon {
-                }
-                & .quote{
-                }
-                & .user-review {
-                }
-                & .user-name {
-                }
-            }
-            
-        }
-        & .swiper-pagination {
-            & .swiper-pagination-bullet {
-            }
-            & .swiper-pagination-bullet-active {
-
-            }
-        }
-    }
-}
-// Large devices (desktops, 992px and up)
-@mixin testimonal-mixin-min-lg() {
-    .testimonal {
-        & .testimonial-card {
-            & .testimonial-pic {
-            }
-            &::before {
-            }
-            &::after {
-            }
-            & .testimonial-content{
-                & .start-icon {
-                }
-                & .quote{
-                }
-                & .user-review {
-                }
-                & .user-name {
-                }
-            }
-        }
-        & .swiper-pagination {
-            & .swiper-pagination-bullet {
-            }
-            & .swiper-pagination-bullet-active {
-            }
-        }
-    }
-}
-// X-Large devices (large desktops, 1200px and up)
-@mixin testimonal-mixin-min-xl() {
-    .testimonal {
-        & .testimonial-card {
-            & .testimonial-pic {
-            }
-            &::before {
-            }
-            &::after {
-            }
-            & .testimonial-content{
-                & .start-icon {
-                }
-                & .quote{
-                }
-                & .user-review {
-                }
-                & .user-name {
-                }
-            }
-        }
-        & .swiper-pagination {
-            & .swiper-pagination-bullet {
-            }
-            & .swiper-pagination-bullet-active {
-
-            }
-        }
-    }
-}
-// XX-Large devices (larger desktops, 1400px and up)
-@mixin testimonal-mixin-min-xxl() {
-    .testimonal {
-        & .testimonial-card {
-            & .testimonial-pic {
-            }
-            &::before {
-            }
-            &::after {
-            }
-            & .testimonial-content{
-                & .start-icon {
-                }
-                & .quote{
-                }
-                & .user-review {
-                }
-                & .user-name {
-                }
-            }
-        }
-        & .swiper-pagination {
-            & .swiper-pagination-bullet {
-            }
-            & .swiper-pagination-bullet-active {
-
-            }
-        }
-    }
-}
-// X-Large devices (large desktops, less than 1400px)
-@mixin testimonal-mixin-max-xl() {
-    .testimonal {
-        & .testimonial-card {
-            & .testimonial-pic {
-            }
-            &::before {
-            }
-            &::after {
-            }
-            & .testimonial-content{
-                & .start-icon {
-                }
-                & .quote{
-                }
-                & .user-review {
-                }
-                & .user-name {
-                }
-            }
-        }
-        & .swiper-pagination {
-            & .swiper-pagination-bullet {
-            }
-            & .swiper-pagination-bullet-active {
-
-            }
-        }
-    }
-}
-// Large devices (desktops, less than 1200px)
-@mixin testimonal-mixin-max-lg() {
-    .testimonal {
-        & .testimonial-card {
-            & .testimonial-pic {
-            }
-            &::before {
-                left: -76px;
-                width: 34%;
-            }
-            &::after {
-            }
-            & .testimonial-content{
-                & .start-icon {
-                }
-                & .quote{
-                }
-                & .user-review {
-                }
-                & .user-name {
-                }
-            }
-        }
-        & .swiper-pagination {
-            & .swiper-pagination-bullet {
-            }
-            & .swiper-pagination-bullet-active {
-
-            }
-        }
-    }
-}
-// Medium devices (tablets, less than 992px)
-@mixin testimonal-mixin-max-md() {
-    .testimonal {
-        & .testimonial-card {
-            & .testimonial-pic {
-            }
-            &::before {
-                left: -60px;
-                width:16%;
-                transform: skewX(-30deg);
-            }
-            &::after {
-            }
-            & .testimonial-content{
-                & .start-icon {
-                }
-                & .quote{
-                    width: 42px;
-                }
-                & .user-review {
-                    font-size: 15px;
-                    line-height: 21px;
-                }
-                & .user-name {
-                    font-size: 16px;
-                }
-            }
-        }
-        & .swiper-pagination {
-            & .swiper-pagination-bullet {
-            }
-            & .swiper-pagination-bullet-active {
-
-            }
-        }
-    }
-}
-// Small devices (landscape phones, less than 768px)
-@mixin testimonal-mixin-max-sm() {
-    .testimonal {
-        & .testimonial-card {
-            & .testimonial-pic {
-                height: 90px;
-                width: 90px;
-            }
-            &::before {
-                left: -50px;
-                width: 20%;
-                transform: skewX(-30deg);
-            }
-            &::after {
-            }
-            & .testimonial-content{
-                & .start-icon {
-                    height: 12px;
-                    width: 12px;
-                }
-                & .quote{
-                }
-                & .user-review {
-                    font-size: 14px;
-                }
-                & .user-name {
-                    font-size: 15px;
-                }
-            }
-        }
-        & .swiper-pagination {
-            & .swiper-pagination-bullet {
-            }
-            & .swiper-pagination-bullet-active {
-
-            }
-        }
-    }
-}
-// X-Small devices (portrait phones, less than 576px)
-@mixin testimonal-mixin-max-xs() {
-    .testimonal {
-        & .testimonial-card {
-            & .testimonial-pic {
-                height: 70px;
-                width: 70px;
-            }
-            &::before {
-                left: -75px;
-                width: 30%;
-                transform: skewX(-20deg);
-            }
-            &::after {
-                border-width: 23px;
-            }
-            & .testimonial-content{
-                & .start-icon {
-                    height: 10px;
-                    width: 10px;
-                }
-                & .quote{
-                    width: 40px;
-                    height: auto;
-                    bottom: 3px;
-                    right: -5px;
-                }
-                & .user-review {
-                    font-size: 12px;
-                    line-height: 17px;
-                }
-                & .user-name {
-                    font-size: 14px;
-                }
-            }
-        }
-        & .swiper-pagination {
-            & .swiper-pagination-bullet {
-            }
-            & .swiper-pagination-bullet-active {
-
-            }
-        }
-    }
-}
-// less than 400px
-@media  screen and (max-width:420px) {
-    .testimonal {
-        & .testimonial-card {
-            & .testimonial-pic {
-            }
-            &::before {
-                left: -50px !important;
-                width: 30% !important;
-            }
-            &::after {
-            }
-            & .testimonial-content{
-                & .start-icon {
-                }
-                & .quote{
-                }
-                & .user-review {
-                    line-height: 16px !important;
-                }
-                & .user-name {
-                }
-            }
-        }
-        & .swiper-pagination {
-            & .swiper-pagination-bullet {
-            }
-            & .swiper-pagination-bullet-active {
-
-            }
-        }
-    }
-}
-// .testimonal end
-
-
-// faq section start
-.faq {
-    // & .faq-img {
-    //     height: 400px;
-    //     width: 400px;
-    // }
-    & .question {
-        & .faq-btn {
+    & .trust-card-main {
+        & .trust-card {
             font-size: 15px;
             color: $white;
-            &:not(.collapsed) {
-                color: $theme1;
-                // background-color: $theme1 !important;
-                &::after {
-                    background: url(../img/Index/minus.svg) no-repeat;
-                    border-color:$theme1;
-                    background-position: center;
-                    background-size: 14px;
-                }
+            & .trust-card-icon {
+                height: 19px;
+                width: 19px;
             }
-            &::after {
-                content: '';
-                background: url(../img/Index/plus.svg) no-repeat;
-                transition: all 0.3s ease-in-out;
-                border: 2px solid $white;
-                height: 25px;
-                width: 25px;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-position: center;
-                background-size: 14px;
-            }
-        }
-        & .faq-title {
-            font-size: 14px;
-            color: $white;
         }
     }
 }
+// truse section end
 
-// Small devices (landscape phones, 576px and up)
-@mixin faq-mixin-min-sm() {
-    .faq {
-        & .question {
-            & .faq-btn {
-                &:not(.collapsed) {
-                    &::after {
+
+// brand section start
+.brand-section {
+        background:url(../img/Index/brand-bg.png) no-repeat;
+        background-position: center center;
+        background-size: cover;
+        & .brand-icon {
+            width: 175px;
+            transition: all 0.3s ease-in-out;
+            & .brand-img {
+                opacity: 0.3;
+                transition: all 0.3s ease-in-out;
+            }
+            &:hover {
+                background-color: rgba($theme1, .1);
+            }
+        }
+}
+// brand section end
+
+// service section start
+.service-section {
+    padding: 90px 0;
+    & .container {
+        &::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            height: 160px;
+            width: 125px;
+            animation: service 4s linear infinite;
+            background: url(../img/Index/service-animation1.png) no-repeat;
+            background-size: cover;
+        }
+        & .sub-heading { 
+            & .service-animation {
+                animation: service 4s linear infinite;
+                right: 20px;
+            }
+        }
+        & .service-card-main {
+            & .service-card {
+                & .service-img {
+                    max-width: 345px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 0;
+                        width: 100%;
+                        z-index: 1;
+                        background:rgba($black, .4);
+                        transition: all 0.3s ease-in-out;
+                    }
+                    & img {
+                        transition: all 0.3s ease-in-out;
                     }
                 }
-                &::after {
+                & .plus {
+                    height: 25px;
+                    width: 25px;
+                    top:0;
+                    left: 50%;
+                    transform: translate(-50%);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s ease-in-out;
+                }
+                & .service-card-content {
+                    & .service-card-icon {
+                        height: 85px;
+                        width: 85px;
+                        background-color: $white;
+                        padding: 21px;
+                        & .service-icontwo {
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+                    & .service-card-heading {
+                        font-size: 17px;
+                        font-weight: 700;
+                        color: lighten($black, 1);
+                        transition: all 0.3s ease-in-out;
+                    }
+                    & .service-card-title {
+                        font-size: 14px;
+                        color: lighten($black, 50);
+                        line-height: 26px;
+                    }
+                    & .service-direct {
+                        height: 35px;
+                        width: 35px;
+                        background-color: $theme3;
+                        transition: all 0.3s ease-in-out;
+                        & .right {
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 3px;
+                        background-color: $black; 
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        z-index: -1;
+                        transition: transform 0.3s ease-in-out;     
+                    }
+                }
+                &:hover {
+                    & .service-img {
+                        &::before {
+                            height: 100%;
+                        }
+                        & img {
+                            transform: scale(1.1)
+                        }
+                    }
+                    & .plus { 
+                        top:40%;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    & .service-card-content {
+                        & .service-card-icon {
+                            background-color: $theme1;
+                            & .service-icontwo {
+                                filter:grayscale(100%);
+                            }
+                        }
+                        & .service-card-heading {
+                            color: $theme1;
+                        }
+                        & .service-direct {
+                            background-color: $black;
+                            & .right {
+                                filter: invert(1);
+                            }
+                        }
+                        &::after {
+                            transform: scaleX(1);
+                            transform-origin:right;
+                        }
+                    }
                 }
             }
-            & .faq-title {
-            }
+            
+        }
+    }
+    @keyframes service {
+        0%, 100% {
+            transform: perspective(400px) translateY(0) rotate(0deg) translateZ(0px) translateX(0);
+        }
+        50% {
+            transform: perspective(400px) rotate(-20deg) translateZ(10px) translateY(10px) translateX(10px);
+        }
+    }
+    & .service-animationtwo {
+        right: 100px;
+        bottom: 30px;
+        animation: servicetwo 8s infinite linear;
+    }
+    @keyframes servicetwo {
+        0% {
+            transform: translateY(0px) translateX(0) rotate(0);
+        }
+        30% {
+            transform: translateY(10px) translateX(30px) rotate(5deg);
+            transform-origin: center center;
+        }
+        50% {
+            transform: translateY(30px) translateX(50px) rotate(15deg);
+            transform-origin: right bottom;
+        }
+        80% {
+            transform: translateY(10px) translateX(30px) rotate(5deg);
+            transform-origin: left top;
+        }
+        100% {
+            transform: translateY(0px) translateX(0) rotate(0);
+            transform-origin: center center;
         }
     }
 }
-// Medium devices (tablets, 768px and up)
-@mixin faq-mixin-min-md() {
-    .faq {
-        & .question {
-            & .faq-btn {
-                &:not(.collapsed) {
-                    &::after {
-                    }
-                }
-                &::after {
-                }
-            }
-            & .faq-title {
-            }
-        }
+// service section end
+
+// calculate section start
+.calculate-section {
+    background: linear-gradient(0deg, $white 0%, $theme3 100%);
+    padding: 100px 0 0 0;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(../img/Index/calculate-bg.png) no-repeat;
+        background-position: top center
+    }
+    & .calculate-title {
+        font-size: 14px;
+        color: lighten($black, 50);
+    }
+    & .calculate-img {
+        height: 480px;
+        max-width: 480px;
     }
 }
-// Large devices (desktops, 992px and up)
-@mixin faq-mixin-min-lg() {
-    .faq {
-        & .question {
-            & .faq-btn {
-                &:not(.collapsed) {
-                    &::after {
-                    }
-                }
-                &::after {
-                }
-            }
-            & .faq-title {
-            }
-        }
-    }
-}
-// X-Large devices (large desktops, 1200px and up)
-@mixin faq-mixin-min-xl() {
-    .faq {
-        & .question {
-            & .faq-btn {
-                &:not(.collapsed) {
-                    &::after {
-                    }
-                }
-                &::after {
+// calculate section end
+
+// testimonal start
+.testimonal {
+    background: url(../img/Index/testim-bg.png) no-repeat;
+    background-position: center left;
+    & .testim-card-main {
+        & .testim-card {
+            border: 2px solid $white;
+            transition: all 0.3s ease-in-out;
+            & .testimonal-img {
+                height: 90px;
+                width: 90px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    right: -10px;
+                    top: -10px;
+                    height: 100%;
+                    z-index: -1;
+                    width: 100%;
+                    border: 2px dashed $theme1;
                 }
             }
-            & .faq-title {
+            & .testim-star {
+                height: 12px;
+                width: 12px;
             }
-        }
-    }
-}
-// XX-Large devices (larger desktops, 1400px and up)
-@mixin faq-mixin-min-xxl() {
-    .faq {
-        & .question {
-            & .faq-btn {
-                &:not(.collapsed) {
-                    &::after {
-                    }
-                }
-                &::after {
-                }
+            & .testim-heading {
+                font-size: 18px;
             }
-            & .faq-title {
+            & .testim-title {
+                font-size: 12px;
+                letter-spacing: 1px;
+                color: lighten($black, 50);
             }
-        }
-    }
-}
-// X-Large devices (large desktops, less than 1400px)
-@mixin faq-mixin-max-xl() {
-    .faq {
-        & .question {
-            & .faq-btn {
-                &:not(.collapsed) {
-                    &::after {
-                    }
-                }
-                &::after {
-                }
+            & .textim-line {
+                transition: all 0.3s ease-in-out;
             }
-            & .faq-title {
-            }
-        }
-    }
-}
-// Large devices (desktops, less than 1200px)
-@mixin faq-mixin-max-lg() {
-    .faq {
-        & .question {
-            & .faq-btn {
-                &:not(.collapsed) {
-                    &::after {
-                    }
-                }
-                &::after {
-                }
-            }
-            & .faq-title {
-            }
-        }
-    }
-}
-// Medium devices (tablets, less than 992px)
-@mixin faq-mixin-max-md() {
-    .faq {
-        & .question {
-            & .faq-btn {
+            & .testim-para {
                 font-size: 14px;
-                &:not(.collapsed) {
-                    &::after {
-                    }
-                }
-                &::after {
-                }
+                color: lighten($black, 55);
+                line-height: 25px;
             }
-            & .faq-title {
-                font-size: 13px;
+            &:hover {
+                border-color: $theme1;
+                & .textim-line {
+                    filter: brightness(0.1);
+                }
             }
         }
     }
 }
-// Small devices (landscape phones, less than 768px)
-@mixin faq-mixin-max-sm() {
-    .faq {
-        & .question {
-            & .faq-btn {
-                font-size: 13px;
-                &:not(.collapsed) {
-                    &::after {
-                        background-size: 10px;
-                    }
-                }
-                &::after {
-                    height: 20px;
-                    width: 20px;
-                    background-size: 10px;
+// testimonal end
+
+// counter section start
+.counter {
+    // background-image:url(../img/Index/counter-bg.png);
+    // background-color: #1c1c27;
+    background-color: darken($primary, 46);
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: url(../img/Index/counter-bg.png) no-repeat;
+        background-position: center center;
+    }
+    & .counter-data {
+        font-size: 50px;
+        color: $white;
+    }
+    & .counter-heading {
+        font-size: 14px;
+        color: $white;
+    }
+}
+// counter section end
+
+// our-benefits section start
+.our-benefits {
+    background: url(../img/Index/benefit-circle.png) no-repeat;
+    background-position: right;
+    &::before {
+        content: '';
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 39%;
+        position: absolute;
+        background-image: linear-gradient(to right, rgba($theme1, .9), rgba($theme1, .9)), url(../img/Index/benefit-bg.jpg);
+        background-size: cover, contain;
+        // background-position: center, right bottom;
+        background-repeat: no-repeat;
+        clip-path: polygon(0 0, 100% 0%, 69% 100%, 0% 100%);
+        // background-position: top left;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 35%;
+        top: -20px;
+        width: 90px;
+        height: 100%;
+        z-index: -1;
+        background-color: lighten($theme1, 40);
+        transform: rotate(15deg);
+        // clip-path: polygon(53% 0, 75% 0, 27% 100%, 0% 100%);
+    }
+    & .our-benefits-img {
+        height: 100%;
+        max-width: 490px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(0deg, $black 0%, rgba($black, 0) 100%);;
+        }
+        & .benefits-rating {
+            left: 10%;
+            bottom: 10%;
+            font-size: 40px;
+            color: $theme1;
+            & .benefits-rating-title {
+                font-size: 15px;
+                color: $white;
+            }
+        }
+    }
+    & .our-benefits-right {
+        & .benefits-para {
+            font-size: 14px;
+            color: lighten($black, 47);
+            line-height: 27px;
+        }
+        & .benefits-card {
+            & .benefits-icon {
+                height: 52px;
+                width: 52px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -20px;
+                    left: -20px;
+                    height: 55px;
+                    z-index: -1;
+                    width: 55px;
+                    border-radius: 50%;
+                    background-color: $theme3;
+                    transition: all 0.3s ease-in-out;
                 }
             }
-            & .faq-title {
-                font-size: 12px;
+            & .benefits-card-title {
+                font-size: 19px;
+                color: lighten($black, 5);
+            }
+            & .benefits-card-para {
+                font-size: 14px;
+                line-height: 26px;
+                color: lighten($black, 50);
+            }
+            &:hover {
+                & .benefits-icon {
+                    &::before {
+                        transform: scale(0.9);
+                    }
+                }
             }
         }
     }
 }
-// X-Small devices (portrait phones, less than 576px)
-@mixin faq-mixin-max-xs() {
-    .faq {
-        & .question {
-            & .faq-btn {
-                font-size: 12px;
-                &:not(.collapsed) {
-                    &::after {
+// our-benefits section end
+
+// news-blog section start
+.news-blog {
+    & .news-blog-card {
+        & .news-content {
+            padding:0 40px;
+                & .news-title {
+                    font-size: 12px;
+                    color: lighten($black, 53);
+                    transition: all 0.3s ease-in-out;
+                    & .news-icon {
+                        height: 15px;
+                        width: 15px;
+                        & img {
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+                    &:hover {
+                            color: $theme1;
+                            & .news-icon {
+                                & img {
+                                    filter: brightness(0.1);
+                                }
+                            }
                     }
                 }
-                &::after {
+                & .news-slash {
+                    font-size: 9px;
+                    color: lighten($black, 40);
+                }
+                & .news-blog-heading {
+                    font-size: 22px;
+                }
+                & .news-blog-para {
+                    font-size: 14px;
+                    color: lighten($black, 45);
+                }
+                & .readmore-btn {
+                    font-size: 12px ;
+                    background-color:$theme3 ;
+                    transition:all 0.3s ease-in-out;    
+                    & .right-arrow {
+                        height: 15px;
+                        width: 15px;
+                        filter: brightness(0.1);
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+        } 
+        & .news-img {
+            & .blog-img {
+                transition: all 0.3s ease-in-out;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 0%;
+                z-index: 1;
+                width: 100%;
+                background: rgba($black, .4);
+                transition: all 0.3s ease-in-out;
+            }
+            & .news-plus {
+                top: 0%;
+                left: 50%;
+                transform: translate(-50%);
+                transition: all 0.3s ease-in-out;
+                opacity: 0;
+                visibility: hidden;
+            }
+            & .news-date {
+                font-size: 14px;
+                color: $white;
+                & span {
+                    line-height: 16px;
+                    font-size: 20px;
                 }
             }
-            & .faq-title {
-                font-size: 11px;
+        }
+        &:hover {
+            & .readmore-btn {
+                color: $white;          
+                background-color: $black;
+                & .right-arrow {
+                    filter: none;
+                    transform: translateX(5px);
+                }
+            }
+            & .blog-img {
+                transform: scale(1.1);
+            }
+            & .news-img {
+                &::before {
+                   height: 100%;
+                }
+                & .news-plus {
+                    top: 50%;  
+                    opacity: 1;
+                    visibility: visible;                  
+                }
             }
         }
     }
 }
-// faq section end
+// news-blog section end
+
+// apply-loan section start
+.apply-loan {
+    background-image: linear-gradient(to right, rgba($theme1, .9), rgba($theme1, .9)), url(../img/Index/apply-bg.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    & .apply-loan-img {
+        clip-path: polygon(0 0, 100% 0, 94% 100%, 0 100%);
+    }
+    & .apply-loan-title {
+        font-size: 13px;
+        color:darken($white, 10);
+    }
+    & .apply-loan-heading {
+        font-size: 35px;
+        color: $white;
+    }
+    & .arrow-animation {
+        width: 90px;
+        height: 35px;
+        animation: shapeMover 5s linear 0s infinite;
+        & .arrow-animation-img {
+            transform: rotate(120deg);
+            filter: invert(1);
+        }
+        @keyframes shapeMover {
+            0%, 100% {
+                transform: perspective(400px) translateY(0) rotate(0deg) translateZ(0px) translateX(0);
+            }
+            
+            50% {
+                transform: perspective(400px) rotate(-20deg) translateZ(10px) translateY(10px) translateX(10px);
+            }
+        }
+    }
+}
+// apply-loan section end
+
+// footer start
+.footer {
+    background-image: linear-gradient(to right, darken($primary, 45), darken($primary, 45)), url(../img/Index/footer-bg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-blend-mode: luminosity;
+    & .footer-logo {
+        height: 51px;
+        width: 140px;
+    }
+    & .footer-para {
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
+// footer end

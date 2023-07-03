@@ -12,14 +12,15 @@
       left: 0;
       height: 100%;
       width: 0;
-      background-color: $black;
+      background-color: $black ;
       z-index: -2;
       transition: all 0.3s ease-in-out;
   }
   &:hover {
-    color: $theme1;
+    color: $white !important;
+    background-color: $black !important;
       &::before {
-          width: 100%;
+          width: 100% ;
       }
   }
 }
