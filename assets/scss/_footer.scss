@@ -21,7 +21,7 @@
             color: $theme1;
             & .footer-icon {
                 & .footer-contact-img {
-                    filter: invert(1);
+                    filter: brightness(10);
                 }
             }
         }
@@ -87,6 +87,15 @@
     }
 }
 // footer end
+
+// copyright start
+.copyright {
+    & .copyright-title {
+        font-size: 13px;
+        color: darken($white, 45);
+    }
+  }
+  // copyright end
 
 // Small devices (landscape phones, 576px and up)
 @mixin footer-mixin-min-sm() {
