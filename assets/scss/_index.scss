@@ -14,16 +14,7 @@
                 width: 30px;
             }
         }
-        @keyframes fadeInUp{
-            0%{
-                transform:translate(0px, 200px);
-                 opacity: 0;
-            }
-            100%{
-                transform:translate(0px, 0);
-                 opacity: 1;
-            }
-        }
+        
         & .hero-heading {
             font-size:60px;
             color: $white;
@@ -87,36 +78,28 @@
             animation:fadeInUp 1.8s ease backwards;
         }
     }    
+    @keyframes fadeInUp{
+        0%{
+            transform:translate(0px, 200px);
+             opacity: 0;
+        }
+        100%{
+            transform:translate(0px, 0);
+             opacity: 1;
+        }
+    }
     & .swiper-slider1 {
         background-image: url(../img/Index/slider-1.png);
     } 
     & .swiper-slider2 {
         background-image: url(../img/Index/slider-2.png);
     }
-    // & .owl-nav {
-    //     position: absolute;
-    //     top: 50%;
-    //     padding-left: 30px;
-    //     transform: translateY(-50%);
-    //     display: inline-flex;
-    //     flex-direction: column;
-    //     & .owl-prev {
-    //         height: 50px;
-    //         width: 50px;
-    //         border-radius: 50%;
-    //         display: flex;
-    //         justify-content: center;
-    //         align-items: center;
-    //         background-color: $theme2 !important;
-    //     }
-    // }
     & .swiper-button-next {
-        left: 30px;
+        left: 20px;
         height: 45px;
         width: 45px;
         border-radius: 50%;
         background-color: $theme2;
-        margin: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -127,13 +110,13 @@
         }
     }
     & .swiper-button-prev {
-        left: 30px;
+        left: 20px;
         height: 45px;
         top: 40%;
+        // margin: 20px 0;
         width: 45px;
         border-radius: 50%;
         background-color: $theme2;
-        margin: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -168,326 +151,792 @@
 
 // Small devices (landscape phones, 576px and up)
 @mixin heroSection-mixin-min-sm() {
-    .heroSection {
-        & .mySwiper {
-            & .swiper-slide{
-                & .sliderr1 {
-                }
-                & .sliderr2 {
-                }
-                & .sliderr3 {
-                }
-                & .sliderr4 {
-                }
-                & .sliderr5 {
+    .hero-section {
+        & .swiper-slide {
+            & .hero-subheading {
+                & .pie-chart {
                 }
             }
-            & .swiper-pagination {
-                & .swiper-pagination-bullet {
+            @keyframes fadeInUp{
+                0%{
                 }
-                & .swiper-pagination-bullet-active {
+                100%{
+
                 }
             }
             & .hero-heading {
-                & .hero-subheading {
-                }
+                & .hero-animation {
+                    &::before {
+                    }
+                    @keyframes zoom-fade {
+                        0% {
+                        }                       
+                       10% {
+                        }
+                        
+                        20% {
+                        }
+                        
+                        30% {
+                        }
+                        
+                        40% {
+
+                        }                        
+                        50% {
+                        }
+                        
+                        90% {
+                        }
+                        
+                        100% {
+                        }
+                      }
+                    }
             }
             & .hero-title {
+            }
+            & .hero-btn {
+            }
+        }    
+        & .swiper-slider1 {
+        } 
+        & .swiper-slider2 {
+        }
+        & .swiper-button-next {
+            &::after {
+            }
+        }
+        & .swiper-button-prev {
+            &::after {
+            }
+        }
+        & .hero-content {
+            & .hero-icon {                
+                & .hand-icon {
+                }
+            }
+            & .hero-content2 {
+                & .hero-checkout {
+                }
+                & .hero-rates {
+                }
             }
         }
     }
 }
 // Medium devices (tablets, 768px and up)
 @mixin heroSection-mixin-min-md() {
-    .heroSection {
-        & .mySwiper {
-            & .swiper-slide{
-                & .sliderr1 {
-                }
-                & .sliderr2 {
-                }
-                & .sliderr3 {
-                }
-                & .sliderr4 {
-                }
-                & .sliderr5 {
+    .hero-section {
+        & .swiper-slide {
+            & .hero-subheading {
+                & .pie-chart {
                 }
             }
-            & .swiper-pagination {
-                & .swiper-pagination-bullet {
+            @keyframes fadeInUp{
+                0%{
                 }
-                & .swiper-pagination-bullet-active {
+                100%{
+
                 }
             }
             & .hero-heading {
-                & .hero-subheading {
-                }
+                & .hero-animation {
+                    &::before {
+                    }
+                    @keyframes zoom-fade {
+                        0% {
+                        }                       
+                       10% {
+                        }
+                        
+                        20% {
+                        }
+                        
+                        30% {
+                        }
+                        
+                        40% {
+
+                        }                        
+                        50% {
+                        }
+                        
+                        90% {
+                        }
+                        
+                        100% {
+                        }
+                      }
+                    }
             }
             & .hero-title {
+            }
+            & .hero-btn {
+            }
+        }    
+        & .swiper-slider1 {
+        } 
+        & .swiper-slider2 {
+        }
+        & .swiper-button-next {
+            &::after {
+            }
+        }
+        & .swiper-button-prev {
+            &::after {
+            }
+        }
+        & .hero-content {
+            & .hero-icon {                
+                & .hand-icon {
+                }
+            }
+            & .hero-content2 {
+                & .hero-checkout {
+                }
+                & .hero-rates {
+                }
             }
         }
     }
 }
 // Large devices (desktops, 992px and up)
 @mixin heroSection-mixin-min-lg() {
-    .heroSection {
-        & .mySwiper {
-            & .swiper-slide{
-                & .sliderr1 {
-                }
-                & .sliderr2 {
-                }
-                & .sliderr3 {
-                }
-                & .sliderr4 {
-                }
-                & .sliderr5 {
+    .hero-section {
+        & .swiper-slide {
+            & .hero-subheading {
+                & .pie-chart {
                 }
             }
-            & .swiper-pagination {
-                & .swiper-pagination-bullet {
+            @keyframes fadeInUp{
+                0%{
                 }
-                & .swiper-pagination-bullet-active {
+                100%{
+
                 }
             }
             & .hero-heading {
-                & .hero-subheading {
-                }
+                & .hero-animation {
+                    &::before {
+                    }
+                    @keyframes zoom-fade {
+                        0% {
+                        }                       
+                       10% {
+                        }
+                        
+                        20% {
+                        }
+                        
+                        30% {
+                        }
+                        
+                        40% {
+
+                        }                        
+                        50% {
+                        }
+                        
+                        90% {
+                        }
+                        
+                        100% {
+                        }
+                      }
+                    }
             }
             & .hero-title {
+            }
+            & .hero-btn {
+            }
+        }    
+        & .swiper-slider1 {
+        } 
+        & .swiper-slider2 {
+        }
+        & .swiper-button-next {
+            &::after {
+            }
+        }
+        & .swiper-button-prev {
+            &::after {
+            }
+        }
+        & .hero-content {
+            & .hero-icon {                
+                & .hand-icon {
+                }
+            }
+            & .hero-content2 {
+                & .hero-checkout {
+                }
+                & .hero-rates {
+                }
             }
         }
     }
 }
 // X-Large devices (large desktops, 1200px and up)
 @mixin heroSection-mixin-min-xl() {
-    .heroSection {
-        & .mySwiper {
-            & .swiper-slide{
-                & .sliderr1 {
-                }
-                & .sliderr2 {
-                }
-                & .sliderr3 {
-                }
-                & .sliderr4 {
-                }
-                & .sliderr5 {
+    .hero-section {
+        & .swiper-slide {
+            & .hero-subheading {
+                & .pie-chart {
                 }
             }
-            & .swiper-pagination {
-                & .swiper-pagination-bullet {
+            @keyframes fadeInUp{
+                0%{
                 }
-                & .swiper-pagination-bullet-active {
+                100%{
+
                 }
             }
             & .hero-heading {
-                & .hero-subheading {
-                }
+                & .hero-animation {
+                    &::before {
+                    }
+                    @keyframes zoom-fade {
+                        0% {
+                        }                       
+                       10% {
+                        }
+                        
+                        20% {
+                        }
+                        
+                        30% {
+                        }
+                        
+                        40% {
+
+                        }                        
+                        50% {
+                        }
+                        
+                        90% {
+                        }
+                        
+                        100% {
+                        }
+                      }
+                    }
             }
             & .hero-title {
+            }
+            & .hero-btn {
+            }
+        }    
+        & .swiper-slider1 {
+        } 
+        & .swiper-slider2 {
+        }
+        & .swiper-button-next {
+            &::after {
+            }
+        }
+        & .swiper-button-prev {
+            &::after {
+            }
+        }
+        & .hero-content {
+            & .hero-icon {                
+                & .hand-icon {
+                }
+            }
+            & .hero-content2 {
+                & .hero-checkout {
+                }
+                & .hero-rates {
+                }
             }
         }
     }
 }
 // XX-Large devices (larger desktops, 1400px and up)
 @mixin heroSection-mixin-min-xxl() {
-    .heroSection {
-        & .mySwiper {
-            & .swiper-slide{
-                & .sliderr1 {
-                }
-                & .sliderr2 {
-                }
-                & .sliderr3 {
-                }
-                & .sliderr4 {
-                }
-                & .sliderr5 {
+    .hero-section {
+        & .swiper-slide {
+            & .hero-subheading {
+                & .pie-chart {
                 }
             }
-            & .swiper-pagination {
-                & .swiper-pagination-bullet {
+            @keyframes fadeInUp{
+                0%{
                 }
-                & .swiper-pagination-bullet-active {
+                100%{
+
                 }
             }
             & .hero-heading {
-                & .hero-subheading {
-                }
+                & .hero-animation {
+                    &::before {
+                    }
+                    @keyframes zoom-fade {
+                        0% {
+                        }                       
+                       10% {
+                        }
+                        
+                        20% {
+                        }
+                        
+                        30% {
+                        }
+                        
+                        40% {
+
+                        }                        
+                        50% {
+                        }
+                        
+                        90% {
+                        }
+                        
+                        100% {
+                        }
+                      }
+                    }
             }
             & .hero-title {
+            }
+            & .hero-btn {
+            }
+        }    
+        & .swiper-slider1 {
+        } 
+        & .swiper-slider2 {
+        }
+        & .swiper-button-next {
+            &::after {
+            }
+        }
+        & .swiper-button-prev {
+            &::after {
+            }
+        }
+        & .hero-content {
+            & .hero-icon {                
+                & .hand-icon {
+                }
+            }
+            & .hero-content2 {
+                & .hero-checkout {
+                }
+                & .hero-rates {
+                }
             }
         }
     }
 }
 // X-Large devices (large desktops, less than 1400px)
 @mixin heroSection-mixin-max-xl() {
-    .heroSection {
-        & .mySwiper {
-            & .swiper-slide{
-                & .sliderr1 {
-                }
-                & .sliderr2 {
-                }
-                & .sliderr3 {
-                }
-                & .sliderr4 {
-                }
-                & .sliderr5 {
+    .hero-section {
+        & .swiper-slide {
+            & .hero-subheading {
+                & .pie-chart {
                 }
             }
-            & .swiper-pagination {
-                & .swiper-pagination-bullet {
+            @keyframes fadeInUp{
+                0%{
                 }
-                & .swiper-pagination-bullet-active {
+                100%{
+
                 }
             }
             & .hero-heading {
-                & .hero-subheading {
-                }
+                & .hero-animation {
+                    &::before {
+                    }
+                    @keyframes zoom-fade {
+                        0% {
+                        }                       
+                       10% {
+                        }
+                        
+                        20% {
+                        }
+                        
+                        30% {
+                        }
+                        
+                        40% {
+
+                        }                        
+                        50% {
+                        }
+                        
+                        90% {
+                        }
+                        
+                        100% {
+                        }
+                      }
+                    }
             }
             & .hero-title {
+            }
+            & .hero-btn {
+            }
+        }    
+        & .swiper-slider1 {
+        } 
+        & .swiper-slider2 {
+        }
+        & .swiper-button-next {
+            &::after {
+            }
+        }
+        & .swiper-button-prev {
+            &::after {
+            }
+        }
+        & .hero-content {
+            & .hero-icon {                
+                & .hand-icon {
+                }
+            }
+            & .hero-content2 {
+                & .hero-checkout {
+                }
+                & .hero-rates {
+                }
             }
         }
     }
 }
 // Large devices (desktops, less than 1200px)
 @mixin heroSection-mixin-max-lg() {
-    .heroSection {
-        & .mySwiper {
-            & .swiper-slide{
-                & .sliderr1 {
-                }
-                & .sliderr2 {
-                }
-                & .sliderr3 {
-                }
-                & .sliderr4 {
-                }
-                & .sliderr5 {
+    .hero-section {
+        & .swiper-slide {
+            & .hero-subheading {
+                & .pie-chart {
                 }
             }
-            & .swiper-pagination {
-                & .swiper-pagination-bullet {
+            @keyframes fadeInUp{
+                0%{
                 }
-                & .swiper-pagination-bullet-active {
+                100%{
+
                 }
             }
             & .hero-heading {
-                font-size: 55px;
-                & .hero-subheading {
-                }
+                & .hero-animation {
+                    &::before {
+                    }
+                    @keyframes zoom-fade {
+                        0% {
+                        }                       
+                       10% {
+                        }
+                        
+                        20% {
+                        }
+                        
+                        30% {
+                        }
+                        
+                        40% {
+
+                        }                        
+                        50% {
+                        }
+                        
+                        90% {
+                        }
+                        
+                        100% {
+                        }
+                      }
+                    }
             }
             & .hero-title {
-                font-size: 15px;
+            }
+            & .hero-btn {
+            }
+        }    
+        & .swiper-slider1 {
+        } 
+        & .swiper-slider2 {
+        }
+        & .swiper-button-next {
+            &::after {
+            }
+        }
+        & .swiper-button-prev {
+            &::after {
+            }
+        }
+        & .hero-content {
+            & .hero-icon {                
+                & .hand-icon {
+                }
+            }
+            & .hero-content2 {
+                & .hero-checkout {
+                }
+                & .hero-rates {
+                }
             }
         }
     }
 }
 // Medium devices (tablets, less than 992px)
 @mixin heroSection-mixin-max-md() {
-    .heroSection {
-        & .mySwiper {
-            & .swiper-slide{
-                & .sliderr1 {
-                }
-                & .sliderr2 {
-                }
-                & .sliderr3 {
-                }
-                & .sliderr4 {
-                }
-                & .sliderr5 {
+    .hero-section {
+        & .swiper-slide {
+            & .hero-subheading {
+                font-size: 17px;
+                & .pie-chart {
                 }
             }
-            & .swiper-pagination {
-                & .swiper-pagination-bullet {
+            @keyframes fadeInUp{
+                0%{
                 }
-                & .swiper-pagination-bullet-active {
+                100%{
+
                 }
             }
             & .hero-heading {
                 font-size: 44px;
-                line-height: 46px;
-                & .hero-subheading {
-                }
+                & .hero-animation {
+                    &::before {
+                    }
+                    @keyframes zoom-fade {
+                        0% {
+                        }                       
+                       10% {
+                        }
+                        
+                        20% {
+                        }
+                        
+                        30% {
+                        }
+                        
+                        40% {
+
+                        }                        
+                        50% {
+                        }
+                        
+                        90% {
+                        }
+                        
+                        100% {
+                        }
+                      }
+                    }
             }
             & .hero-title {
                 font-size: 14px;
+            }
+            & .hero-btn {
+            }
+        }    
+        & .swiper-slider1 {
+        } 
+        & .swiper-slider2 {
+        }
+        & .swiper-button-next {
+            &::after {
+            }
+        }
+        & .swiper-button-prev {
+            &::after {
+            }
+        }
+        & .hero-content {
+            & .hero-icon {
+                height: 95px;
+                width: 95px;
+                & .hand-icon {
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+            & .hero-content2 {
+                height: 95px;
+                & .hero-checkout {
+                }
+                & .hero-rates {
+                }
             }
         }
     }
 }
 // Small devices (landscape phones, less than 768px)
 @mixin heroSection-mixin-max-sm() {
-    .heroSection {
-        & .mySwiper {
-            & .swiper-slide{
-                & .sliderr1 {
-                }
-                & .sliderr2 {
-                }
-                & .sliderr3 {
-                }
-                & .sliderr4 {
-                }
-                & .sliderr5 {
+    .hero-section {
+        & .swiper-slide {
+            & .hero-subheading {
+                font-size: 16px;
+                & .pie-chart {
+                    height: 25px;
+                    width: 25px;
                 }
             }
-            & .swiper-pagination {
-                & .swiper-pagination-bullet {
-                    height: 12px;
-                    width: 12px;
+            @keyframes fadeInUp{
+                0%{
                 }
-                & .swiper-pagination-bullet-active {
+                100%{
+
                 }
             }
             & .hero-heading {
                 font-size: 36px;
-                line-height: 40px;
-                & .hero-subheading {
-                }
+                & .hero-animation {
+                    &::before {
+                    }
+                    @keyframes zoom-fade {
+                        0% {
+                        }                       
+                       10% {
+                        }
+                        
+                        20% {
+                        }
+                        
+                        30% {
+                        }
+                        
+                        40% {
+
+                        }                        
+                        50% {
+                        }
+                        
+                        90% {
+                        }
+                        
+                        100% {
+                        }
+                      }
+                    }
             }
             & .hero-title {
-                font-size: 13px ;
+                font-size: 13px;
+            }
+            & .hero-btn {
+            }
+        }    
+        & .swiper-slider1 {
+        } 
+        & .swiper-slider2 {
+        }
+        & .swiper-button-next {
+            &::after {
+            }
+        }
+        & .swiper-button-prev {
+            &::after {
+            }
+        }
+        & .hero-content {
+            & .hero-icon {
+                height: 75px;
+                width: 75px;
+                & .hand-icon {
+                    height: 35px;
+                    width: 35px;
+                }
+            }
+            & .hero-content2 {
+                height: 75px;
+                & .hero-checkout {
+                    font-size: 9px;
+                }
+                & .hero-rates {
+                    font-size: 15px;
+                }
             }
         }
     }
 }
 // X-Small devices (portrait phones, less than 576px)
 @mixin heroSection-mixin-max-xs() {
-    .heroSection {
-        & .mySwiper {
-            & .swiper-slide{
-                & .sliderr1 {
-                }
-                & .sliderr2 {
-                }
-                & .sliderr3 {
-                }
-                & .sliderr4 {
-                }
-                & .sliderr5 {
+    .hero-section {
+        & .swiper-slide {
+            & .hero-subheading {
+                font-size: 15px;
+                & .pie-chart {
+                    height: 20px;
+                    width: 20px;
                 }
             }
-            & .swiper-pagination {
-                & .swiper-pagination-bullet {
-                    height: 10px;
-                    width: 10px;
-                    border-width: 2px;
+            @keyframes fadeInUp{
+                0%{
                 }
-                & .swiper-pagination-bullet-active {
+                100%{
+
                 }
             }
             & .hero-heading {
-                font-size: 28px;
-                line-height: 35px;
-                & .hero-subheading {
-                }
+                font-size: 30px;
+                & .hero-animation {
+                    &::before {
+                    }
+                    @keyframes zoom-fade {
+                        0% {
+                        }                       
+                       10% {
+                        }
+                        
+                        20% {
+                        }
+                        
+                        30% {
+                        }
+                        
+                        40% {
+
+                        }                        
+                        50% {
+                        }
+                        
+                        90% {
+                        }
+                        
+                        100% {
+                        }
+                      }
+                    }
             }
             & .hero-title {
                 font-size: 12px;
+            }
+            & .hero-btn {
+            }
+        }    
+        & .swiper-slider1 {
+        } 
+        & .swiper-slider2 {
+        }
+        & .swiper-button-next {
+            &::after {
+            }
+        }
+        & .swiper-button-prev {
+            &::after {
+            }
+        }
+        & .hero-content {
+            & .hero-icon {
+                height: 65px;
+                width: 65px;
+                & .hand-icon {
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+            & .hero-content2 {
+                height: 65px;
+                & .hero-checkout {
+                    font-size: 8px;
+                }
+                & .hero-rates {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -558,7 +1007,6 @@
         font-size: 18px;
         color: lighten($black,10);
         line-height: 28px;
-        
         }
         & .about-title2 {
             font-size: 15px;
@@ -691,175 +1139,700 @@
 
 // Small devices (landscape phones, 576px and up)
 @mixin aboutus-mixin-min-sm() {
-    .aboutus {
-        & .about-card {
-            &:hover {
+    .about-us {
+        & .about-left {
+            &::before {
             }
-            & .about-img {
+            @keyframes aboutus {
+                0%, 100% { 
+                }
+                50% {
+                }
             }
-            & .about-heading {
+            & .about-loanicon {
+                &::before {
             }
-            & .about-title{
+            & .about-title {           
             }
+            & .about-title2 {
+            }
+            & .about-card {
+                & .about-card-heading {
+                    & .about-card-icon {
+                    }
+                }
+                & .about-card-title {
+                }
+            }
+        }
+        & .about-us-img {
+            &::before {
+            }
+            &::after {
+            }
+            & .about-img-content-main {
+                &::before {
+                }
+                & .about-year {
+                    & sup {
+                    }
+                }
+                & .about-experience {
+                }
+            }
+        }
+        & .about-cardd {
+            .about-card2 {
+                & .about-card2-img {
+                    &::before {
+                    }
+                    & .about-card2-icon {
+                    }
+                }
+                & .about-card1-heading {
+                }
+                & .about-card1-title {
+                }
+                & .moredetail-btn {
+                }
+                &:hover {
+                    & .about-card1-heading {
+                    }
+                    & .moredetail-btn {
+                    }
+                }
+            }
+        }
         }
     }
 }
 // Medium devices (tablets, 768px and up)
 @mixin aboutus-mixin-min-md() {
-    .aboutus {
-        & .about-card {
-            &:hover {
+    .about-us {
+        & .about-left {
+            &::before {
             }
-            & .about-img {
+            @keyframes aboutus {
+                0%, 100% { 
+                }
+                50% {
+                }
             }
-            & .about-heading {
+            & .about-loanicon {
+                &::before {
             }
-            & .about-title{
+            & .about-title {           
             }
+            & .about-title2 {
+            }
+            & .about-card {
+                & .about-card-heading {
+                    & .about-card-icon {
+                    }
+                }
+                & .about-card-title {
+                }
+            }
+        }
+        & .about-us-img {
+            &::before {
+            }
+            &::after {
+            }
+            & .about-img-content-main {
+                &::before {
+                }
+                & .about-year {
+                    & sup {
+                    }
+                }
+                & .about-experience {
+                }
+            }
+        }
+        & .about-cardd {
+            .about-card2 {
+                & .about-card2-img {
+                    &::before {
+                    }
+                    & .about-card2-icon {
+                    }
+                }
+                & .about-card1-heading {
+                }
+                & .about-card1-title {
+                }
+                & .moredetail-btn {
+                }
+                &:hover {
+                    & .about-card1-heading {
+                    }
+                    & .moredetail-btn {
+                    }
+                }
+            }
+        }
         }
     }
 }
 // Large devices (desktops, 992px and up)
 @mixin aboutus-mixin-min-lg() {
-    .aboutus {
-        & .about-card {
-            &:hover {
+    .about-us {
+        & .about-left {
+            &::before {
             }
-            & .about-img {
+            @keyframes aboutus {
+                0%, 100% { 
+                }
+                50% {
+                }
             }
-            & .about-heading {
+            & .about-loanicon {
+                &::before {
             }
-            & .about-title{
+            & .about-title {           
             }
+            & .about-title2 {
+            }
+            & .about-card {
+                & .about-card-heading {
+                    & .about-card-icon {
+                    }
+                }
+                & .about-card-title {
+                }
+            }
+        }
+        & .about-us-img {
+            &::before {
+            }
+            &::after {
+            }
+            & .about-img-content-main {
+                &::before {
+                }
+                & .about-year {
+                    & sup {
+                    }
+                }
+                & .about-experience {
+                }
+            }
+        }
+        & .about-cardd {
+            .about-card2 {
+                & .about-card2-img {
+                    &::before {
+                    }
+                    & .about-card2-icon {
+                    }
+                }
+                & .about-card1-heading {
+                }
+                & .about-card1-title {
+                }
+                & .moredetail-btn {
+                }
+                &:hover {
+                    & .about-card1-heading {
+                    }
+                    & .moredetail-btn {
+                    }
+                }
+            }
+        }
         }
     }
 }
 // X-Large devices (large desktops, 1200px and up)
 @mixin aboutus-mixin-min-xl() {
-    .aboutus {
-        & .about-card {
-            &:hover {
+    .about-us {
+        & .about-left {
+            &::before {
             }
-            & .about-img {
+            @keyframes aboutus {
+                0%, 100% { 
+                }
+                50% {
+                }
             }
-            & .about-heading {
+            & .about-loanicon {
+                &::before {
             }
-            & .about-title{
+            & .about-title {           
             }
+            & .about-title2 {
+            }
+            & .about-card {
+                & .about-card-heading {
+                    & .about-card-icon {
+                    }
+                }
+                & .about-card-title {
+                }
+            }
+        }
+        & .about-us-img {
+            &::before {
+            }
+            &::after {
+            }
+            & .about-img-content-main {
+                &::before {
+                }
+                & .about-year {
+                    & sup {
+                    }
+                }
+                & .about-experience {
+                }
+            }
+        }
+        & .about-cardd {
+            .about-card2 {
+                & .about-card2-img {
+                    &::before {
+                    }
+                    & .about-card2-icon {
+                    }
+                }
+                & .about-card1-heading {
+                }
+                & .about-card1-title {
+                }
+                & .moredetail-btn {
+                }
+                &:hover {
+                    & .about-card1-heading {
+                    }
+                    & .moredetail-btn {
+                    }
+                }
+            }
+        }
         }
     }
 }
 // XX-Large devices (larger desktops, 1400px and up)
 @mixin aboutus-mixin-min-xxl() {
-    .aboutus {
-        & .about-card {
-            &:hover {
+    .about-us {
+        & .about-left {
+            &::before {
             }
-            & .about-img {
+            @keyframes aboutus {
+                0%, 100% { 
+                }
+                50% {
+                }
             }
-            & .about-heading {
+            & .about-loanicon {
+                &::before {
             }
-            & .about-title{
+            & .about-title {           
             }
+            & .about-title2 {
+            }
+            & .about-card {
+                & .about-card-heading {
+                    & .about-card-icon {
+                    }
+                }
+                & .about-card-title {
+                }
+            }
+        }
+        & .about-us-img {
+            &::before {
+            }
+            &::after {
+            }
+            & .about-img-content-main {
+                &::before {
+                }
+                & .about-year {
+                    & sup {
+                    }
+                }
+                & .about-experience {
+                }
+            }
+        }
+        & .about-cardd {
+            .about-card2 {
+                & .about-card2-img {
+                    &::before {
+                    }
+                    & .about-card2-icon {
+                    }
+                }
+                & .about-card1-heading {
+                }
+                & .about-card1-title {
+                }
+                & .moredetail-btn {
+                }
+                &:hover {
+                    & .about-card1-heading {
+                    }
+                    & .moredetail-btn {
+                    }
+                }
+            }
+        }
         }
     }
 }
 // X-Large devices (large desktops, less than 1400px)
 @mixin aboutus-mixin-max-xl() {
-    .aboutus {
-        & .about-card {
-            &:hover {
+    .about-us {
+        & .about-left {
+            &::before {
             }
-            & .about-img {
+            @keyframes aboutus {
+                0%, 100% { 
+                }
+                50% {
+                }
             }
-            & .about-heading {
+            & .about-loanicon {
+                &::before {
             }
-            & .about-title{
+            & .about-title {           
             }
+            & .about-title2 {
+            }
+            & .about-card {
+                & .about-card-heading {
+                    & .about-card-icon {
+                    }
+                }
+                & .about-card-title {
+                }
+            }
+        }
+        & .about-us-img {
+            &::before {
+            }
+            &::after {
+            }
+            & .about-img-content-main {
+                &::before {
+                }
+                & .about-year {
+                    & sup {
+                    }
+                }
+                & .about-experience {
+                }
+            }
+        }
+        & .about-cardd {
+            .about-card2 {
+                & .about-card2-img {
+                    &::before {
+                    }
+                    & .about-card2-icon {
+                    }
+                }
+                & .about-card1-heading {
+                }
+                & .about-card1-title {
+                }
+                & .moredetail-btn {
+                }
+                &:hover {
+                    & .about-card1-heading {
+                    }
+                    & .moredetail-btn {
+                    }
+                }
+            }
+        }
         }
     }
 }
 // Large devices (desktops, less than 1200px)
 @mixin aboutus-mixin-max-lg() {
-    .aboutus {
-        & .about-card {
-            height: 290px;
-            width: 290px;
-            &:hover {
+    .about-us {
+        & .about-left {
+            &::before {
             }
-            & .about-img {
-                height: 95px;
-                width: 95px;
+            @keyframes aboutus {
+                0%, 100% { 
+                }
+                50% {
+                }
             }
-            & .about-heading {
+            & .about-loanicon {
+                &::before {
             }
-            & .about-title{
+            & .about-title {           
             }
+            & .about-title2 {
+            }
+            & .about-card {
+                & .about-card-heading {
+                    & .about-card-icon {
+                    }
+                }
+                & .about-card-title {
+                }
+            }
+        }
+        & .about-us-img {
+            &::before {
+            }
+            &::after {
+            }
+            & .about-img-content-main {
+                &::before {
+                }
+                & .about-year {
+                    & sup {
+                    }
+                }
+                & .about-experience {
+                }
+            }
+        }
+        & .about-cardd {
+            .about-card2 {
+                & .about-card2-img {
+                    &::before {
+                    }
+                    & .about-card2-icon {
+                    }
+                }
+                & .about-card1-heading {
+                }
+                & .about-card1-title {
+                }
+                & .moredetail-btn {
+                }
+                &:hover {
+                    & .about-card1-heading {
+                    }
+                    & .moredetail-btn {
+                    }
+                }
+            }
+        }
         }
     }
 }
 // Medium devices (tablets, less than 992px)
 @mixin aboutus-mixin-max-md() {
-    .aboutus {
-        & .about-card {
-            height: 300px;
-            width: 300px;
-            &:hover {
+    .about-us {
+        & .about-left {
+            &::before {
             }
-            & .about-img {
-                height: 90px;
-                width: 90px;
+            @keyframes aboutus {
+                0%, 100% { 
+                }
+                50% {
+                }
             }
-            & .about-heading {
-                font-size: 20px;
+            & .about-loanicon {
+                &::before {
             }
-            & .about-title{
-                font-size: 14px;
+            & .about-title {           
             }
+            & .about-title2 {
+            }
+            & .about-card {
+                & .about-card-heading {
+                    & .about-card-icon {
+                    }
+                }
+                & .about-card-title {
+                }
+            }
+        }
+        & .about-us-img {
+            &::before {
+            }
+            &::after {
+            }
+            & .about-img-content-main {
+                &::before {
+                }
+                & .about-year {
+                    & sup {
+                    }
+                }
+                & .about-experience {
+                }
+            }
+        }
+        & .about-cardd {
+            .about-card2 {
+                & .about-card2-img {
+                    &::before {
+                    }
+                    & .about-card2-icon {
+                    }
+                }
+                & .about-card1-heading {
+                }
+                & .about-card1-title {
+                }
+                & .moredetail-btn {
+                }
+                &:hover {
+                    & .about-card1-heading {
+                    }
+                    & .moredetail-btn {
+                    }
+                }
+            }
+        }
         }
     }
 }
 // Small devices (landscape phones, less than 768px)
 @mixin aboutus-mixin-max-sm() {
-    .aboutus {
-        & .about-card {
-            height:270px ;
-            width: 270px;
-            &:hover {
+    .about-us {
+        & .about-left {
+            &::before {
             }
-            & .about-img {
-                height: 75px;
-                width: 75px;
+            @keyframes aboutus {
+                0%, 100% { 
+                }
+                50% {
+                }
             }
-            & .about-heading {
-                font-size: 18px;
+            & .about-loanicon {
+                &::before {
             }
-            & .about-title{
-                font-size: 13px;
+            & .about-title {           
             }
+            & .about-title2 {
+            }
+            & .about-card {
+                & .about-card-heading {
+                    & .about-card-icon {
+                    }
+                }
+                & .about-card-title {
+                }
+            }
+        }
+        & .about-us-img {
+            &::before {
+            }
+            &::after {
+            }
+            & .about-img-content-main {
+                &::before {
+                }
+                & .about-year {
+                    & sup {
+                    }
+                }
+                & .about-experience {
+                }
+            }
+        }
+        & .about-cardd {
+            .about-card2 {
+                & .about-card2-img {
+                    &::before {
+                    }
+                    & .about-card2-icon {
+                    }
+                }
+                & .about-card1-heading {
+                }
+                & .about-card1-title {
+                }
+                & .moredetail-btn {
+                }
+                &:hover {
+                    & .about-card1-heading {
+                    }
+                    & .moredetail-btn {
+                    }
+                }
+            }
+        }
         }
     }
 }
 // X-Small devices (portrait phones, less than 576px)
 @mixin aboutus-mixin-max-xs() {
-    .aboutus {
-        & .about-card {
-            height: 250px;
-            width: 250px;
-            border-width: 8px;
-            &:hover {
+    .about-us {
+        & .about-left {
+            &::before {
             }
-            & .about-img {
-                height: 65px;
-                width: 65px;
+            @keyframes aboutus {
+                0%, 100% { 
+                }
+                50% {
+                }
             }
-            & .about-heading {
-                font-size: 16px;
+            & .about-loanicon {
+                height: 40px;
+                width: 70px;
+                &::before {
             }
-            & .about-title{
+            & .about-title {  
+                font-size: 14px;         
+            }
+            & .about-title2 {
                 font-size: 12px;
-                line-height: 19px;
             }
+            & .about-card {
+                & .about-card-heading {
+                    font-size: 13px;
+                    & .about-card-icon {
+                        height: 22px;
+                        width: 22px;
+                    }
+                }
+                & .about-card-title {
+                    font-size: 12px;
+                }
+            }
+        }
+        & .about-us-img {
+            max-width: 300px;
+            &::before {
+            }
+            &::after {
+            }
+            & .about-img-content-main {
+                &::before {
+                }
+                & .about-year {
+                    & sup {
+                    }
+                }
+                & .about-experience {
+                }
+            }
+        }
+        & .about-cardd {
+            .about-card2 {
+                & .about-card2-img {
+                    &::before {
+                    }
+                    & .about-card2-icon {
+                    }
+                }
+                & .about-card1-heading {
+                }
+                & .about-card1-title {
+                }
+                & .moredetail-btn {
+                }
+                &:hover {
+                    & .about-card1-heading {
+                    }
+                    & .moredetail-btn {
+                    }
+                }
+            }
+        }
         }
     }
 }
@@ -1149,15 +2122,36 @@
     }
     & .calculate-img {
         height: 100%;
-        width: 485px;
-        & .calculate-rating {
-            & .calculate-rating-count {
-                font-size: 32px;
-                color: $white;
-            }
-            & .calculate-rating-title {
-                font-size: 22px;
-                color: $white;
+        width: 86%;
+        & .calculate-rating-main {
+            // background: url(../img/Index/calculator-form-bubble-bg.png);
+            // background-size: 90%;
+            // height: 150px;
+            // width: 320px;
+            right: -14%;
+            bottom: 25%;
+            transform: translate(14%, 25%);
+            width: 398px;
+            height: 295px;
+            background-image: url(../img/Index/calculator-form-bubble-bg.png);
+            background-repeat: no-repeat;
+            & .calculate-rating {
+                width: 260px;
+                height: 130px;
+                margin-top: 59px;
+                & .calculate-rating-count {
+                    font-size: 50px;
+                    color: $white;
+                    word-spacing: -4px;
+                    line-height: 45px;
+                    & .per {
+                        font-size: 32px;
+                    }
+                }
+                & .calculate-rating-title {
+                    font-size: 20px;
+                    color: $white;
+                }
             }
         }
     }
@@ -1184,6 +2178,7 @@
     background: url(../img/Index/testim-bg.png) no-repeat;
     background-position: center left;
     & .testim-card-main {
+        z-index: 1;
         & .testim-card {
             border: 2px solid $white;
             transition: all 0.3s ease-in-out;

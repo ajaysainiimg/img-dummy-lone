@@ -3,7 +3,7 @@
   background-color: $theme1; 
   transition: all 0.3s ease-in-out;
   font-size: 13px;
-  padding: 0 34px;
+  padding: 17px 34px;
   letter-spacing: 1px;
   &::before {
       content: '';
@@ -29,42 +29,12 @@
 // Small devices (landscape phones, 576px and up)
 @mixin btn-mixin-min-sm() {
   .custom-btn {
-      &::before {
-      }
-      & .person {
-        & .person-img {
-        }
-      }
-      &:hover {
-        &::before {
-        }
-        & .person-img {
-        }
-      }
-      &:focus {
-        &::before {
-        }
-        & .person-img {
-        }
-      }
-      &:active {
-        &::before {
-        }
-        & .person-img {
-        }
-      }
-   }
-  .custom-btn2 {
-  &::before {
-  }
-  & .person-img {
-  }
-  &:hover {
     &::before {
     }
-    & .person-img {
+    &:hover {
+        &::before {
+        }
     }
-  }
   }
 }
 // Medium devices (tablets, 768px and up)
@@ -72,40 +42,10 @@
   .custom-btn {
     &::before {
     }
-    & .person {
-      & .person-img {
-      }
-    }
     &:hover {
-      &::before {
-      }
-      & .person-img {
-      }
+        &::before {
+        }
     }
-    &:focus {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
-    &:active {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
-  }
-.custom-btn2 {
-&::before {
-}
-& .person-img {
-}
-&:hover {
-  &::before {
-  }
-  & .person-img {
-  }
-}
   }
 }
 // Large devices (desktops, 992px and up)
@@ -113,331 +53,91 @@
   .custom-btn {
     &::before {
     }
-    & .person {
-      & .person-img {
-      }
-    }
     &:hover {
-      &::before {
-      }
-      & .person-img {
-      }
+        &::before {
+        }
     }
-    &:focus {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
-    &:active {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
- }
-.custom-btn2 {
-&::before {
-}
-& .person-img {
-}
-&:hover {
-  &::before {
   }
-  & .person-img {
-  }
-}
-}
 }
 // X-Large devices (large desktops, 1200px and up)
 @mixin btn-mixin-min-xl() {
   .custom-btn {
     &::before {
     }
-    & .person {
-      & .person-img {
-      }
-    }
     &:hover {
-      &::before {
-      }
-      & .person-img {
-      }
+        &::before {
+        }
     }
-    &:focus {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
-    &:active {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
- }
-.custom-btn2 {
-&::before {
-}
-& .person-img {
-}
-&:hover {
-  &::before {
   }
-  & .person-img {
-  }
-}
-}
 }
 // XX-Large devices (larger desktops, 1400px and up)
 @mixin btn-mixin-min-xxl() {
   .custom-btn {
     &::before {
     }
-    & .person {
-      & .person-img {
-      }
-    }
     &:hover {
-      &::before {
-      }
-      & .person-img {
-      }
+        &::before {
+        }
     }
-    &:focus {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
-    &:active {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
- }
-.custom-btn2 {
-&::before {
-}
-& .person-img {
-}
-&:hover {
-  &::before {
   }
-  & .person-img {
-  }
-}
-}
 }
 // X-Large devices (large desktops, less than 1400px)
 @mixin btn-mixin-max-xl() {
   .custom-btn {
     &::before {
     }
-    & .person {
-      & .person-img {
-      }
-    }
     &:hover {
-      &::before {
-      }
-      & .person-img {
-      }
+        &::before {
+        }
     }
-    &:focus {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
-    &:active {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
- }
-.custom-btn2 {
-&::before {
-}
-& .person-img {
-}
-&:hover {
-  &::before {
   }
-  & .person-img {
-  }
-}
-}
 }
 // Large devices (desktops, less than 1200px)
 @mixin btn-mixin-max-lg() {
   .custom-btn {
     &::before {
     }
-    & .person {
-      & .person-img {
-      }
-    }
     &:hover {
-      &::before {
-      }
-      & .person-img {
-      }
+        &::before {
+        }
     }
-    &:focus {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
-    &:active {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
- }
-.custom-btn2 {
-&::before {
-}
-& .person-img {
-}
-&:hover {
-  &::before {
   }
-  & .person-img {
-  }
-}
-}
 }
 // Medium devices (tablets, less than 992px)
 @mixin btn-mixin-max-md() {
   .custom-btn {
-    font-size: 13px;
+    padding: 15px 24px;
     &::before {
     }
-    & .person {
-      & .person-img {
-      }
-    }
     &:hover {
-      &::before {
-      }
-      & .person-img {
-      }
+        &::before {
+        }
     }
-    &:focus {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
-    &:active {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
- }
-.custom-btn2 {
-&::before {
-}
-& .person-img {
-}
-&:hover {
-  &::before {
   }
-  & .person-img {
-  }
-}
-}
 }
 // Small devices (landscape phones, less than 768px)
 @mixin btn-mixin-max-sm() {
   .custom-btn {
     font-size: 12px;
+    padding: 13px 22px;
     &::before {
     }
-    & .person {
-      & .person-img {
-      }
-    }
     &:hover {
-      &::before {
-      }
-      & .person-img {
-      }
+        &::before {
+        }
     }
-    &:focus {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
-    &:active {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
-  }
-  .custom-btn2 {
-&::before {
-}
-& .person-img {
-}
-&:hover {
-  &::before {
-  }
-  & .person-img {
-  }
-}
   }
 }
 // X-Small devices (portrait phones, less than 576px)
 @mixin btn-mixin-max-xs() {
   .custom-btn {
     font-size: 11px;
+    padding: 10px 16px;
     &::before {
     }
-    & .person {
-      height: 12px;
-      width: 12px;
-      & .person-img {
-      }
-    }
     &:hover {
-      &::before {
-      }
-      & .person-img {
-      }
+        &::before {
+        }
     }
-    &:focus {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
-    &:active {
-      &::before {
-      }
-      & .person-img {
-      }
-    }
-  }
-  .custom-btn2 {
-&::before {
-}
-& .person-img {
-}
-&:hover {
-  &::before {
-  }
-  & .person-img {
-  }
-}
   }
 }

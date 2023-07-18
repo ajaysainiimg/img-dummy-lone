@@ -21,3 +21,122 @@
     font-weight: bold;
     line-height: 1.2em;
 }
+
+// Small devices (landscape phones, 576px and up)
+@mixin heading-mixin-min-sm() {
+    .heading {
+        &::after {
+        }
+        &::before {
+        }
+    }
+    .sub-heading {
+    }
+}
+// Medium devices (tablets, 768px and up)
+@mixin heading-mixin-min-md() {
+    .heading {
+        &::after {
+        }
+        &::before {
+        }
+    }
+    .sub-heading {
+    }
+}
+// Large devices (desktops, 992px and up)
+@mixin heading-mixin-min-lg() {
+    .heading {
+    &::after {
+    }
+    &::before {
+    }
+    }
+    .sub-heading {
+    }
+}
+// X-Large devices (large desktops, 1200px and up)
+@mixin heading-mixin-min-xl() {
+    .heading {
+        &::after {
+        }
+        &::before {
+        }
+    }
+    .sub-heading {
+    }
+}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin heading-mixin-min-xxl() {
+    .heading {
+        &::after {
+        }
+        &::before {
+        }
+    }
+    .sub-heading {
+    }
+}
+// X-Large devices (large desktops, less than 1400px)
+@mixin heading-mixin-max-xl() {
+    .heading {
+        &::after {
+        }
+        &::before {
+        }
+    }
+    .sub-heading {
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin heading-mixin-max-lg() {
+    .heading {
+        &::after {
+        }
+        &::before {
+        }
+    }
+    .sub-heading {
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin heading-mixin-max-md() {
+    .heading {
+        &::after {
+        }
+        &::before {
+        }
+    }
+    .sub-heading {
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin heading-mixin-max-sm() {
+    .heading {
+        &::after {
+        }
+        &::before {
+        }
+    }
+    .sub-heading {
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin heading-mixin-max-xs() {
+    .heading {
+        font-size: 12px;
+        &::after {
+            font-size: 10px;
+            top: 1px;
+            right: -17px;
+        }
+        &::before {
+            top: 1px;
+            left: 2px;
+            font-size: 10px;
+        }
+    }
+    .sub-heading {
+        font-size: 22px;
+    }
+}

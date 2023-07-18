@@ -74,7 +74,7 @@
   <!-- scroll top end -->
 
 <!-- navbar start -->
-<div class="container-fluid bg-dark top-bar py-2 ">
+<div class="container-fluid bg-dark top-bar py-2 d-lg-flex d-none">
     <div class="container">
       <div class="row align-items-center py-1">
         <div class="col">
@@ -90,11 +90,24 @@
           </div>
         </div>
         <div class="col-auto">
-          <div class="d-flex justify-content-center align-items-center gap-4">
-            <a href="javascript:;" class="top-social-icon d-inline-flex justify-content-center align-items-center"><img src="assets/img/Navbar/twitter.svg" alt="twitter" class="h-100 w-100 img-fluid topsocial-img"></a>
-            <a href="javascript:;" class="top-social-icon d-inline-flex justify-content-center align-items-center"><img src="assets/img/Navbar/facebook.svg" alt="facebook" class="h-100 w-100 img-fluid topsocial-img"></a>
-            <a href="javascript:;" class="top-social-icon d-inline-flex justify-content-center align-items-center"><img src="assets/img/Navbar/pinterest.svg" alt="pinterest" class="h-100 w-100 img-fluid topsocial-img"></a>
-            <a href="javascript:;" class="top-social-icon d-inline-flex justify-content-center align-items-center"><img src="assets/img/Navbar/instagram.svg" alt="instagram" class="h-100 w-100 img-fluid topsocial-img"></a>
+          <div class="d-flex align-items-center gap-5">
+            <div class="d-flex align-items-center gap-3">
+              <a href="javascript:;" class="text-decoration-none map-mail fw-normal d-flex align-items-center gap-2">
+                Login
+              </a>
+              <a href="javascript:;" class="text-decoration-none map-mail fw-normal d-flex align-items-center gap-2">
+                Company News
+              </a>
+              <a href="javascript:;" class="text-decoration-none map-mail fw-normal d-flex align-items-center gap-2">
+                Faq
+              </a>
+            </div>
+            <div class="d-flex justify-content-center align-items-center gap-4">
+              <a href="javascript:;" class="top-social-icon d-inline-flex justify-content-center align-items-center"><img src="assets/img/Navbar/twitter.svg" alt="twitter" class="h-100 w-100 img-fluid topsocial-img"></a>
+              <a href="javascript:;" class="top-social-icon d-inline-flex justify-content-center align-items-center"><img src="assets/img/Navbar/facebook.svg" alt="facebook" class="h-100 w-100 img-fluid topsocial-img"></a>
+              <a href="javascript:;" class="top-social-icon d-inline-flex justify-content-center align-items-center"><img src="assets/img/Navbar/pinterest.svg" alt="pinterest" class="h-100 w-100 img-fluid topsocial-img"></a>
+              <a href="javascript:;" class="top-social-icon d-inline-flex justify-content-center align-items-center"><img src="assets/img/Navbar/instagram.svg" alt="instagram" class="h-100 w-100 img-fluid topsocial-img"></a>
+            </div>
           </div>
         </div>
       </div>
@@ -103,13 +116,7 @@
 <nav class="navbar navbar-expand-lg container-fluid bg-white z-3 w-100 " aria-label="Offcanvas navbar large" id="navbar">
   <div class="container"> 
     <a class="navbar-brand nav-logo" href="index.html"><img src="assets/img/Navbar/logo-dark.png" alt="logo" class="nav-logo img-fluid h-100 w-100"></a>
-    <div class="offcanvas offcanvas-start bg-black nav-offcanvas" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar3Label">
-      <div class="offcanvas-header bg-theme1">
-        <div class="offcanvas-logo"><img src="assets/img/Navbar/logo.png" alt="logo" class="w-100 h-100 img-fluid"></div>
-        <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 align-items-md-center align-items-start pe-3">
+        <ul class="navbar-nav justify-content-end flex-grow-1 align-items-md-center align-items-start pe-3 d-lg-flex d-none">
           <li class="nav-item">
             <a class="nav-link p-0 position-relative fw-normal" href="#about">Home</a>
           </li>
@@ -145,14 +152,20 @@
             <a class="nav-link p-0 position-relative fw-normal" href="#contact">Contact</a>
           </li>
         </ul>
-      </div>
-    </div>
-    <div class="ms-4 d-flex align-items-center gap-4">
-      <a class="search-bar d-inline-flex justify-content-center align-items-center" id="Enlarge"  data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><img src="assets/img/Navbar/search-bar.svg" alt="search" class="h-100 w-100 img-fluid search-img"></a>
-      <a href="javascript:;" class="custom-btn btn border-0 rounded-0 position-relative py-3">Request Loan</a>
+    <div class="ms-4 d-flex align-items-center gap-sm-4 gap-3">
+      <a class="d-lg-none d-flex menu-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        <img src="assets/img/Navbar/menu_icon.svg" alt="menu" class="h-100 w-100">
+      </a>
+      <button class="search-bar d-inline-flex border-0 p-0 bg-transparent justify-content-center align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+        <img src="assets/img/Navbar/search-bar.svg" alt="search" class="h-100 w-100 img-fluid search-img">
+      </button>
+      <!-- <a class="search-bar d-inline-flex justify-content-center align-items-center" id="Enlarge"  data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample2">
+      </a> -->
+      <a href="javascript:;" class="custom-btn btn border-0 rounded-0 position-relative ">Request Loan</a>
     </div>
   </div>
 </nav>
+
 <!-- navbar end -->
 
 <!-- hero section start -->
@@ -163,13 +176,13 @@
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-md-7">
-              <div class="row mx-0 gap-4">
+              <div class="row mx-0 gap-md-4 gap-3">
                 <div class="col-12">
                   <div class=" text-uppercase hero-subheading d-flex align-items-center gap-3"><span class="d-inline-flex justify-content-center align-items-center pie-chart"><img src="assets/img/Index/PieChart.svg" alt="pie-chart" class="h-100 w-100 img-fluid"></span>Simple and Secure payment</div>
                 </div>
                   <div class="hero-heading col-12 fw-bolder">We Provide you a finacial <span class="hero-animation position-relative">power</span></div>
                   <div class="col-12 fw-medium hero-title text-white-50 pb-1" data-aos-offset="50">Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem, ipsum.</div>   
-                  <div class="col-auto"> <a href="javascript:;" class="custom-btn hero-btn btn border-0 rounded-0 position-relative py-3">Apply For Loan</a></div>
+                  <div class="col-auto"> <a href="javascript:;" class="custom-btn hero-btn btn border-0 rounded-0 position-relative">Apply For Loan</a></div>
               </div>
             </div>
           </div>
@@ -179,21 +192,21 @@
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-md-7">
-              <div class="row mx-0 gap-4">
+              <div class="row mx-0 gap-md-4 gap-3">
                 <div class="col-12">
                   <div class=" text-uppercase hero-subheading d-flex align-items-center gap-3"><span class="d-inline-flex justify-content-center align-items-center pie-chart"><img src="assets/img/Index/PieChart.svg" alt="pie-chart" class="h-100 w-100 img-fluid"></span>Simple and Secure payment</div>
                 </div>
                   <div class="hero-heading col-12 fw-bolder">We Provide you a finacial <span class="hero-animation position-relative">power</span></div>
                   <div class="col-12 fw-medium hero-title text-white-50 pb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem, ipsum.</div>   
-                  <div class="col-auto"><a href="javascript:;" class="custom-btn hero-btn btn border-0 rounded-0 position-relative py-3">Apply For Loan</a></div>
+                  <div class="col-auto"><a href="javascript:;" class="custom-btn hero-btn btn border-0 rounded-0 position-relative">Apply For Loan</a></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next d-md-flex d-none"></div>
+      <div class="swiper-button-prev d-md-flex d-none"></div>
       <div class="hero-content d-flex align-items-center position-absolute end-0 bottom-0 z-1 gap-2">
         <div class="hero-icon bg-theme1 d-flex justify-content-center align-items-center">
           <span class="hand-icon d-inline-flex justify-content-center align-items-center"><img src="assets/img/Index/hand.svg" alt="hand" class="h-100 w-100 img-fluid"></span>
@@ -203,44 +216,32 @@
           <div class="hero-rates fw-medium">88% Success Rates</div>
         </div> 
       </div>
-  </div>
 
-  <!-- offcanvas start -->
-  <div class="offcanvas offcanvas-top search-offcanvas" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div>
-        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+      <!-- search-offcanvas start -->
+      <div class="offcanvas offcanvas-top search-offcanvas" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          ...
+        </div>
       </div>
-      <div class="dropdown mt-3">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-          Dropdown button
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-      </div>
-    </div>
+      <!-- search-offcanvas end -->
   </div>
-  <!-- offcanvas end -->
 </div>
 <!-- hero section end -->
 
 <!-- about us sectin start -->
-<div class="container-fluid about-us pt-5 position-relative bg-light">
+<div class="container-fluid about-us pt-lg-5 pt-md-3 pt-0 position-relative bg-light">
   <div class="container pt-5">
-    <div class="row pt-4">
-      <div class="col-md-6 about-left position-relative ">
+    <div class="row pt-lg-4 pt-md-3 pt-0 gap-lg-0 gap-5">
+      <div class="col-lg-6 about-left position-relative ">
         <div class="row mx-0">
-          <div class="col-12"><span class="heading fw-semibold position-relative ps-4">ABOUT COMPANY</span></div>
-          <div class="col-12 sub-heading pt-1 z-1">Personal loans to fulfill your dreams</div>
-          <div class="col-12 py-4">
-            <div class="row mx-0 align-items-center py-2">
+          <div class="col-12 px-0"><span class="heading fw-semibold position-relative ps-md-4 ps-3">ABOUT COMPANY</span></div>
+          <div class="col-12 sub-heading pt-1 z-1 px-0">Personal loans to fulfill your dreams</div>
+          <div class="col-12 py-md-4 py-2 px-md-3 px-0">
+            <div class="row mx0 align-items-center py-2 position-relative">
               <div class="about-loanicon col-auto position-relative d-flex justify-content-center align-items-center"><img src="assets/img/Index/loan2.svg" alt="loan" class="w-100 h-100 img-fluid"></div>
               <div class="about-title fw-medium col">We’re in this business since 1987 and we provide the best services.</div>
             </div>
@@ -267,8 +268,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="about-us-img position-relative z-1">
+      <div class="col-lg-6">
+        <div class="about-us-img position-relative z-1 mx-auto">
           <img src="assets/img/Index/about.png" alt="about" class="h-100 w-100 img-fluid">
           <div class="position-absolute about-img-content-main d-inline-flex align-items-center bg-theme1 ">
             <div class="about-year fw-semibold">25 <sup>+</sup></div>
@@ -474,8 +475,8 @@
         Nullam vel nibh facilisis lectus fermentum ultrices quis non risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst.
       </div>
       <div class="col-12 pt-5">
-        <div class="row mx-0 shadow-sm bg-white">
-          <div class="col-md-6">
+        <div class="row mx-0">
+          <div class="col-md-6 bg-white">
             <div class="row p-5">
               <div class="col-12 pt-3 px-0">
                 <div class="d-flex align-items-center justify-content-between">
@@ -524,11 +525,11 @@
             </div>
           </div>
           <div class="col-md-6 px-md-0" >
-            <div class="calculate-img ms-auto position-relative">
+            <div class="calculate-img position-relative me-auto">
               <img src="assets/img/Index/loan-calculator.png" alt="calculate" class="h-100 w-100 img-fluid object-fit-cover">
-              <div class="bg-white position-absolute calculate-rating">
-                <div class="border border-2 border-dark bg-theme1">
-                  <div class="calculate-rating-count fw-bold">98%</div>
+              <div class="bgwhite position-absolute calculate-rating-main d-flex justify-content-center align-items-start">
+                <div class="border border-2 border-dark bg-theme1 calculate-rating d-flex justify-content-center ps-4 flex-column">
+                  <div class="calculate-rating-count fw-bold">98 <sup class="per">%</sup></div>
                   <div class="calculate-rating-title">Satisfied Customers</div>
                 </div>
               </div>
@@ -547,7 +548,7 @@
     <div class="row pt-5 mt-2">
       <div class="col-12 text-center"><span class="heading fw-semibold position-relative ps-4">OUR TESTIMONIALS</span></div>
       <div class="sub-heading pt-1 col-12 text-center">What they’re talking about <br>our company</div>
-      <div class="col-12 testim-card-main mb-n4 pt-4 z-1">
+      <div class="col-12 testim-card-main mb-n4 pt-4">
         <div class="row mx-0">
           <div class="col-md-4">
             <div class="testim-card bg-white shadow-sm px-4 pt-5">
@@ -881,6 +882,73 @@
 </div>
 <!-- copyright section end -->
 
+<!-- navbar offcanvas start -->
+<div class="offcanvas offcanvas-start navv-offcanvas" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <div class="offcanvas-logo"><img src="assets/img/Footer/footerlogo.png" alt="logo" class="h-100 w-100 img-fluid"></div>
+    <button type="button" class="btn-close d-flex justify-content-center align-items-center" data-bs-dismiss="offcanvas" aria-label="Close">
+      <img src="assets/img/Navbar/btn-close.svg" alt="close">
+    </button>
+  </div>
+  <div class="offcanvas-body navv-offcanvas-body">
+    <ul class="accordion list-unstyled d-flex flex-column " id="accordionExample">
+      <li class="pb-3"><a href="javascript:;" class="text-decoration-none offcanvas-link fw-medium ">Home</a></li>
+      <li class="border-top border-1 border-white border-opacity-25 border-bottom py-3"><a href="javascript:;" class="text-decoration-none offcanvas-link fw-medium">About</a></li>
+      <li class="py-3">
+        <a href="javascript:;" class="text-decoration-none offcanvas-link collapse-link accordion-button collapsed p-0 bg-transparent border-0 shadow-none"  data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Service</a>
+        <div class="accordion-collapse collapse pt-3" id="collapseTwo"  data-bs-parent="#accordionExample">
+          <ul class="flex-column gap-1 list-unstyled ">
+            <li class="border-top border-1 border-white border-opacity-25 py-2 px-3">
+              <a href="javascript:;" class="offcanvas-link-inner text-decoration-none">Service-1</a>
+            </li>
+            <li class="border-top border-1 border-white border-opacity-25 py-2 px-3">
+              <a href="javascript:;" class="offcanvas-link-inner text-decoration-none">Service-Detail</a>
+            </li>
+           </ul>
+        </div>
+      </li>
+      <li class="border-top border-1 border-white border-opacity-25 border-bottom py-3"><a href="javascript:;" class="text-decoration-none offcanvas-link fw-medium">Pages</a></li>
+      <li class="py-3">
+        <a href="javascript:;" class="text-decoration-none offcanvas-link collapse-link accordion-button collapsed p-0 bg-transparent border-0 shadow-none"  data-bs-toggle="collapse" data-bs-target="#collapsethree" aria-expanded="false" aria-controls="collapseTwo">Features</a>
+        <div class="accordion-collapse collapse pt-3" id="collapsethree" data-bs-parent="#accordionExample">
+          <ul class="flex-column gap-1 list-unstyled ">
+           <li class="border-top border-1 border-white border-opacity-25 py-2 px-3"><a href="javascript:;" class="offcanvas-link-inner text-decoration-none ">Personal Loan Calcualtor</a></li>
+           <li class="border-top border-1 border-white border-opacity-25 border-bottom py-2 px-3"><a href="javascript:;" class="offcanvas-link-inner text-decoration-none">Loan Eligibility</a></li>
+           <li class="py-2 px-3"><a href="javascript:;" class="offcanvas-link-inner text-decoration-none">Home Loan Calcualtor</a></li>
+           <li class="border-top border-1 border-white border-opacity-25 border-bottom py-2 px-3"><a href="javascript:;" class="offcanvas-link-inner text-decoration-none">Home Loan Eligibility</a></li>
+           <li class="py-2 px-3"><a href="javascript:;" class="offcanvas-link-inner text-decoration-none">Compare Loan EMI</a></li>
+           <li class="border-top border-1 border-white border-opacity-25 pt-2 px-3"><a href="javascript:;" class="offcanvas-link-inner text-decoration-none">Monthly Calcualtor</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-top border-1 border-white border-opacity-25 border-bottom py-3"><a href="javascript:;" class="text-decoration-none offcanvas-link fw-medium">News</a></li>
+      <li class="pt-3"><a href="javascript:;" class="text-decoration-none offcanvas-link fw-medium">Contact</a></li>
+    </ul>
+    <div class="d-flex gap-2 pt-3 flex-column">
+      <a href="javascript:;" class="text-decoration-none map-mail fw-normal d-flex align-items-center gap-2">
+        <span class="d-inline-flex align-items-center justify-content-center map-mail-icon rounded-pill bg-theme1"><img src="assets/img/Navbar/location.svg" alt="location" class="h-100 w-100 img-fluid"></span>
+        B34, chitrakoot vaishali nagar, jaipur
+      </a>
+      <a href="mailto:demo123@gmail.com" class="text-decoration-none mt-1 map-mail fw-normal d-flex align-items-center gap-2">
+        <span class="d-inline-flex align-items-center justify-content-center map-mail-icon rounded-pill bg-theme1"><img src="assets/img/Navbar/email.svg" alt="location" class="h-100 w-100 img-fluid"></span>
+        demo123@gmail.com
+      </a>
+    </div>
+    <div class="d-flex align-items-center gap-3 pt-4">
+      <a href="javascript:;" class="top-social-icon d-inline-flex justify-content-center align-items-center"><img src="assets/img/Navbar/twitter.svg" alt="twitter" class="h-100 w-100 img-fluid topsocial-img"></a>
+      <a href="javascript:;" class="top-social-icon d-inline-flex justify-content-center align-items-center"><img src="assets/img/Navbar/facebook.svg" alt="facebook" class="h-100 w-100 img-fluid topsocial-img"></a>
+      <a href="javascript:;" class="top-social-icon d-inline-flex justify-content-center align-items-center"><img src="assets/img/Navbar/pinterest.svg" alt="pinterest" class="h-100 w-100 img-fluid topsocial-img"></a>
+      <a href="javascript:;" class="top-social-icon d-inline-flex justify-content-center align-items-center"><img src="assets/img/Navbar/instagram.svg" alt="instagram" class="h-100 w-100 img-fluid topsocial-img"></a>
+    </div>
+  </div>
+</div>
+<!-- navbar offcanvas end -->
+<!-- navbar hide start-->
+<!-- <div class="navbar-hide-main">
+  <div class="navbar-hide"></div>
+  <div class="navbar-content"></div>
+</div> -->
+<!-- navbar hide end-->
 
   <!-- Bootstrap Js -->
   <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>

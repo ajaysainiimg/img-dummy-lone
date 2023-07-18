@@ -2,56 +2,84 @@
 // No media query for `xs` since this is the default in Bootstrap
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-    // @include btn-mixin-min-sm();
-    // @include navbar-mixin-min-sm();
-   
+    @include btn-mixin-min-sm();
+    @include navbar-mixin-min-sm();
+    @include heroSection-mixin-min-sm();
+    @include aboutus-mixin-min-sm();
+    @include heading-mixin-min-sm();
 }
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  // @include btn-mixin-min-md();
-  // @include navbar-mixin-min-md();
+  @include btn-mixin-min-md();
+  @include navbar-mixin-min-md();
+  @include heroSection-mixin-min-md();
+  @include aboutus-mixin-min-md();
+  @include heading-mixin-min-md();
 }
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  // @include btn-mixin-min-lg();
-  // @include navbar-mixin-min-lg();
+  @include btn-mixin-min-lg();
+  @include navbar-mixin-min-lg();
+  @include heroSection-mixin-min-lg();
+  @include aboutus-mixin-min-lg();
+  @include heading-mixin-min-lg();
  
 }
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  // @include btn-mixin-min-xl();
-  // @include navbar-mixin-min-xl();
-
+  @include btn-mixin-min-xl();
+  @include navbar-mixin-min-xl();
+  @include heroSection-mixin-min-xl();
+  @include aboutus-mixin-min-xl();
+  @include heading-mixin-min-xl();
 }
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
-  // @include btn-mixin-min-xxl();
-  // @include navbar-mixin-min-xxl();
+  @include btn-mixin-min-xxl();
+  @include navbar-mixin-min-xxl();
+  @include heroSection-mixin-min-xxl();
+  @include aboutus-mixin-min-xxl();
+  @include heading-mixin-min-xxl();
 }
 // X-Large devices (large desktops, less than 1400px)
 @media (max-width: 1399.98px) {
-  // @include btn-mixin-max-xl();
-  // @include navbar-mixin-max-xl();
+  @include btn-mixin-max-xl();
+  @include navbar-mixin-max-xl();
+  @include heroSection-mixin-max-xl();
+  @include aboutus-mixin-max-xl();
+  @include heading-mixin-max-xl();
 }
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
-  // @include btn-mixin-max-lg();
-  // @include navbar-mixin-max-lg();
+  @include btn-mixin-max-lg();
+  @include navbar-mixin-max-lg();
+  @include heroSection-mixin-max-lg();
+  @include aboutus-mixin-max-lg();
+  @include heading-mixin-max-lg();
 }
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
-  // @include btn-mixin-max-md();
-  // @include navbar-mixin-max-md();
+  @include btn-mixin-max-md();
+  @include navbar-mixin-max-md();
+  @include heroSection-mixin-max-md();
+  @include aboutus-mixin-max-md();
+  @include heading-mixin-max-md();
 }
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
-  // @include btn-mixin-max-sm();
-  // @include navbar-mixin-max-sm();
+  @include btn-mixin-max-sm();
+  @include navbar-mixin-max-sm();
+  @include heroSection-mixin-max-sm();
+  @include aboutus-mixin-max-sm();
+  @include heading-mixin-max-sm();
 }
 // X-Small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
-  // @include btn-mixin-max-xs();
-  // @include navbar-mixin-max-xs();
+  @include btn-mixin-max-xs();
+  @include navbar-mixin-max-xs();
+  @include heroSection-mixin-max-xs();
+  @include aboutus-mixin-max-xs();
+  @include heading-mixin-max-xs();
 }
 // XX-Large devices (larger desktops)
 // No media query since the xxl breakpoint has no upper bound on its width
